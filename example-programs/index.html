@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+  <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <title>Using Example Programs - Citrix Virtual Channel SDK for Citrix Receiver for Linux 13.5</title>
+     
+    <link rel="shortcut icon" href="
+https://www.citrix.com/etc/designs/citrix/icon-favicon.png"> 
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+    <link rel="stylesheet" href="../css/highlight.css">
+    <link rel="stylesheet" href="../css/override.css" type="text/css" />
+    <link rel="stylesheet" href="../css/font-awesome.css" type="text/css" /> 
+    <script>
+      // Current page data
+      var mkdocs_page_name = "Using Example Programs";
+      var mkdocs_page_input_path = "example-programs.md";
+      var mkdocs_page_url = "/example-programs/";
+
+    </script>
+    
+    <script src="../js/jquery-2.1.1.min.js"></script>
+    <script src="../js/modernizr-2.8.3.min.js"></script>
+    <script type="text/javascript" src="../js/highlight.pack.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/custom.js"></script>  
+  </head>
+
+  <body class="wy-body-for-nav" role="document">
+
+    <div class="header-top">
+
+        <div class="header-top-left">
+          <a href="http://developer-docs.citrix.com" class="logo-position"><img height="60" src="../img/citrixlogoblack.png" target="_blank" class="logo-citrix"><span style="color:#000;font-size: 20px;position: relative;top:4px;left:20px;">Developer Documentation</span></a>
+        </div>
+        <div class="header-top-right">
+          <ul>
+
+            <form id="rtd-search-form-alt" class="wy-form" action="../search.html" method="get">
+             <ul class="header-elements">
+              <li class="list-inline support">
+                <input name="q" id="txtName" type="text" placeholder="Search SDKs" class="searchdocs">
+                <a class="fa fa-search errspan"></a>
+<!---
+              </li>
+             <li> <a href="javascript:void(0);" style="font-size: 22px;position: relative;left: -10px;top: 3px"><i class="fa fa-globe"></i></a></li>
+             </ul>
+             --->
+            </form>
+
+          </ul>
+
+        </div>
+
+    </div>
+    <div class="body">
+      <div class="wy-grid-for-nav">
+
+        
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+          <div class="wy-side-nav-search">
+            <div role="search">
+  <form id ="rtd-search-form-alt" class="wy-form" action="../search.html" method="get">
+	<i class="fa fa-search"></i>
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+          </div>
+
+          <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+            <ul class="current">
+              
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="..">Overview</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../system-requirements/">System Requirements</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../installation/">Installing the Virtual Channel SDK</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../architecture/">Architecture</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 current">
+        <a class="toctree-l1-a current" href="./">Using Example Programs</a>
+		
+            <ul style="margin-left: 0px;padding-left:15px;border-left: 1px solid #b2b2b2;">
+            
+                <li class="toctree-l3"><a href="#using-example-programs" style="padding:0px;position: relative;">&nbsp;Using Example Programs</a></li>
+                
+                    <li><a class="toctree-l4" href="#ping" style="padding:0px;position: relative;">Ping</a></li>
+                
+                    <li><a class="toctree-l4" href="#mix" style="padding:0px;position: relative;">Mix</a></li>
+                
+                    <li><a class="toctree-l4" href="#over" style="padding:0px;position: relative;">Over</a></li>
+                
+                    <li><a class="toctree-l4" href="#oxs" style="padding:0px;position: relative;">OXS</a></li>
+                
+                    <li><a class="toctree-l4" href="#building-examples" style="padding:0px;position: relative;">Building Examples</a></li>
+                
+                    <li><a class="toctree-l4" href="#configuring-the-virtual-driver" style="padding:0px;position: relative;">Configuring the Virtual Driver</a></li>
+                
+                    <li><a class="toctree-l4" href="#running-an-example-virtual-channel" style="padding:0px;position: relative;">Running an Example Virtual Channel</a></li>
+                
+                    <li><a class="toctree-l4" href="#debugging-a-linux-virtual-driver" style="padding:0px;position: relative;">Debugging a Linux Virtual Driver</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../programming-guide/">Programming Guide</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../programming-reference/">Programming Reference</a>
+		
+    </li>
+
+			  
+            </ul>
+          </div>
+          &nbsp;
+        </nav>
+
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+           
+          <div class="wy-nav-content">
+            <div class="rst-content">
+              <!-- <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Using Example Programs</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div> -->
+              <div role="main">
+                <div class="section">
+                <div class="file-format">
+                 <div class="leftAlign" style="float: left;visibility: hidden;">
+                  </div>
+                  <div class="rightAlign" style="float: right;">
+                      <span>Download full document:</span>
+                      <ul class="file-types">
+                        <li><a style="border: 1px solid #EE3D24;padding: 5px;font-size: 11px;color: #EE3D24;border-radius: 5px;font-weight: 700">PDF</a></li>
+                        <li><a style="border: 1px solid #2A579A;padding: 5px;font-size: 11px;color: #2A579A;border-radius: 5px;font-weight: 700">DOCX</a></li>
+                        <li><a style="border: 1px solid #495164;padding: 5px;font-size: 11px;color: #495164;border-radius: 5px;font-weight: 700">EMAIL</a></li>
+                        <li><a style="border: 1px solid #495164;padding: 5px;font-size: 11px;color: #495164;border-radius: 5px;font-weight: 700">PRINT</a></li>
+                      </ul>
+                  </div>
+                  </div>
+                   <h1 id="using-example-programs"><a class="toclink" href="#using-example-programs">Using Example Programs</a></h1>
+<p>The example programs included with the Virtual Channel SDK are
+buildable, working virtual channels. Use these examples to:</p>
+<ul>
+<li>
+<p>Verify your Virtual Channel SDK installation is correct by building
+    a known working example program.</p>
+</li>
+<li>
+<p>Provide working examples of code that can be modified to suit
+    your requirements.</p>
+</li>
+<li>
+<p>Explore the features and functionality provided in the Virtual
+    Channel SDK.</p>
+</li>
+</ul>
+<p>Each of these example programs comprises a client virtual driver and a
+server application. The server-side application is run from the command
+line within an ICA session. A single virtual channel comprises an
+application pair.</p>
+<p>The example programs included with the Virtual Channel SDK are:</p>
+<p><strong>Ping</strong>: Records the round-trip delay time for a test packet sent over
+a virtual channel.</p>
+<p><strong>Mix</strong>: Demonstrates a mechanism to call functions (for example, to get
+the time of day) on a remote client.</p>
+<p><strong>Over</strong>: Simple asynchronous application that demonstrates how to code
+an application where the server must receive a response from the client
+asynchronously, and where the type of packet being sent to the client is
+different from the type received.</p>
+<p><strong>OXS</strong>: Demonstrates sub-window or overlay buffers, events, and timers.</p>
+<p>Each example includes a description of the program, packet format, and
+other necessary information.</p>
+<h2 id="ping"><a class="toclink" href="#ping">Ping</a></h2>
+<p>Ping is a simple program that records the round-trip delay time for a
+test packet sent over a virtual channel. The server sends a packet to
+the client and the client responds with a packet containing the time it
+received the original packet from the server. This sequence is repeated
+a specified number of times, and then the program displays the
+round-trip time for each ping and the average round-trip delay time.</p>
+<p>For this example, there is no significant difference between a BEGIN
+packet and an END packet. The two types of packets are provided as an
+example for writing your own virtual channel protocols.</p>
+<p>This program demonstrates:</p>
+<ul>
+<li>
+<p>How to transfer data synchronously. The sequence of events is:
+    {SrvWrite, ClntRead, ClntWrite, SrvRead} {SrvWrite, ClntRead} {...}.
+    The server waits for the client to reply before sending the
+    next packet.</p>
+</li>
+<li>
+<p>How to read parameter data (in this case, the number of times to
+    send packets to the client) from the Module.ini files.</p>
+</li>
+</ul>
+<h3 id="packet-format"><a class="toclink" href="#packet-format">Packet Format</a></h3>
+<p>The following packet is exchanged between the client and the server.</p>
+<div class="codehilite"><pre><span></span>typedef struct PING {
+    USHORT      uSign;          // Signature
+    USHORT      uType;          // Type, BEGIN or END, from server
+    USHORT      uLen;           // Packet length from server
+    USHORT      uCounter;       // Sequencer
+    ULONG       ulServerMS;     // Server millisecond clock
+    ULONG       ulClientMS;     // Client millisecond clock
+} PING, *PPING;
+</pre></div>
+
+
+<h2 id="mix"><a class="toclink" href="#mix">Mix</a></h2>
+<p>Mix demonstrates a mechanism that can be used to call functions on a
+remote client (for example to get the time of day). This program
+demonstrates an extensible scheme for making function calls from the
+server to the client that allows the server to specify when it expects a
+response from the client and when it does not. This method can increase
+performance, because the server does not have to constantly wait for a
+reply from the client.</p>
+<p>The server calls a series of simple functions:</p>
+<ul>
+<li>
+<p><strong>AddNo</strong>: Add two numbers and return the sum as the return value.</p>
+</li>
+<li>
+<p><strong>DispStr</strong>: Write a string to the log file. There is no return
+    value (write-only function).</p>
+</li>
+<li>
+<p><strong>Gettime</strong>: Read the client time and return it as the return value.</p>
+</li>
+</ul>
+<p>The actual implementation of these functions is on the client side. The
+server conditionally waits for the response from the client, depending
+on the function being executed. For example, the server waits for the
+result of the AddNo or Gettime function, but not the write-only function
+DispStr, which returns no result.</p>
+<h3 id="packet-format_1"><a class="toclink" href="#packet-format_1">Packet Format</a></h3>
+<div class="codehilite"><pre><span></span>typedef struct MIXHEAD {
+    USHORT      uType           // Packet type
+    USHORT      uFunc;          // Index of Function
+    ULONG       uLen;           // Length of data
+    USHORT      fRetReq;        // True if return value required
+    ULONG       dwRetVal;       // Return Value from client
+    USHORT      dwLen1;         // length of data for \#1 LpVoid
+    USHORT      dwLen2;         // length of data for \#2 LpVoid
+} MIXHEAD, *PMIXHEAD;
+</pre></div>
+
+
+<p>The data consists of the above structure followed by the arguments to
+the function being called. uLen is the total length of the data being
+sent, including the arguments. DwLen1 is the length of the data pointed
+to by a pointer argument.</p>
+<h3 id="sequence-of-events"><a class="toclink" href="#sequence-of-events">Sequence of Events</a></h3>
+<p>The Mix program demonstrates the following sequence of events. See the
+graphic on the next page.</p>
+<p>This figure illustrates the sequence of events that occurs when you use
+the Mix program, starting at the top.</p>
+<p><img alt="" src="../mix-sequence-of-events.png" /></p>
+<h2 id="over"><a class="toclink" href="#over">Over</a></h2>
+<p>Over is a simple asynchronous application. It demonstrates how to code
+an application in which the server must receive a response from the
+client asynchronously, and the type of packet being sent to the client
+is different from the type received.</p>
+<p>When the Over program begins, it:</p>
+<ol>
+<li>
+<p>Spawns a thread that waits for a response from the client.</p>
+</li>
+<li>
+<p>Begins sending data packets with sequence numbers to the client.</p>
+</li>
+<li>
+<p>(After sending the last packet of data) sends a packet with a
+    sequence number of NO_MORE_DATA, and then closes the connection.</p>
+</li>
+</ol>
+<p>The client receives packets and inspects the sequence number. For every
+sequence number divisible by 10, the client increases the sequence
+number by 7 and sends a response to the server. These numbers are chosen
+arbitrarily to demonstrate that the client can asynchronously send data
+to the server at any time.</p>
+<p>The packet type used to send data from the server to the client is
+different from the packet type used to receive data from the client.</p>
+<h3 id="packet-format-from-server-to-client"><a class="toclink" href="#packet-format-from-server-to-client">Packet Format - From Server to Client</a></h3>
+<div class="codehilite"><pre><span></span>typedef struct OVER {
+    USHORT      uSign;          // Signature
+    USHORT      uType;          // Type, BEGIN or END, from server
+    USHORT      uLen;           // Packet length from server
+    USHORT      uCounter;       // Sequencer
+    ULONG       ulServerMS;     // Server millisecond clock
+} OVER, *POVER;
+</pre></div>
+
+
+<h3 id="packet-format-from-client-to-server"><a class="toclink" href="#packet-format-from-client-to-server">Packet Format - From Client to Server</a></h3>
+<div class="codehilite"><pre><span></span>typedef struct DRVRESP {
+    USHORT      uType;          // Type OVERFLOW_JUMP from client
+    USHORT      uLen;           // Packet length from client
+    USHORT      uCounter;       // seqUencer
+} DRVRESP, * PDRVRESP;
+</pre></div>
+
+
+<h3 id="sequence-of-events_1"><a class="toclink" href="#sequence-of-events_1">Sequence of Events</a></h3>
+<p>This figure illustrates the sequence of events that occurs when you
+use the Over program, starting at the top.</p>
+<p><img alt="" src="../over-sequence-of-events.png" /></p>
+<h2 id="oxs"><a class="toclink" href="#oxs">OXS</a></h2>
+<p>OXS is the Noughts and Crosses game. The OXS virtual channel implements
+remote drawing of this game. The purpose of this is to demonstrate the
+following interfaces, which are specific to the Receiver for Linux:</p>
+<ul>
+<li>
+<p>Sub-windows or overlay buffers</p>
+</li>
+<li>
+<p>Events (the selection of File Descriptor)</p>
+</li>
+<li>
+<p>Timers</p>
+</li>
+</ul>
+<p>The client component of the OXS virtual driver implements the drawing of
+the game. All processing of the game play is performed on the server. To
+achieve client-side drawing, a sub-window (child) of the session window
+is obtained using the sub-window interface. The sub-window is placed
+over the corresponding area of the game window, and every movement to
+the server-side game window is mimicked by the sub-window. This creates
+the impression of a single application. Mouse clicks and interaction
+with the server-side OXS application are converted into Play Move,
+Winning Line, Move Window, and Close Window commands. These are received
+by the virtual driver and translated into corresponding actions and X
+drawing commands.</p>
+<p>This sub-window technology is most useful for solutions such as local
+video decoding. The sub-window interface is not designed to take
+keyboard and mouse input. It is intended to render graphics.</p>
+<p>In addition, the OXS virtual driver uses the events (Evt) interface.
+This monitors the X server file descriptor for Expose events, which
+allows a callback to redraw the game area for every event.</p>
+<p>The OXS virtual driver also uses the timer (Tmr) interface. This works
+around a race condition between the OXS and Seamless virtual channels.
+Although the sub-window used for drawing mimics the movements of the
+server side window, if Seamless is used a race condition occurs between
+the movement of the Seamless server-side window and the sub-window. The
+timer is used to delay the sub-window position update until after the
+Seamless window move is complete.</p>
+<p>Note: The sample application below is a basic one and does not use the
+MM_clip api. In this case, the overlaid session sub-window is never
+clipped and is always an on top square.</p>
+<p>Clipping the session sub-window properly can give the appearance that it
+is in the remote sessions window stack, even though it is actually
+overlaid on top of the session. This is not something this example does.</p>
+<h2 id="building-examples"><a class="toclink" href="#building-examples">Building Examples</a></h2>
+<h3 id="building-a-server-side-example-using-nmake"><a class="toclink" href="#building-a-server-side-example-using-nmake">Building a Server-side Example using Nmake</a></h3>
+<p>Examples of the latest server-side executables have been provided for
+testing. Please download the latest Windows Virtual Channel SDK in order
+to develop the server-side component.</p>
+<h3 id="building-a-client-side-example-using-linux"><a class="toclink" href="#building-a-client-side-example-using-linux">Building a Client-side Example using Linux</a></h3>
+<ol>
+<li>
+<p>To start a build, open a terminal.</p>
+</li>
+<li>
+<p>Change src/examples/vc/client/unix/MakeCOMMONVD to match the
+    target platform.</p>
+<p><strong>Note:</strong> Linux does not require pingwire.c. Also, for Linux armel a
+cross compiler can be used. This is detected by the presence of the
+environment variable, CROSS_COMPILER_PREFIX</p>
+</li>
+<li>
+<p>Set the environment variable HOST_PREFIX to the target:</p>
+<ul>
+<li>
+<p>linux for Linux x64</p>
+</li>
+<li>
+<p>linux for Linux x86</p>
+</li>
+<li>
+<p>linuxarm for Linux armel</p>
+</li>
+<li>
+<p>linuxarmhf for Linux armhf</p>
+</li>
+</ul>
+</li>
+<li>
+<p>For example, to build <strong>vdping.dll</strong>, type: <code>cd src/examples/vc/client/vdping/unix</code> and then type <code>make</code>. The production (retail) and debug builds of vdping.dll are built in the
+lib subdirectory. Pre-built production versions are provided in the
+separate directories, <code>src/examples/vc/client/vdping/linux/obj/retail</code> and
+<code>src/examples/vc/client/vdping/linuxarm/obj/retail</code>.</p>
+</li>
+<li>
+<p>Perform the same process to build all other example virtual drivers.</p>
+</li>
+</ol>
+<p>Alternatively to build all example Virtual Drivers, type <strong>cd
+src/examples/vc/client</strong> and then run the <strong>build</strong> script.</p>
+<h2 id="configuring-the-virtual-driver"><a class="toclink" href="#configuring-the-virtual-driver">Configuring the Virtual Driver</a></h2>
+<ol>
+<li>
+<p>Copy the appropriate virtual driver for the platform to the client
+    installation directory. For example, copy the Linux virtual driver,
+    vdping.dll, in src/examples/vc/client/vdping/unix/lib/linux/retail
+    for a locally built version, or in
+    src/examples/vc/client/vdping/linux/obj/retail for a pre-built
+    version to the client installation directory as VDPING.DLL.</p>
+</li>
+<li>
+<p>In the client installation directory, modify the file
+    config/module.ini and make the following changes: </p>
+<ul>
+<li>
+<p>In the [ICA 3.0] section append “Ping” to the VirtualDriver list.</p>
+</li>
+<li>
+<p>In the [ICA 3.0] section add “Ping=On”.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Add a new section [Ping] with the entry “DriverName=VDPING.DLL”.</p>
+</li>
+<li>
+<p>Copy ctxping.exe.sample from src/examples/vc/server/ctxping to the
+    Citrix server and rename it to ctxping.exe.</p>
+</li>
+<li>
+<p>Run ctxping at the command prompt within a client session to
+    implement the Ping virtual channel.</p>
+</li>
+</ol>
+<h2 id="running-an-example-virtual-channel"><a class="toclink" href="#running-an-example-virtual-channel">Running an Example Virtual Channel</a></h2>
+<p>Examples of the latest server-side executables have been provided for
+testing.</p>
+<ol>
+<li>
+<p>On a client configured with the client-side example, connect to a
+    server running XenApp or XenDesktop with the associated server-side
+    example (located at base/examples/vc/server in this SDK).</p>
+</li>
+<li>
+<p>Within the ICA session, run the server-side executable. </p>
+</li>
+</ol>
+<p>The server-side example queries the client-side virtual driver, and then
+displays the driver information. Use the <strong>-d</strong> parameter to display
+detailed information. For Ping only: CTXPING sends PingCount separate
+pings. PingCount has a default value of three, but can be set in the
+[Ping] section of the Module.ini file. Each ping consists of a BEGIN
+packet and an END packet.</p>
+<h2 id="debugging-a-linux-virtual-driver"><a class="toclink" href="#debugging-a-linux-virtual-driver">Debugging a Linux Virtual Driver</a></h2>
+<p>Use the TRACE feature to log events on the client. To enable the TRACE
+statements, you must build the debug version of the virtual driver and
+create a debug.ini file in the current directory where the client is
+run.</p>
+<p>When the debug module is installed on the client, the TRACE statements
+write the debug information to a file, ncs.log.&lt;process id&gt;. The
+following debug.ini contents create tracing for the example virtual
+channels:</p>
+<div class="codehilite"><pre><span></span>\[ncs\]
+traceFlags = +LOG_PRINTF
+traceClasses = +TC_VD
+traceFeatures = +TT_ALL
+traceFile = ncs.log.\$\$
+</pre></div>
+
+
+<p>You can refine tracing by editing the traceFeatures line. For example,
+"traceFeatures = +TT_API1 | TT_API2" will only print trace statements
+of type TT_API1 and TT_API2.</p>
+<p>The class flag for virtual channels is TC_VD. For the complete list of
+class and event flags, see logflags.h (located in src/inc/).</p>
+<ol>
+<li>
+<p>Compile the debug version of the virtual driver for the
+    client platform.</p>
+</li>
+<li>
+<p>If it is running, close the client on the client device.</p>
+</li>
+<li>
+<p>Copy the debug version of the virtual driver to the client
+    installation directory. For example, copy vdping.dll to the client
+    installation directory as VDPING.DLL.</p>
+</li>
+<li>
+<p>Ensure that config.ini and module.ini in the client installation
+    directory are updated appropriately to load the new virtual driver,
+    following the instructions for loading a production version of the
+    virtual driver.</p>
+</li>
+<li>
+<p>Create the debug.ini file in the current working directory.</p>
+</li>
+<li>
+<p>Launch Receiver to implement the new virtual channel.</p>
+</li>
+</ol> 
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </section>
+
+      </div>
+    </div>
+    <!--<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span class="prev"><a href="../architecture/"><i class="fa fa-angle-left"></i> Previous</a></span>
+      
+      
+        <span class="next"><a href="../programming-guide/">Next <i class="fa fa-angle-right"></i></a></span>
+      
+    </span>
+	<div class="footer-right">
+		<ul class="social-links">
+			<li class="list-inline"><a href="https://twitter.com/citrix"><i class="fa fa-twitter"></i>@citrix</a></li>
+			<li class="list-inline"><a href="mailto:support@citrix.com"><i class="fa fa-envelope-o"></i>support@citrix.com</a></li>
+		</ul>
+		<ul class="inner-pages">
+			<li class="list-inline"><a href="http://citrix.com/about/legal">Privacy and Terms</li>
+		</ul>
+	</div>
+</div>-->
+
+  </body>
+
+</html>

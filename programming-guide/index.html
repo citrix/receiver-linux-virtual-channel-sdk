@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+  <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <title>Programming Guide - Citrix Virtual Channel SDK for Citrix Receiver for Linux 13.5</title>
+     
+    <link rel="shortcut icon" href="
+https://www.citrix.com/etc/designs/citrix/icon-favicon.png"> 
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+    <link rel="stylesheet" href="../css/highlight.css">
+    <link rel="stylesheet" href="../css/override.css" type="text/css" />
+    <link rel="stylesheet" href="../css/font-awesome.css" type="text/css" /> 
+    <script>
+      // Current page data
+      var mkdocs_page_name = "Programming Guide";
+      var mkdocs_page_input_path = "programming-guide.md";
+      var mkdocs_page_url = "/programming-guide/";
+
+    </script>
+    
+    <script src="../js/jquery-2.1.1.min.js"></script>
+    <script src="../js/modernizr-2.8.3.min.js"></script>
+    <script type="text/javascript" src="../js/highlight.pack.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/custom.js"></script>  
+  </head>
+
+  <body class="wy-body-for-nav" role="document">
+
+    <div class="header-top">
+
+        <div class="header-top-left">
+          <a href="http://developer-docs.citrix.com" class="logo-position"><img height="60" src="../img/citrixlogoblack.png" target="_blank" class="logo-citrix"><span style="color:#000;font-size: 20px;position: relative;top:4px;left:20px;">Developer Documentation</span></a>
+        </div>
+        <div class="header-top-right">
+          <ul>
+
+            <form id="rtd-search-form-alt" class="wy-form" action="../search.html" method="get">
+             <ul class="header-elements">
+              <li class="list-inline support">
+                <input name="q" id="txtName" type="text" placeholder="Search SDKs" class="searchdocs">
+                <a class="fa fa-search errspan"></a>
+<!---
+              </li>
+             <li> <a href="javascript:void(0);" style="font-size: 22px;position: relative;left: -10px;top: 3px"><i class="fa fa-globe"></i></a></li>
+             </ul>
+             --->
+            </form>
+
+          </ul>
+
+        </div>
+
+    </div>
+    <div class="body">
+      <div class="wy-grid-for-nav">
+
+        
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+          <div class="wy-side-nav-search">
+            <div role="search">
+  <form id ="rtd-search-form-alt" class="wy-form" action="../search.html" method="get">
+	<i class="fa fa-search"></i>
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+          </div>
+
+          <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+            <ul class="current">
+              
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="..">Overview</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../system-requirements/">System Requirements</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../installation/">Installing the Virtual Channel SDK</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../architecture/">Architecture</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../example-programs/">Using Example Programs</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 current">
+        <a class="toctree-l1-a current" href="./">Programming Guide</a>
+		
+            <ul style="margin-left: 0px;padding-left:15px;border-left: 1px solid #b2b2b2;">
+            
+                <li class="toctree-l3"><a href="#programming-guide" style="padding:0px;position: relative;">&nbsp;Programming Guide</a></li>
+                
+                    <li><a class="toctree-l4" href="#design-suggestions" style="padding:0px;position: relative;">Design Suggestions</a></li>
+                
+                    <li><a class="toctree-l4" href="#client-side-functions-overview" style="padding:0px;position: relative;">Client-Side Functions Overview</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../programming-reference/">Programming Reference</a>
+		
+    </li>
+
+			  
+            </ul>
+          </div>
+          &nbsp;
+        </nav>
+
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+           
+          <div class="wy-nav-content">
+            <div class="rst-content">
+              <!-- <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Programming Guide</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div> -->
+              <div role="main">
+                <div class="section">
+                <div class="file-format">
+                 <div class="leftAlign" style="float: left;visibility: hidden;">
+                  </div>
+                  <div class="rightAlign" style="float: right;">
+                      <span>Download full document:</span>
+                      <ul class="file-types">
+                        <li><a style="border: 1px solid #EE3D24;padding: 5px;font-size: 11px;color: #EE3D24;border-radius: 5px;font-weight: 700">PDF</a></li>
+                        <li><a style="border: 1px solid #2A579A;padding: 5px;font-size: 11px;color: #2A579A;border-radius: 5px;font-weight: 700">DOCX</a></li>
+                        <li><a style="border: 1px solid #495164;padding: 5px;font-size: 11px;color: #495164;border-radius: 5px;font-weight: 700">EMAIL</a></li>
+                        <li><a style="border: 1px solid #495164;padding: 5px;font-size: 11px;color: #495164;border-radius: 5px;font-weight: 700">PRINT</a></li>
+                      </ul>
+                  </div>
+                  </div>
+                   <h1 id="programming-guide"><a class="toclink" href="#programming-guide">Programming Guide</a></h1>
+<p>Virtual channels are referred to by a seven-character (or shorter) ASCII
+name. In several previous versions of the ICA protocol, virtual channels
+were numbered; the numbers are now assigned dynamically based on the
+ASCII name, making implementation easier.</p>
+<p>When developing virtual channel code for internal use only, you can use
+any seven-character name that does not conflict with existing virtual
+channels. Use only upper and lowercase ASCII letters and numbers. Follow
+the existing naming convention when adding your own virtual channels.</p>
+<p>The predefined channels, which begin with the OEM identifier CTX, are
+for use only by Citrix.</p>
+<h2 id="design-suggestions"><a class="toclink" href="#design-suggestions">Design Suggestions</a></h2>
+<p>Follow these suggestions to make your virtual channels easier to design
+and enhance:</p>
+<ul>
+<li>
+<p>When you design your own virtual channel protocol, allow for the
+    flexibility to add features. Virtual channels have version numbers
+    that are exchanged during initialization so that both the client and
+    the server detect the maximum level of functionality that can
+    be used. For example, if the client is at Version 3 and the server
+    is at Version 5, the server does not send any packets with
+    functionality beyond Version 3 because the client does not know how
+    to interpret the newer packets.</p>
+</li>
+<li>
+<p>Because the server side of a virtual channel protocol can be
+    implemented as a separate process, it is easier to write code that
+    interfaces with the Citrix-provided virtual channel support on the
+    server than on the client (where the code must fit into an existing
+    code structure). The server side of a virtual channel simply opens
+    the channel, reads from and writes to it, and closes it when done.</p>
+</li>
+</ul>
+<p>Writing code for the server-side is similar to writing an application,
+which uses services exported by the system. It is easier to write an
+application to handle the virtual channel communication because it can
+then be run once for each ICA connection supporting the virtual
+channel.</p>
+<p>Writing for the client-side is similar to writing a driver, which must
+provide services to the system in addition to using system services.
+If a service is written, it must manage multiple connections.</p>
+<ul>
+<li>
+<p>If you are designing new hardware for use with new virtual channels
+    (for example, an improved compressed video format), make sure the
+    hardware can be detected so that the client can determine whether or
+    not it is installed. Then the client can communicate to the server
+    if the hardware is available before the server uses the new
+    data format. Optionally, you could have the virtual driver translate
+    the new data format for use with older hardware.</p>
+</li>
+<li>
+<p>There might be limitations preventing your new virtual channel from
+    performing at an optimum level. If the client is connecting to the
+    server running XenApp through a low-speed connection, the bandwidth
+    might not be great enough to properly support audio or video data.
+    You can make your protocol adaptive, so that as bandwidth decreases,
+    performance degrades gracefully, possibly by sending sound normally
+    but reducing the frame rate of the video to fit the
+    available bandwidth.</p>
+</li>
+<li>
+<p>To identify where problems are occurring (connection,
+    implementation, or protocol), first get the connection and
+    communication working. Then, after the virtual channel is complete
+    and debugged, do some time trials and record the results. These
+    results establish a baseline for measuring further optimizations
+    such as compression and other enhancements so that the channel
+    requires less bandwidth.</p>
+</li>
+<li>
+<p>The time stamp in the pVdPoll variable can be helpful for resolving
+    timing issues in your virtual driver. It is a ULONG containing the
+    current time in milliseconds. The pVdPoll variable is a pointer to a
+    DLLPOLL structure. See dllapi.h (in base/inc/) for definitions of
+    these structures.</p>
+</li>
+</ul>
+<h2 id="client-side-functions-overview"><a class="toclink" href="#client-side-functions-overview">Client-Side Functions Overview</a></h2>
+<p>The client software is built on a modular configurable architecture that
+allows replaceable, configurable modules (such as virtual channel
+drivers) to handle various aspects of an ICA connection. These modules
+are specially formatted and dynamically loadable. To accomplish this
+modular capability, each module (including virtual channel drivers)
+implements a fixed set of function entry points.</p>
+<p>There are six groups of functions:
+user-defined, virtual driver helper, memory INI, Receiver for Linux
+sub-window interface, Receiver for Linux event interface, and Receiver
+for Linux timer interface.</p>
+<h3 id="user-defined-functions"><a class="toclink" href="#user-defined-functions">User-Defined Functions</a></h3>
+<p>To make writing virtual channels easier, dynamic loading is handled by
+the WinStation driver, which in turn calls user-defined functions. This
+simplifies creating the virtual channel because all you have to do is
+fill in the functions and link your virtual channel driver with vdapi.a
+(provided with this SDK).</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DriverClose</td>
+<td>Frees private driver data. Called before unloading a virtual driver (generally upon client exit).</td>
+</tr>
+<tr>
+<td>DriverGetLastError</td>
+<td>Returns the last error set by the virtual driver. Not used; links with the common front end, VDAPI.</td>
+</tr>
+<tr>
+<td>DriverInfo</td>
+<td>Retrieves information about the virtual driver.</td>
+</tr>
+<tr>
+<td>DriverOpen</td>
+<td>Performs all initialization for the virtual driver. Called once when the client loads the virtual driver (at startup).</td>
+</tr>
+<tr>
+<td>DriverPoll</td>
+<td>Allows driver to check timers and other state information, sends queued data to the server, and performs any other required processing. Called periodically to see if the virtual driver has any data to write.</td>
+</tr>
+<tr>
+<td>DriverQueryInformation</td>
+<td>Retrieves run-time information from the virtual driver.</td>
+</tr>
+<tr>
+<td>DriverSetInformation</td>
+<td>Sets run-time information in the virtual driver.</td>
+</tr>
+<tr>
+<td>ICADataArrival</td>
+<td>Indicates that data was delivered. Called when data arrives on the virtual channel.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="virtual-driver-helper-functions"><a class="toclink" href="#virtual-driver-helper-functions">Virtual Driver Helper Functions</a></h3>
+<p>The virtual driver uses helper functions to send data and manage the
+virtual channel. When the WinStation driver initializes the virtual
+driver, the WinStation driver passes pointers to helper functions and
+the virtual driver passes pointers to the user-defined functions. Newer
+API functions QueueVirtualWrite, MM_*, Evt_*, and Tmr_* helper
+functions are callable directly by the virtual driver.</p>
+<p>VdCallWd is linked in as part of VDAPI and is available in all
+user-implemented functions. The others are obtained during DriverOpen
+when VdCallWd is called with the WDxSETINFORMATION parameter.</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>QueueVirtualWrite</td>
+<td>Queues a virtual write and stimulates packet output if required allowing the data to be sent without waiting for the poll. This must be used to send data to the server in all newly written virtual drivers. This replaces the deprecated functions below.</td>
+</tr>
+<tr>
+<td>AppendVdHeader (<strong>Deprecated</strong>)</td>
+<td>Appends a virtual driver header to a buffer.</td>
+</tr>
+<tr>
+<td>OutBufAppend (<strong>Deprecated</strong>)</td>
+<td>Appends data to a buffer.</td>
+</tr>
+<tr>
+<td>OutBufReserve (<strong>Deprecated</strong>)</td>
+<td>Checks for available output buffer space.</td>
+</tr>
+<tr>
+<td>OutBufWrite (<strong>Deprecated</strong>)</td>
+<td>Sends the buffer to the server.</td>
+</tr>
+<tr>
+<td>VdCallWd</td>
+<td>Used to query and set information from the WinStation driver (WD).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="memory-ini-functions"><a class="toclink" href="#memory-ini-functions">Memory INI Functions</a></h3>
+<p>Memory INI functions read data from the client engine configuration
+files stored in both the client installation directory for system wide
+settings and \$HOME/.ICAClient for user specific settings.</p>
+<p>For each entry in appsrv.ini and wfclient.ini, there must be a
+corresponding entry in All_Regions.ini for the setting to take effect.
+For more information, refer to All_Regions.ini file in the
+\$ICAROOT/config directory.</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>miGetPrivateProfileBool</td>
+<td>Returns a boolean value.</td>
+</tr>
+<tr>
+<td>miGetPrivateProfileInt</td>
+<td>Returns an integer value.</td>
+</tr>
+<tr>
+<td>miGetPrivateProfileLong</td>
+<td>Returns a long value.</td>
+</tr>
+<tr>
+<td>miGetPrivateProfileString</td>
+<td>Returns a string value.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="receiver-for-linux-sub-window-interface"><a class="toclink" href="#receiver-for-linux-sub-window-interface">Receiver for Linux Sub-Window Interface</a></h3>
+<p>Receiver for Linux sub-window interface allows a virtual channel to gain
+access to a sub-window of the client session in order to draw within a
+session. The sub-window interface is not designed to take keyboard and
+mouse input. It is simply for rendering graphics.</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MM_clip</td>
+<td>Sets the shape of the window.</td>
+</tr>
+<tr>
+<td>MM_destroy_window</td>
+<td>Destroys a window created by MM_get_window.</td>
+</tr>
+<tr>
+<td>MM_get_window</td>
+<td>Creates an operating system window that is a sub-window of an existing session window.</td>
+</tr>
+<tr>
+<td>MM_set_geometry</td>
+<td>Sets the size and position of a session sub-window.</td>
+</tr>
+<tr>
+<td>MM_show_window</td>
+<td>Makes a window visible.</td>
+</tr>
+<tr>
+<td>MM_TWI_clear_new_window_function</td>
+<td>Clears the callback for seamless window creation.</td>
+</tr>
+<tr>
+<td>MM_TWI_set_new_window_function</td>
+<td>Adds a callback for seamless window creation.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="receiver-for-linux-event-evt-interface"><a class="toclink" href="#receiver-for-linux-event-evt-interface">Receiver for Linux Event (Evt) Interface</a></h3>
+<p>Receiver for Linux event interface allows a virtual channel to select on
+a given file descriptor in the Receiver for Linux event loop and receive
+a callback from the Receiver for Linux event loop when the given
+conditions are met.</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Evt_create</td>
+<td>Allocates an event structure that can be used to fire a callback on an event.</td>
+</tr>
+<tr>
+<td>Evt_destroy</td>
+<td>Destroys previously created event structure.</td>
+</tr>
+<tr>
+<td>Evt_remove_triggers</td>
+<td>Removes any previously added file descriptor selections on a given file descriptor.</td>
+</tr>
+<tr>
+<td>Evt_remove_triggers</td>
+<td>Removes any previously added file descriptor selections on a given file descriptor.</td>
+</tr>
+<tr>
+<td>Evt_signal</td>
+<td>Calls the function stored in the event structure.</td>
+</tr>
+<tr>
+<td>Evt_trigger_for_input</td>
+<td>Connects the callback of an event structure to be triggered on the given file descriptor satisfying the input conditions.</td>
+</tr>
+<tr>
+<td>Evt_trigger_for_output</td>
+<td>Connects the callback of an event structure to be triggered on the given file descriptor satisfying the output conditions.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="receiver-for-linux-timer-tmr-interface"><a class="toclink" href="#receiver-for-linux-timer-tmr-interface">Receiver for Linux Timer (Tmr) Interface</a></h3>
+<p>Receiver for Linux timer interface allows a virtual channel to set up a
+recurrent timer that invokes a given callback. The timer is attached to
+the event loop of the Receiver for Linux and is called from the event
+loop when the timer fires.</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tmr_create</td>
+<td>Creates a timer object and returns its handle.</td>
+</tr>
+<tr>
+<td>Tmr_destroy</td>
+<td>Destroys a timer object given a printer to its handle and sets the handle to NULL.</td>
+</tr>
+<tr>
+<td>Tmr_setEnabled</td>
+<td>Enables or disables a timer object.</td>
+</tr>
+<tr>
+<td>Tmr_setPeriod</td>
+<td>Sets the timeout period for a timer.</td>
+</tr>
+</tbody>
+</table> 
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </section>
+
+      </div>
+    </div>
+    <!--<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span class="prev"><a href="../example-programs/"><i class="fa fa-angle-left"></i> Previous</a></span>
+      
+      
+        <span class="next"><a href="../programming-reference/">Next <i class="fa fa-angle-right"></i></a></span>
+      
+    </span>
+	<div class="footer-right">
+		<ul class="social-links">
+			<li class="list-inline"><a href="https://twitter.com/citrix"><i class="fa fa-twitter"></i>@citrix</a></li>
+			<li class="list-inline"><a href="mailto:support@citrix.com"><i class="fa fa-envelope-o"></i>support@citrix.com</a></li>
+		</ul>
+		<ul class="inner-pages">
+			<li class="list-inline"><a href="http://citrix.com/about/legal">Privacy and Terms</li>
+		</ul>
+	</div>
+</div>-->
+
+  </body>
+
+</html>

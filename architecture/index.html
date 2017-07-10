@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+  <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <title>Architecture - Citrix Virtual Channel SDK for Citrix Receiver for Linux 13.5</title>
+     
+    <link rel="shortcut icon" href="
+https://www.citrix.com/etc/designs/citrix/icon-favicon.png"> 
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+    <link rel="stylesheet" href="../css/highlight.css">
+    <link rel="stylesheet" href="../css/override.css" type="text/css" />
+    <link rel="stylesheet" href="../css/font-awesome.css" type="text/css" /> 
+    <script>
+      // Current page data
+      var mkdocs_page_name = "Architecture";
+      var mkdocs_page_input_path = "architecture.md";
+      var mkdocs_page_url = "/architecture/";
+
+    </script>
+    
+    <script src="../js/jquery-2.1.1.min.js"></script>
+    <script src="../js/modernizr-2.8.3.min.js"></script>
+    <script type="text/javascript" src="../js/highlight.pack.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/custom.js"></script>  
+  </head>
+
+  <body class="wy-body-for-nav" role="document">
+
+    <div class="header-top">
+
+        <div class="header-top-left">
+          <a href="http://developer-docs.citrix.com" class="logo-position"><img height="60" src="../img/citrixlogoblack.png" target="_blank" class="logo-citrix"><span style="color:#000;font-size: 20px;position: relative;top:4px;left:20px;">Developer Documentation</span></a>
+        </div>
+        <div class="header-top-right">
+          <ul>
+
+            <form id="rtd-search-form-alt" class="wy-form" action="../search.html" method="get">
+             <ul class="header-elements">
+              <li class="list-inline support">
+                <input name="q" id="txtName" type="text" placeholder="Search SDKs" class="searchdocs">
+                <a class="fa fa-search errspan"></a>
+<!---
+              </li>
+             <li> <a href="javascript:void(0);" style="font-size: 22px;position: relative;left: -10px;top: 3px"><i class="fa fa-globe"></i></a></li>
+             </ul>
+             --->
+            </form>
+
+          </ul>
+
+        </div>
+
+    </div>
+    <div class="body">
+      <div class="wy-grid-for-nav">
+
+        
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+          <div class="wy-side-nav-search">
+            <div role="search">
+  <form id ="rtd-search-form-alt" class="wy-form" action="../search.html" method="get">
+	<i class="fa fa-search"></i>
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+          </div>
+
+          <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+            <ul class="current">
+              
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="..">Overview</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../system-requirements/">System Requirements</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../installation/">Installing the Virtual Channel SDK</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 current">
+        <a class="toctree-l1-a current" href="./">Architecture</a>
+		
+            <ul style="margin-left: 0px;padding-left:15px;border-left: 1px solid #b2b2b2;">
+            
+                <li class="toctree-l3"><a href="#architecture" style="padding:0px;position: relative;">&nbsp;Architecture</a></li>
+                
+                    <li><a class="toctree-l4" href="#virtual-channel-overview" style="padding:0px;position: relative;">Virtual Channel Overview</a></li>
+                
+                    <li><a class="toctree-l4" href="#ica-and-virtual-channel-data-packets" style="padding:0px;position: relative;">ICA and Virtual Channel Data Packets</a></li>
+                
+                    <li><a class="toctree-l4" href="#client-winstation-driver-and-virtual-driver-interaction" style="padding:0px;position: relative;">Client WinStation Driver and Virtual Driver Interaction</a></li>
+                
+                    <li><a class="toctree-l4" href="#moduleini" style="padding:0px;position: relative;">Module.ini</a></li>
+                
+                    <li><a class="toctree-l4" href="#virtual-channel-packets" style="padding:0px;position: relative;">Virtual Channel Packets</a></li>
+                
+                    <li><a class="toctree-l4" href="#flow-control" style="padding:0px;position: relative;">Flow Control</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../example-programs/">Using Example Programs</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../programming-guide/">Programming Guide</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../programming-reference/">Programming Reference</a>
+		
+    </li>
+
+			  
+            </ul>
+          </div>
+          &nbsp;
+        </nav>
+
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+           
+          <div class="wy-nav-content">
+            <div class="rst-content">
+              <!-- <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Architecture</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div> -->
+              <div role="main">
+                <div class="section">
+                <div class="file-format">
+                 <div class="leftAlign" style="float: left;visibility: hidden;">
+                  </div>
+                  <div class="rightAlign" style="float: right;">
+                      <span>Download full document:</span>
+                      <ul class="file-types">
+                        <li><a style="border: 1px solid #EE3D24;padding: 5px;font-size: 11px;color: #EE3D24;border-radius: 5px;font-weight: 700">PDF</a></li>
+                        <li><a style="border: 1px solid #2A579A;padding: 5px;font-size: 11px;color: #2A579A;border-radius: 5px;font-weight: 700">DOCX</a></li>
+                        <li><a style="border: 1px solid #495164;padding: 5px;font-size: 11px;color: #495164;border-radius: 5px;font-weight: 700">EMAIL</a></li>
+                        <li><a style="border: 1px solid #495164;padding: 5px;font-size: 11px;color: #495164;border-radius: 5px;font-weight: 700">PRINT</a></li>
+                      </ul>
+                  </div>
+                  </div>
+                   <h1 id="architecture"><a class="toclink" href="#architecture">Architecture</a></h1>
+<p>A Citrix Independent Computing Architecture (ICA) virtual channel is a
+bidirectional error-free connection for the exchange of generalized
+packet data between a server running Citrix XenApp and a client device.
+Developers can use virtual channels to add functionality to clients.
+Uses for virtual channels include:</p>
+<ul>
+<li>
+<p>Support for administrative functions</p>
+</li>
+<li>
+<p>New data streams (audio and video)</p>
+</li>
+<li>
+<p>New devices, such as scanners, card readers, and joysticks)</p>
+</li>
+</ul>
+<h2 id="virtual-channel-overview"><a class="toclink" href="#virtual-channel-overview">Virtual Channel Overview</a></h2>
+<p>An ICA virtual channel is a bidirectional error-free connection for the
+exchange of generalized packet data between a client and a server
+running Citrix XenApp or XenDesktop. Each implementation of an ICA
+virtual channel consists of two components:</p>
+<p><strong>Server-side portion on the computer running XenApp or XenDesktop</strong></p>
+<p>The virtual channel on the server side is a normal Win32 process; it can
+be either an application or a Windows NT service.</p>
+<p><strong>Client-side portion on the client device</strong></p>
+<p>The client-side virtual channel driver is a dynamically loadable module
+(.DLL) that executes in the context of the client. You must write your
+virtual driver.</p>
+<p>This figure illustrates the virtual channel client-server connection:</p>
+<p><img alt="" src="../vc-client-server-connection.png" /></p>
+<p>The WinStation driver is responsible for demultiplexing the virtual
+channel data from the ICA data stream and routing it to the correct
+processing module (in this case, the virtual driver). The WinStation
+driver is also responsible for gathering and sending virtual channel
+data to the server over the ICA connection.</p>
+<p>The following is an overview of client-server data exchange using a
+virtual channel:</p>
+<ol>
+<li>
+<p>The client connects to the server running XenApp or XenDesktop. The
+    client passes information about the virtual channels it supports to
+    the server.</p>
+</li>
+<li>
+<p>The server-side application starts, obtains a handle to the virtual
+    channel, and optionally queries for additional information about
+    the channel.</p>
+</li>
+<li>
+<p>The client-side virtual driver and server-side application pass data
+    using the following two methods:</p>
+<ul>
+<li>
+<p>If the server application has data to send to the client, the data
+is sent to the client immediately. When the client receives the
+data, the WinStation driver demultiplexes the virtual channel data
+from the ICA stream and passes it immediately to the client
+virtual driver.</p>
+</li>
+<li>
+<p>If the client virtual driver has data to send to the server, the
+data is sent by using the QueueVirtualWrite call for the newly
+written virtual drivers. The data can be sent at any point that the
+virtual driver is processing the main process control flow. Do not
+send data from a thread within a virtual driver. Note that there is
+no way to alert the server virtual channel application that the data
+was received.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>When the server virtual channel application is finished, it closes
+    the virtual channel and frees any allocated resources.</p>
+</li>
+</ol>
+<h2 id="ica-and-virtual-channel-data-packets"><a class="toclink" href="#ica-and-virtual-channel-data-packets">ICA and Virtual Channel Data Packets</a></h2>
+<p>Virtual channel data packets are encapsulated in the ICA stream between
+the client and the servers. Because ICA is a presentation-level protocol
+and runs over several different transports, the virtual channel
+application programming interface (API) enables developers to write
+their protocols without worrying about the underlying transport. The
+data packet is preserved.</p>
+<p>For example, if 100 bytes are sent to the server, the same 100 bytes are
+received by the server when the virtual channel is demultiplexed from
+the ICA data stream. The compiled code runs independently of the
+currently configured transport protocol.</p>
+<p>The ICA engine provides the following services to the virtual channel:</p>
+<p><strong>Packet encapsulation</strong></p>
+<p>ICA virtual channels are packet-based, meaning that if one side performs
+a write with a certain amount of data, the other side receives the
+entire block of data when it performs a read. This contrasts with TCP,
+for example, which is stream-based and requires a higher-level protocol
+to parse out packet boundaries. Stated another way, virtual channel
+packets are contained within the ICA stream, which is managed separately
+by system software.</p>
+<p><strong>Error correction</strong></p>
+<p>ICA provides its own reliability mechanisms even when the underlying
+transport is unreliable. This guarantees that connections are error free
+and that data is received in the order in which it is sent.</p>
+<p><strong>Flow control</strong></p>
+<p>The virtual channel API provides several types of flow control. This
+allows designers to structure their channels to handle only a specific
+amount of data at any one time. See Flow Control for more information.</p>
+<h2 id="client-winstation-driver-and-virtual-driver-interaction"><a class="toclink" href="#client-winstation-driver-and-virtual-driver-interaction">Client WinStation Driver and Virtual Driver Interaction</a></h2>
+<p>The WinStation driver calls into the virtual driver on the event
+callbacks, timer callbacks, and on the periodic call to the DriverPoll
+function. The client runtime environment is single threaded and
+nonpreemptive; therefore, the virtual driver you write must never block.
+When control flow is passed to the virtual driver, the virtual driver
+must immediately perform the required operations and return control to
+the WinStation driver.</p>
+<p>Because all transfers to the server require reserving an output buffer
+and buffers might be temporarily unavailable, the virtual driver must be
+prepared to delay sending all output until a later point.</p>
+<p>The following process occurs when a user starts the client:</p>
+<ol>
+<li>
+<p>At client load time, the client engine
+    reads the Configuration Storage in the configuration files to
+    determine the modules to configure, including how to configure the
+    virtual channel drivers.</p>
+</li>
+<li>
+<p>The client engine loads the virtual channel drivers defined in the
+    Configuration Storage in the configuration files by calling the Load
+    function, which must be exported explicitly by the virtual channel
+    driver .DLL. The Load function is defined in the static library file
+    vdapi.a, which is provided in this SDK. Every driver must link with
+    this library file. The Load function forwards the driver entry
+    points defined in the .DLL to the client engine.</p>
+</li>
+<li>
+<p>For each virtual channel, the WinStation driver calls the DriverOpen
+    function, which establishes and initializes the virtual channel. The
+    WinStation driver passes the addresses of the output buffer
+    management functions in the WinStation driver to the virtual
+    channel driver. The virtual channel driver passes the address of the
+    ICADataArrival function to the WinStation driver. The WinStation driver calls the DriverOpen function for each virtual driver when
+    the client loads, not when the virtual channel is opened by the
+    server-side application.</p>
+</li>
+<li>
+<p>When virtual channel data arrives from the server, the WinStation
+    driver calls the ICADataArrival function for that virtual driver.</p>
+</li>
+<li>
+<p>To send data, the virtual channel driver has two options:</p>
+<ul>
+<li>
+<p>To use the QueueVirtualWrite function which is simple to use and
+offers the option for immediate data transfer. This is the method
+that should be used for all new virtual drivers.</p>
+</li>
+<li>
+<p>To use the <strong>deprecated</strong> client-side helper functions (these
+addresses are obtained during initialization) to reserve an output
+buffer, fill it with data, and write the buffer.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Outgoing data must be placed in the WinStation driver’s output
+    buffers for transmission to the host. Checks for available space
+    using OutBufReserve.</p>
+</li>
+<li>
+<p>Fills in the buffer using AppendVdHeader and OutBufAppend.</p>
+</li>
+<li>
+<p>Writes the data using OutBufWrite.</p>
+</li>
+</ol>
+<p>The WinStation driver does not preserve the output buffer data between
+calls to the virtual driver, so the virtual driver must complete the
+data output process before returning control.</p>
+<h2 id="moduleini"><a class="toclink" href="#moduleini">Module.ini</a></h2>
+<p>The Receivers use settings stored in Module.ini to determine which
+virtual channels to load. Driver developers can also use Module.ini to
+store parameters for virtual channels. Module.ini changes are effective
+only before the installation. After the installation, you must modify
+the Configuration Storage in the configuration files to add or remove
+virtual channels.</p>
+<p>Use the memory INI functions to read data from Configuration Storage.</p>
+<h2 id="virtual-channel-packets"><a class="toclink" href="#virtual-channel-packets">Virtual Channel Packets</a></h2>
+<p>ICA does not define the contents of a virtual channel packet. The
+contents are specific to the particular virtual channel and are not
+interpreted or managed by the ICA data stream manager. You must develop
+your own protocol for the virtual channel data.</p>
+<p>A virtual channel packet can be any length up to the maximum size
+supported by the ICA connection. This size is independent of size
+restrictions on the lower-layer transport. These restrictions affect the
+server-side WFVirtualChannelRead and WFVirtualChannelWrite functions and
+the QueueVirtualWrite and SendData functions on the client side. The
+maximum packet size is 5000 bytes (4996 data bytes plus 4 bytes of
+packet overhead generated by the ICA datastream manager).</p>
+<p>Both the virtual driver and the server-side application can query the
+maximum packet size. See DriverOpen for an example of querying the
+maximum packet size on the client side.</p>
+<h2 id="flow-control"><a class="toclink" href="#flow-control">Flow Control</a></h2>
+<p>ICA virtual channels provide support for downstream (server to client)
+flow control, but there is currently no support for upstream flow
+control. Data received by the server is queued until used.</p>
+<p>Some transport protocols such as TCP/IP provide flow control, while
+others do not. If data flow control is needed, you might need to design
+it into your virtual channel.</p>
+<p>Choose one of three types of flow control for an ICA virtual channel:
+<strong>None</strong>, <strong>Delay</strong>, or <strong>ACK</strong>. Each virtual channel can have its own
+flow control method. The flow control method is specified by the virtual
+driver during initialization.</p>
+<h3 id="none"><a class="toclink" href="#none">None</a></h3>
+<p>ICA does not control the flow of data. It is assumed the client can
+process all data sent. You must implement any required flow control as
+part of the virtual channel protocol. This method is the most difficult
+to implement but provides the greatest flexibility. The Ping example
+does not use flow control and does not require it.</p>
+<h3 id="delay"><a class="toclink" href="#delay">Delay</a></h3>
+<p>Delay flow control is a simple method of pacing the data sent from the
+server. When the client virtual driver specifies delay flow control, it
+also provides a delay time in milliseconds. The server waits for the
+specified delay time between each packet of data it sends.</p>
+<h3 id="ack"><a class="toclink" href="#ack">ACK</a></h3>
+<p>ACK flow control provides what is referred to as a sliding window. With
+ACK flow control, the client specifies its maximum buffer size (the
+maximum amount of data it can handle at any one time). The server sends
+up to that amount of data. The client virtual driver sends an ACK ICA
+packet when it completes processing all or part of its buffer,
+indicating how much data was processed. The server can then send more
+data bytes up to the number of bytes acknowledged by the client.</p>
+<p>This ACK is not transparent—the virtual driver must explicitly construct
+the ACK packet and send it to the server. The server sends entire
+packets; if the next packet to be sent is larger than the window, the
+server blocks the send until the window is large enough to accommodate
+the entire packet.</p> 
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </section>
+
+      </div>
+    </div>
+    <!--<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span class="prev"><a href="../installation/"><i class="fa fa-angle-left"></i> Previous</a></span>
+      
+      
+        <span class="next"><a href="../example-programs/">Next <i class="fa fa-angle-right"></i></a></span>
+      
+    </span>
+	<div class="footer-right">
+		<ul class="social-links">
+			<li class="list-inline"><a href="https://twitter.com/citrix"><i class="fa fa-twitter"></i>@citrix</a></li>
+			<li class="list-inline"><a href="mailto:support@citrix.com"><i class="fa fa-envelope-o"></i>support@citrix.com</a></li>
+		</ul>
+		<ul class="inner-pages">
+			<li class="list-inline"><a href="http://citrix.com/about/legal">Privacy and Terms</li>
+		</ul>
+	</div>
+</div>-->
+
+  </body>
+
+</html>

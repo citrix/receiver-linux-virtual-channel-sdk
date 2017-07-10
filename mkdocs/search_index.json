@@ -1,0 +1,1129 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Citrix Virtual Channel SDK for Citrix Receiver for Linux 13.5\n\n\nThe Citrix Virtual Channel Software Development Kit (SDK) provides\nsupport for writing server-side applications and client-side drivers for\nadditional virtual channels using the ICA protocol. The server-side\nvirtual channel applications are on XenApp or XenDesktop servers. This\nversion of the SDK provides support for writing new virtual channels for\nReceiver for Linux. If you want to write virtual drivers for other\nclient platforms, contact Citrix.\n\n\nThe Virtual Channel SDK provides:\n\n\n\n\n\n\nThe Citrix Virtual Driver Application Programming Interface (VDAPI)\n    used with the virtual channel functions in the Citrix Server API SDK\n    (WFAPI SDK) to create new virtual channels. The virtual channel\n    support provided by VDAPI is designed to make writing your own\n    virtual channels easier.\n\n\n\n\n\n\nWorking source code for several virtual channel sample programs that\n    demonstrate programming techniques.\n\n\n\n\n\n\nThe Virtual Channel SDK requires the WFAPI SDK to write the server\n    side of the virtual channel.", 
+            "title": "Overview"
+        }, 
+        {
+            "location": "/#citrix-virtual-channel-sdk-for-citrix-receiver-for-linux-135", 
+            "text": "The Citrix Virtual Channel Software Development Kit (SDK) provides\nsupport for writing server-side applications and client-side drivers for\nadditional virtual channels using the ICA protocol. The server-side\nvirtual channel applications are on XenApp or XenDesktop servers. This\nversion of the SDK provides support for writing new virtual channels for\nReceiver for Linux. If you want to write virtual drivers for other\nclient platforms, contact Citrix.  The Virtual Channel SDK provides:    The Citrix Virtual Driver Application Programming Interface (VDAPI)\n    used with the virtual channel functions in the Citrix Server API SDK\n    (WFAPI SDK) to create new virtual channels. The virtual channel\n    support provided by VDAPI is designed to make writing your own\n    virtual channels easier.    Working source code for several virtual channel sample programs that\n    demonstrate programming techniques.    The Virtual Channel SDK requires the WFAPI SDK to write the server\n    side of the virtual channel.", 
+            "title": "Citrix Virtual Channel SDK for Citrix Receiver for Linux 13.5"
+        }, 
+        {
+            "location": "/system-requirements/", 
+            "text": "System Requirements\n\n\nYou can build the Citrix Virtual Channel SDK on 4MB of disk space. The Virtual Channel SDK components for this release were built on Debian 5. You can compile the virtual channel on a\nsimilar system.\n\n\nDevelopment Environment Requirements\n\n\n\n\n\n\nGNU Compiler Collection (GCC) compiler\n    on all platforms\n\n\n\n\n\n\nARM Compiler (cross-compiler) requires a GCC cross-compiler\n\n\n\n\n\n\nGNU Make utility\n\n\n\n\n\n\nExecution Environment Requirements\n\n\nServer requirement\n\n\nThe Linux Virtual Channel SDK is supported on Citrix Presentation Server 4.5, Citrix XenApp, versions 5.0, 6.0, 6.5, 7.5, 7.6, 7.7, 7.8, 7.9, 7.11, 7.12, and 7.13, and Citrix XenDesktop, versions 4.0, 5.0, 5.5, 5.6, 7, 7.1, 7.5, 7.6, 7.7, 7.8, 7.9, 7.11, 7.12, and 7.13.\n\n\nLinux client requirement\n\n\nCitrix Receiver for Linux 13.5\n\n\n\n\nNote\nThe Linux Virtual Channel SDK is supported for use with the client of the corresponding version number and any LCM fixes for that release.", 
+            "title": "System Requirements"
+        }, 
+        {
+            "location": "/system-requirements/#system-requirements", 
+            "text": "You can build the Citrix Virtual Channel SDK on 4MB of disk space. The Virtual Channel SDK components for this release were built on Debian 5. You can compile the virtual channel on a\nsimilar system.", 
+            "title": "System Requirements"
+        }, 
+        {
+            "location": "/system-requirements/#development-environment-requirements", 
+            "text": "GNU Compiler Collection (GCC) compiler\n    on all platforms    ARM Compiler (cross-compiler) requires a GCC cross-compiler    GNU Make utility", 
+            "title": "Development Environment Requirements"
+        }, 
+        {
+            "location": "/system-requirements/#execution-environment-requirements", 
+            "text": "", 
+            "title": "Execution Environment Requirements"
+        }, 
+        {
+            "location": "/system-requirements/#server-requirement", 
+            "text": "The Linux Virtual Channel SDK is supported on Citrix Presentation Server 4.5, Citrix XenApp, versions 5.0, 6.0, 6.5, 7.5, 7.6, 7.7, 7.8, 7.9, 7.11, 7.12, and 7.13, and Citrix XenDesktop, versions 4.0, 5.0, 5.5, 5.6, 7, 7.1, 7.5, 7.6, 7.7, 7.8, 7.9, 7.11, 7.12, and 7.13.", 
+            "title": "Server requirement"
+        }, 
+        {
+            "location": "/system-requirements/#linux-client-requirement", 
+            "text": "Citrix Receiver for Linux 13.5   Note The Linux Virtual Channel SDK is supported for use with the client of the corresponding version number and any LCM fixes for that release.", 
+            "title": "Linux client requirement"
+        }, 
+        {
+            "location": "/installation/", 
+            "text": "Installing the Virtual Channel SDK\n\n\nThe Citrix Community Web site is the home\nof the Citrix Developer Network and all technical resources and\ndiscussions involving the use of Citrix SDKs. You can find access to\nSDKs, sample code and scripts, extensions and plug-ins, and SDK\ndocumentation. Also included are the Citrix Developer Network forums,\nwhere technical discussions take place around each of the Citrix SDKs.\n\n\n\n\n\n\nDownload the Virtual Channel SDK, vcsdk.tar.gz, from\n    http://www.citrix.com/downloads/citrix-receiver/virtual-channel-sdks/virtual-channel-sdk.html\n    to your user device.\n\n\n\n\n\n\nOpen a terminal window.\n\n\n\n\n\n\nRun the installation file by typing \n\n\n\n\n\n\ntar xvfz vcsdk.tar.gz\n\n\n\n\n\nUninstalling the Virtual Channel SDK\n\n\nRemove the VCSDK directory to uninstall the Virtual Channel SDK by\ntyping, for example,\n\n\nrm -rf VCSDK", 
+            "title": "Installing the Virtual Channel SDK"
+        }, 
+        {
+            "location": "/installation/#installing-the-virtual-channel-sdk", 
+            "text": "The Citrix Community Web site is the home\nof the Citrix Developer Network and all technical resources and\ndiscussions involving the use of Citrix SDKs. You can find access to\nSDKs, sample code and scripts, extensions and plug-ins, and SDK\ndocumentation. Also included are the Citrix Developer Network forums,\nwhere technical discussions take place around each of the Citrix SDKs.    Download the Virtual Channel SDK, vcsdk.tar.gz, from\n    http://www.citrix.com/downloads/citrix-receiver/virtual-channel-sdks/virtual-channel-sdk.html\n    to your user device.    Open a terminal window.    Run the installation file by typing     tar xvfz vcsdk.tar.gz", 
+            "title": "Installing the Virtual Channel SDK"
+        }, 
+        {
+            "location": "/installation/#uninstalling-the-virtual-channel-sdk", 
+            "text": "Remove the VCSDK directory to uninstall the Virtual Channel SDK by\ntyping, for example,  rm -rf VCSDK", 
+            "title": "Uninstalling the Virtual Channel SDK"
+        }, 
+        {
+            "location": "/architecture/", 
+            "text": "Architecture\n\n\nA Citrix Independent Computing Architecture (ICA) virtual channel is a\nbidirectional error-free connection for the exchange of generalized\npacket data between a server running Citrix XenApp and a client device.\nDevelopers can use virtual channels to add functionality to clients.\nUses for virtual channels include:\n\n\n\n\n\n\nSupport for administrative functions\n\n\n\n\n\n\nNew data streams (audio and video)\n\n\n\n\n\n\nNew devices, such as scanners, card readers, and joysticks)\n\n\n\n\n\n\nVirtual Channel Overview\n\n\nAn ICA virtual channel is a bidirectional error-free connection for the\nexchange of generalized packet data between a client and a server\nrunning Citrix XenApp or XenDesktop. Each implementation of an ICA\nvirtual channel consists of two components:\n\n\nServer-side portion on the computer running XenApp or XenDesktop\n\n\nThe virtual channel on the server side is a normal Win32 process; it can\nbe either an application or a Windows NT service.\n\n\nClient-side portion on the client device\n\n\nThe client-side virtual channel driver is a dynamically loadable module\n(.DLL) that executes in the context of the client. You must write your\nvirtual driver.\n\n\nThis figure illustrates the virtual channel client-server connection:\n\n\n\n\nThe WinStation driver is responsible for demultiplexing the virtual\nchannel data from the ICA data stream and routing it to the correct\nprocessing module (in this case, the virtual driver). The WinStation\ndriver is also responsible for gathering and sending virtual channel\ndata to the server over the ICA connection.\n\n\nThe following is an overview of client-server data exchange using a\nvirtual channel:\n\n\n\n\n\n\nThe client connects to the server running XenApp or XenDesktop. The\n    client passes information about the virtual channels it supports to\n    the server.\n\n\n\n\n\n\nThe server-side application starts, obtains a handle to the virtual\n    channel, and optionally queries for additional information about\n    the channel.\n\n\n\n\n\n\nThe client-side virtual driver and server-side application pass data\n    using the following two methods:\n\n\n\n\n\n\nIf the server application has data to send to the client, the data\nis sent to the client immediately. When the client receives the\ndata, the WinStation driver demultiplexes the virtual channel data\nfrom the ICA stream and passes it immediately to the client\nvirtual driver.\n\n\n\n\n\n\nIf the client virtual driver has data to send to the server, the\ndata is sent by using the QueueVirtualWrite call for the newly\nwritten virtual drivers. The data can be sent at any point that the\nvirtual driver is processing the main process control flow. Do not\nsend data from a thread within a virtual driver. Note that there is\nno way to alert the server virtual channel application that the data\nwas received.\n\n\n\n\n\n\n\n\n\n\nWhen the server virtual channel application is finished, it closes\n    the virtual channel and frees any allocated resources.\n\n\n\n\n\n\nICA and Virtual Channel Data Packets\n\n\nVirtual channel data packets are encapsulated in the ICA stream between\nthe client and the servers. Because ICA is a presentation-level protocol\nand runs over several different transports, the virtual channel\napplication programming interface (API) enables developers to write\ntheir protocols without worrying about the underlying transport. The\ndata packet is preserved.\n\n\nFor example, if 100 bytes are sent to the server, the same 100 bytes are\nreceived by the server when the virtual channel is demultiplexed from\nthe ICA data stream. The compiled code runs independently of the\ncurrently configured transport protocol.\n\n\nThe ICA engine provides the following services to the virtual channel:\n\n\nPacket encapsulation\n\n\nICA virtual channels are packet-based, meaning that if one side performs\na write with a certain amount of data, the other side receives the\nentire block of data when it performs a read. This contrasts with TCP,\nfor example, which is stream-based and requires a higher-level protocol\nto parse out packet boundaries. Stated another way, virtual channel\npackets are contained within the ICA stream, which is managed separately\nby system software.\n\n\nError correction\n\n\nICA provides its own reliability mechanisms even when the underlying\ntransport is unreliable. This guarantees that connections are error free\nand that data is received in the order in which it is sent.\n\n\nFlow control\n\n\nThe virtual channel API provides several types of flow control. This\nallows designers to structure their channels to handle only a specific\namount of data at any one time. See Flow Control for more information.\n\n\nClient WinStation Driver and Virtual Driver Interaction\n\n\nThe WinStation driver calls into the virtual driver on the event\ncallbacks, timer callbacks, and on the periodic call to the DriverPoll\nfunction. The client runtime environment is single threaded and\nnonpreemptive; therefore, the virtual driver you write must never block.\nWhen control flow is passed to the virtual driver, the virtual driver\nmust immediately perform the required operations and return control to\nthe WinStation driver.\n\n\nBecause all transfers to the server require reserving an output buffer\nand buffers might be temporarily unavailable, the virtual driver must be\nprepared to delay sending all output until a later point.\n\n\nThe following process occurs when a user starts the client:\n\n\n\n\n\n\nAt client load time, the client engine\n    reads the Configuration Storage in the configuration files to\n    determine the modules to configure, including how to configure the\n    virtual channel drivers.\n\n\n\n\n\n\nThe client engine loads the virtual channel drivers defined in the\n    Configuration Storage in the configuration files by calling the Load\n    function, which must be exported explicitly by the virtual channel\n    driver .DLL. The Load function is defined in the static library file\n    vdapi.a, which is provided in this SDK. Every driver must link with\n    this library file. The Load function forwards the driver entry\n    points defined in the .DLL to the client engine.\n\n\n\n\n\n\nFor each virtual channel, the WinStation driver calls the DriverOpen\n    function, which establishes and initializes the virtual channel. The\n    WinStation driver passes the addresses of the output buffer\n    management functions in the WinStation driver to the virtual\n    channel driver. The virtual channel driver passes the address of the\n    ICADataArrival function to the WinStation driver. The WinStation driver calls the DriverOpen function for each virtual driver when\n    the client loads, not when the virtual channel is opened by the\n    server-side application.\n\n\n\n\n\n\nWhen virtual channel data arrives from the server, the WinStation\n    driver calls the ICADataArrival function for that virtual driver.\n\n\n\n\n\n\nTo send data, the virtual channel driver has two options:\n\n\n\n\n\n\nTo use the QueueVirtualWrite function which is simple to use and\noffers the option for immediate data transfer. This is the method\nthat should be used for all new virtual drivers.\n\n\n\n\n\n\nTo use the \ndeprecated\n client-side helper functions (these\naddresses are obtained during initialization) to reserve an output\nbuffer, fill it with data, and write the buffer.\n\n\n\n\n\n\n\n\n\n\nOutgoing data must be placed in the WinStation driver\u2019s output\n    buffers for transmission to the host. Checks for available space\n    using OutBufReserve.\n\n\n\n\n\n\nFills in the buffer using AppendVdHeader and OutBufAppend.\n\n\n\n\n\n\nWrites the data using OutBufWrite.\n\n\n\n\n\n\nThe WinStation driver does not preserve the output buffer data between\ncalls to the virtual driver, so the virtual driver must complete the\ndata output process before returning control.\n\n\nModule.ini\n\n\nThe Receivers use settings stored in Module.ini to determine which\nvirtual channels to load. Driver developers can also use Module.ini to\nstore parameters for virtual channels. Module.ini changes are effective\nonly before the installation. After the installation, you must modify\nthe Configuration Storage in the configuration files to add or remove\nvirtual channels.\n\n\nUse the memory INI functions to read data from Configuration Storage.\n\n\nVirtual Channel Packets\n\n\nICA does not define the contents of a virtual channel packet. The\ncontents are specific to the particular virtual channel and are not\ninterpreted or managed by the ICA data stream manager. You must develop\nyour own protocol for the virtual channel data.\n\n\nA virtual channel packet can be any length up to the maximum size\nsupported by the ICA connection. This size is independent of size\nrestrictions on the lower-layer transport. These restrictions affect the\nserver-side WFVirtualChannelRead and WFVirtualChannelWrite functions and\nthe QueueVirtualWrite and SendData functions on the client side. The\nmaximum packet size is 5000 bytes (4996 data bytes plus 4 bytes of\npacket overhead generated by the ICA datastream manager).\n\n\nBoth the virtual driver and the server-side application can query the\nmaximum packet size. See DriverOpen for an example of querying the\nmaximum packet size on the client side.\n\n\nFlow Control\n\n\nICA virtual channels provide support for downstream (server to client)\nflow control, but there is currently no support for upstream flow\ncontrol. Data received by the server is queued until used.\n\n\nSome transport protocols such as TCP/IP provide flow control, while\nothers do not. If data flow control is needed, you might need to design\nit into your virtual channel.\n\n\nChoose one of three types of flow control for an ICA virtual channel:\n\nNone\n, \nDelay\n, or \nACK\n. Each virtual channel can have its own\nflow control method. The flow control method is specified by the virtual\ndriver during initialization.\n\n\nNone\n\n\nICA does not control the flow of data. It is assumed the client can\nprocess all data sent. You must implement any required flow control as\npart of the virtual channel protocol. This method is the most difficult\nto implement but provides the greatest flexibility. The Ping example\ndoes not use flow control and does not require it.\n\n\nDelay\n\n\nDelay flow control is a simple method of pacing the data sent from the\nserver. When the client virtual driver specifies delay flow control, it\nalso provides a delay time in milliseconds. The server waits for the\nspecified delay time between each packet of data it sends.\n\n\nACK\n\n\nACK flow control provides what is referred to as a sliding window. With\nACK flow control, the client specifies its maximum buffer size (the\nmaximum amount of data it can handle at any one time). The server sends\nup to that amount of data. The client virtual driver sends an ACK ICA\npacket when it completes processing all or part of its buffer,\nindicating how much data was processed. The server can then send more\ndata bytes up to the number of bytes acknowledged by the client.\n\n\nThis ACK is not transparent\u2014the virtual driver must explicitly construct\nthe ACK packet and send it to the server. The server sends entire\npackets; if the next packet to be sent is larger than the window, the\nserver blocks the send until the window is large enough to accommodate\nthe entire packet.", 
+            "title": "Architecture"
+        }, 
+        {
+            "location": "/architecture/#architecture", 
+            "text": "A Citrix Independent Computing Architecture (ICA) virtual channel is a\nbidirectional error-free connection for the exchange of generalized\npacket data between a server running Citrix XenApp and a client device.\nDevelopers can use virtual channels to add functionality to clients.\nUses for virtual channels include:    Support for administrative functions    New data streams (audio and video)    New devices, such as scanners, card readers, and joysticks)", 
+            "title": "Architecture"
+        }, 
+        {
+            "location": "/architecture/#virtual-channel-overview", 
+            "text": "An ICA virtual channel is a bidirectional error-free connection for the\nexchange of generalized packet data between a client and a server\nrunning Citrix XenApp or XenDesktop. Each implementation of an ICA\nvirtual channel consists of two components:  Server-side portion on the computer running XenApp or XenDesktop  The virtual channel on the server side is a normal Win32 process; it can\nbe either an application or a Windows NT service.  Client-side portion on the client device  The client-side virtual channel driver is a dynamically loadable module\n(.DLL) that executes in the context of the client. You must write your\nvirtual driver.  This figure illustrates the virtual channel client-server connection:   The WinStation driver is responsible for demultiplexing the virtual\nchannel data from the ICA data stream and routing it to the correct\nprocessing module (in this case, the virtual driver). The WinStation\ndriver is also responsible for gathering and sending virtual channel\ndata to the server over the ICA connection.  The following is an overview of client-server data exchange using a\nvirtual channel:    The client connects to the server running XenApp or XenDesktop. The\n    client passes information about the virtual channels it supports to\n    the server.    The server-side application starts, obtains a handle to the virtual\n    channel, and optionally queries for additional information about\n    the channel.    The client-side virtual driver and server-side application pass data\n    using the following two methods:    If the server application has data to send to the client, the data\nis sent to the client immediately. When the client receives the\ndata, the WinStation driver demultiplexes the virtual channel data\nfrom the ICA stream and passes it immediately to the client\nvirtual driver.    If the client virtual driver has data to send to the server, the\ndata is sent by using the QueueVirtualWrite call for the newly\nwritten virtual drivers. The data can be sent at any point that the\nvirtual driver is processing the main process control flow. Do not\nsend data from a thread within a virtual driver. Note that there is\nno way to alert the server virtual channel application that the data\nwas received.      When the server virtual channel application is finished, it closes\n    the virtual channel and frees any allocated resources.", 
+            "title": "Virtual Channel Overview"
+        }, 
+        {
+            "location": "/architecture/#ica-and-virtual-channel-data-packets", 
+            "text": "Virtual channel data packets are encapsulated in the ICA stream between\nthe client and the servers. Because ICA is a presentation-level protocol\nand runs over several different transports, the virtual channel\napplication programming interface (API) enables developers to write\ntheir protocols without worrying about the underlying transport. The\ndata packet is preserved.  For example, if 100 bytes are sent to the server, the same 100 bytes are\nreceived by the server when the virtual channel is demultiplexed from\nthe ICA data stream. The compiled code runs independently of the\ncurrently configured transport protocol.  The ICA engine provides the following services to the virtual channel:  Packet encapsulation  ICA virtual channels are packet-based, meaning that if one side performs\na write with a certain amount of data, the other side receives the\nentire block of data when it performs a read. This contrasts with TCP,\nfor example, which is stream-based and requires a higher-level protocol\nto parse out packet boundaries. Stated another way, virtual channel\npackets are contained within the ICA stream, which is managed separately\nby system software.  Error correction  ICA provides its own reliability mechanisms even when the underlying\ntransport is unreliable. This guarantees that connections are error free\nand that data is received in the order in which it is sent.  Flow control  The virtual channel API provides several types of flow control. This\nallows designers to structure their channels to handle only a specific\namount of data at any one time. See Flow Control for more information.", 
+            "title": "ICA and Virtual Channel Data Packets"
+        }, 
+        {
+            "location": "/architecture/#client-winstation-driver-and-virtual-driver-interaction", 
+            "text": "The WinStation driver calls into the virtual driver on the event\ncallbacks, timer callbacks, and on the periodic call to the DriverPoll\nfunction. The client runtime environment is single threaded and\nnonpreemptive; therefore, the virtual driver you write must never block.\nWhen control flow is passed to the virtual driver, the virtual driver\nmust immediately perform the required operations and return control to\nthe WinStation driver.  Because all transfers to the server require reserving an output buffer\nand buffers might be temporarily unavailable, the virtual driver must be\nprepared to delay sending all output until a later point.  The following process occurs when a user starts the client:    At client load time, the client engine\n    reads the Configuration Storage in the configuration files to\n    determine the modules to configure, including how to configure the\n    virtual channel drivers.    The client engine loads the virtual channel drivers defined in the\n    Configuration Storage in the configuration files by calling the Load\n    function, which must be exported explicitly by the virtual channel\n    driver .DLL. The Load function is defined in the static library file\n    vdapi.a, which is provided in this SDK. Every driver must link with\n    this library file. The Load function forwards the driver entry\n    points defined in the .DLL to the client engine.    For each virtual channel, the WinStation driver calls the DriverOpen\n    function, which establishes and initializes the virtual channel. The\n    WinStation driver passes the addresses of the output buffer\n    management functions in the WinStation driver to the virtual\n    channel driver. The virtual channel driver passes the address of the\n    ICADataArrival function to the WinStation driver. The WinStation driver calls the DriverOpen function for each virtual driver when\n    the client loads, not when the virtual channel is opened by the\n    server-side application.    When virtual channel data arrives from the server, the WinStation\n    driver calls the ICADataArrival function for that virtual driver.    To send data, the virtual channel driver has two options:    To use the QueueVirtualWrite function which is simple to use and\noffers the option for immediate data transfer. This is the method\nthat should be used for all new virtual drivers.    To use the  deprecated  client-side helper functions (these\naddresses are obtained during initialization) to reserve an output\nbuffer, fill it with data, and write the buffer.      Outgoing data must be placed in the WinStation driver\u2019s output\n    buffers for transmission to the host. Checks for available space\n    using OutBufReserve.    Fills in the buffer using AppendVdHeader and OutBufAppend.    Writes the data using OutBufWrite.    The WinStation driver does not preserve the output buffer data between\ncalls to the virtual driver, so the virtual driver must complete the\ndata output process before returning control.", 
+            "title": "Client WinStation Driver and Virtual Driver Interaction"
+        }, 
+        {
+            "location": "/architecture/#moduleini", 
+            "text": "The Receivers use settings stored in Module.ini to determine which\nvirtual channels to load. Driver developers can also use Module.ini to\nstore parameters for virtual channels. Module.ini changes are effective\nonly before the installation. After the installation, you must modify\nthe Configuration Storage in the configuration files to add or remove\nvirtual channels.  Use the memory INI functions to read data from Configuration Storage.", 
+            "title": "Module.ini"
+        }, 
+        {
+            "location": "/architecture/#virtual-channel-packets", 
+            "text": "ICA does not define the contents of a virtual channel packet. The\ncontents are specific to the particular virtual channel and are not\ninterpreted or managed by the ICA data stream manager. You must develop\nyour own protocol for the virtual channel data.  A virtual channel packet can be any length up to the maximum size\nsupported by the ICA connection. This size is independent of size\nrestrictions on the lower-layer transport. These restrictions affect the\nserver-side WFVirtualChannelRead and WFVirtualChannelWrite functions and\nthe QueueVirtualWrite and SendData functions on the client side. The\nmaximum packet size is 5000 bytes (4996 data bytes plus 4 bytes of\npacket overhead generated by the ICA datastream manager).  Both the virtual driver and the server-side application can query the\nmaximum packet size. See DriverOpen for an example of querying the\nmaximum packet size on the client side.", 
+            "title": "Virtual Channel Packets"
+        }, 
+        {
+            "location": "/architecture/#flow-control", 
+            "text": "ICA virtual channels provide support for downstream (server to client)\nflow control, but there is currently no support for upstream flow\ncontrol. Data received by the server is queued until used.  Some transport protocols such as TCP/IP provide flow control, while\nothers do not. If data flow control is needed, you might need to design\nit into your virtual channel.  Choose one of three types of flow control for an ICA virtual channel: None ,  Delay , or  ACK . Each virtual channel can have its own\nflow control method. The flow control method is specified by the virtual\ndriver during initialization.", 
+            "title": "Flow Control"
+        }, 
+        {
+            "location": "/architecture/#none", 
+            "text": "ICA does not control the flow of data. It is assumed the client can\nprocess all data sent. You must implement any required flow control as\npart of the virtual channel protocol. This method is the most difficult\nto implement but provides the greatest flexibility. The Ping example\ndoes not use flow control and does not require it.", 
+            "title": "None"
+        }, 
+        {
+            "location": "/architecture/#delay", 
+            "text": "Delay flow control is a simple method of pacing the data sent from the\nserver. When the client virtual driver specifies delay flow control, it\nalso provides a delay time in milliseconds. The server waits for the\nspecified delay time between each packet of data it sends.", 
+            "title": "Delay"
+        }, 
+        {
+            "location": "/architecture/#ack", 
+            "text": "ACK flow control provides what is referred to as a sliding window. With\nACK flow control, the client specifies its maximum buffer size (the\nmaximum amount of data it can handle at any one time). The server sends\nup to that amount of data. The client virtual driver sends an ACK ICA\npacket when it completes processing all or part of its buffer,\nindicating how much data was processed. The server can then send more\ndata bytes up to the number of bytes acknowledged by the client.  This ACK is not transparent\u2014the virtual driver must explicitly construct\nthe ACK packet and send it to the server. The server sends entire\npackets; if the next packet to be sent is larger than the window, the\nserver blocks the send until the window is large enough to accommodate\nthe entire packet.", 
+            "title": "ACK"
+        }, 
+        {
+            "location": "/example-programs/", 
+            "text": "Using Example Programs\n\n\nThe example programs included with the Virtual Channel SDK are\nbuildable, working virtual channels. Use these examples to:\n\n\n\n\n\n\nVerify your Virtual Channel SDK installation is correct by building\n    a known working example program.\n\n\n\n\n\n\nProvide working examples of code that can be modified to suit\n    your requirements.\n\n\n\n\n\n\nExplore the features and functionality provided in the Virtual\n    Channel SDK.\n\n\n\n\n\n\nEach of these example programs comprises a client virtual driver and a\nserver application. The server-side application is run from the command\nline within an ICA session. A single virtual channel comprises an\napplication pair.\n\n\nThe example programs included with the Virtual Channel SDK are:\n\n\nPing\n: Records the round-trip delay time for a test packet sent over\na virtual channel.\n\n\nMix\n: Demonstrates a mechanism to call functions (for example, to get\nthe time of day) on a remote client.\n\n\nOver\n: Simple asynchronous application that demonstrates how to code\nan application where the server must receive a response from the client\nasynchronously, and where the type of packet being sent to the client is\ndifferent from the type received.\n\n\nOXS\n: Demonstrates sub-window or overlay buffers, events, and timers.\n\n\nEach example includes a description of the program, packet format, and\nother necessary information.\n\n\nPing\n\n\nPing is a simple program that records the round-trip delay time for a\ntest packet sent over a virtual channel. The server sends a packet to\nthe client and the client responds with a packet containing the time it\nreceived the original packet from the server. This sequence is repeated\na specified number of times, and then the program displays the\nround-trip time for each ping and the average round-trip delay time.\n\n\nFor this example, there is no significant difference between a BEGIN\npacket and an END packet. The two types of packets are provided as an\nexample for writing your own virtual channel protocols.\n\n\nThis program demonstrates:\n\n\n\n\n\n\nHow to transfer data synchronously. The sequence of events is:\n    {SrvWrite, ClntRead, ClntWrite, SrvRead} {SrvWrite, ClntRead} {...}.\n    The server waits for the client to reply before sending the\n    next packet.\n\n\n\n\n\n\nHow to read parameter data (in this case, the number of times to\n    send packets to the client) from the Module.ini files.\n\n\n\n\n\n\nPacket Format\n\n\nThe following packet is exchanged between the client and the server.\n\n\ntypedef struct PING {\n    USHORT      uSign;          // Signature\n    USHORT      uType;          // Type, BEGIN or END, from server\n    USHORT      uLen;           // Packet length from server\n    USHORT      uCounter;       // Sequencer\n    ULONG       ulServerMS;     // Server millisecond clock\n    ULONG       ulClientMS;     // Client millisecond clock\n} PING, *PPING;\n\n\n\n\n\nMix\n\n\nMix demonstrates a mechanism that can be used to call functions on a\nremote client (for example to get the time of day). This program\ndemonstrates an extensible scheme for making function calls from the\nserver to the client that allows the server to specify when it expects a\nresponse from the client and when it does not. This method can increase\nperformance, because the server does not have to constantly wait for a\nreply from the client.\n\n\nThe server calls a series of simple functions:\n\n\n\n\n\n\nAddNo\n: Add two numbers and return the sum as the return value.\n\n\n\n\n\n\nDispStr\n: Write a string to the log file. There is no return\n    value (write-only function).\n\n\n\n\n\n\nGettime\n: Read the client time and return it as the return value.\n\n\n\n\n\n\nThe actual implementation of these functions is on the client side. The\nserver conditionally waits for the response from the client, depending\non the function being executed. For example, the server waits for the\nresult of the AddNo or Gettime function, but not the write-only function\nDispStr, which returns no result.\n\n\nPacket Format\n\n\ntypedef struct MIXHEAD {\n    USHORT      uType           // Packet type\n    USHORT      uFunc;          // Index of Function\n    ULONG       uLen;           // Length of data\n    USHORT      fRetReq;        // True if return value required\n    ULONG       dwRetVal;       // Return Value from client\n    USHORT      dwLen1;         // length of data for \\#1 LpVoid\n    USHORT      dwLen2;         // length of data for \\#2 LpVoid\n} MIXHEAD, *PMIXHEAD;\n\n\n\n\n\nThe data consists of the above structure followed by the arguments to\nthe function being called. uLen is the total length of the data being\nsent, including the arguments. DwLen1 is the length of the data pointed\nto by a pointer argument.\n\n\nSequence of Events\n\n\nThe Mix program demonstrates the following sequence of events. See the\ngraphic on the next page.\n\n\nThis figure illustrates the sequence of events that occurs when you use\nthe Mix program, starting at the top.\n\n\n\n\nOver\n\n\nOver is a simple asynchronous application. It demonstrates how to code\nan application in which the server must receive a response from the\nclient asynchronously, and the type of packet being sent to the client\nis different from the type received.\n\n\nWhen the Over program begins, it:\n\n\n\n\n\n\nSpawns a thread that waits for a response from the client.\n\n\n\n\n\n\nBegins sending data packets with sequence numbers to the client.\n\n\n\n\n\n\n(After sending the last packet of data) sends a packet with a\n    sequence number of NO_MORE_DATA, and then closes the connection.\n\n\n\n\n\n\nThe client receives packets and inspects the sequence number. For every\nsequence number divisible by 10, the client increases the sequence\nnumber by 7 and sends a response to the server. These numbers are chosen\narbitrarily to demonstrate that the client can asynchronously send data\nto the server at any time.\n\n\nThe packet type used to send data from the server to the client is\ndifferent from the packet type used to receive data from the client.\n\n\nPacket Format - From Server to Client\n\n\ntypedef struct OVER {\n    USHORT      uSign;          // Signature\n    USHORT      uType;          // Type, BEGIN or END, from server\n    USHORT      uLen;           // Packet length from server\n    USHORT      uCounter;       // Sequencer\n    ULONG       ulServerMS;     // Server millisecond clock\n} OVER, *POVER;\n\n\n\n\n\nPacket Format - From Client to Server\n\n\ntypedef struct DRVRESP {\n    USHORT      uType;          // Type OVERFLOW_JUMP from client\n    USHORT      uLen;           // Packet length from client\n    USHORT      uCounter;       // seqUencer\n} DRVRESP, * PDRVRESP;\n\n\n\n\n\nSequence of Events\n\n\nThis figure illustrates the sequence of events that occurs when you\nuse the Over program, starting at the top.\n\n\n\n\nOXS\n\n\nOXS is the Noughts and Crosses game. The OXS virtual channel implements\nremote drawing of this game. The purpose of this is to demonstrate the\nfollowing interfaces, which are specific to the Receiver for Linux:\n\n\n\n\n\n\nSub-windows or overlay buffers\n\n\n\n\n\n\nEvents (the selection of File Descriptor)\n\n\n\n\n\n\nTimers\n\n\n\n\n\n\nThe client component of the OXS virtual driver implements the drawing of\nthe game. All processing of the game play is performed on the server. To\nachieve client-side drawing, a sub-window (child) of the session window\nis obtained using the sub-window interface. The sub-window is placed\nover the corresponding area of the game window, and every movement to\nthe server-side game window is mimicked by the sub-window. This creates\nthe impression of a single application. Mouse clicks and interaction\nwith the server-side OXS application are converted into Play Move,\nWinning Line, Move Window, and Close Window commands. These are received\nby the virtual driver and translated into corresponding actions and X\ndrawing commands.\n\n\nThis sub-window technology is most useful for solutions such as local\nvideo decoding. The sub-window interface is not designed to take\nkeyboard and mouse input. It is intended to render graphics.\n\n\nIn addition, the OXS virtual driver uses the events (Evt) interface.\nThis monitors the X server file descriptor for Expose events, which\nallows a callback to redraw the game area for every event.\n\n\nThe OXS virtual driver also uses the timer (Tmr) interface. This works\naround a race condition between the OXS and Seamless virtual channels.\nAlthough the sub-window used for drawing mimics the movements of the\nserver side window, if Seamless is used a race condition occurs between\nthe movement of the Seamless server-side window and the sub-window. The\ntimer is used to delay the sub-window position update until after the\nSeamless window move is complete.\n\n\nNote: The sample application below is a basic one and does not use the\nMM_clip api. In this case, the overlaid session sub-window is never\nclipped and is always an on top square.\n\n\nClipping the session sub-window properly can give the appearance that it\nis in the remote sessions window stack, even though it is actually\noverlaid on top of the session. This is not something this example does.\n\n\nBuilding Examples\n\n\nBuilding a Server-side Example using Nmake\n\n\nExamples of the latest server-side executables have been provided for\ntesting. Please download the latest Windows Virtual Channel SDK in order\nto develop the server-side component.\n\n\nBuilding a Client-side Example using Linux\n\n\n\n\n\n\nTo start a build, open a terminal.\n\n\n\n\n\n\nChange src/examples/vc/client/unix/MakeCOMMONVD to match the\n    target platform.\n\n\nNote:\n Linux does not require pingwire.c. Also, for Linux armel a\ncross compiler can be used. This is detected by the presence of the\nenvironment variable, CROSS_COMPILER_PREFIX\n\n\n\n\n\n\nSet the environment variable HOST_PREFIX to the target:\n\n\n\n\n\n\nlinux for Linux x64\n\n\n\n\n\n\nlinux for Linux x86\n\n\n\n\n\n\nlinuxarm for Linux armel\n\n\n\n\n\n\nlinuxarmhf for Linux armhf\n\n\n\n\n\n\n\n\n\n\nFor example, to build \nvdping.dll\n, type: \ncd src/examples/vc/client/vdping/unix\n and then type \nmake\n. The production (retail) and debug builds of vdping.dll are built in the\nlib subdirectory. Pre-built production versions are provided in the\nseparate directories, \nsrc/examples/vc/client/vdping/linux/obj/retail\n and\n\nsrc/examples/vc/client/vdping/linuxarm/obj/retail\n.\n\n\n\n\n\n\nPerform the same process to build all other example virtual drivers.\n\n\n\n\n\n\nAlternatively to build all example Virtual Drivers, type \ncd\nsrc/examples/vc/client\n and then run the \nbuild\n script.\n\n\nConfiguring the Virtual Driver\n\n\n\n\n\n\nCopy the appropriate virtual driver for the platform to the client\n    installation directory. For example, copy the Linux virtual driver,\n    vdping.dll, in src/examples/vc/client/vdping/unix/lib/linux/retail\n    for a locally built version, or in\n    src/examples/vc/client/vdping/linux/obj/retail for a pre-built\n    version to the client installation directory as VDPING.DLL.\n\n\n\n\n\n\nIn the client installation directory, modify the file\n    config/module.ini and make the following changes: \n\n\n\n\n\n\nIn the [ICA 3.0] section append \u201cPing\u201d to the VirtualDriver list.\n\n\n\n\n\n\nIn the [ICA 3.0] section add \u201cPing=On\u201d.\n\n\n\n\n\n\n\n\n\n\nAdd a new section [Ping] with the entry \u201cDriverName=VDPING.DLL\u201d.\n\n\n\n\n\n\nCopy ctxping.exe.sample from src/examples/vc/server/ctxping to the\n    Citrix server and rename it to ctxping.exe.\n\n\n\n\n\n\nRun ctxping at the command prompt within a client session to\n    implement the Ping virtual channel.\n\n\n\n\n\n\nRunning an Example Virtual Channel\n\n\nExamples of the latest server-side executables have been provided for\ntesting.\n\n\n\n\n\n\nOn a client configured with the client-side example, connect to a\n    server running XenApp or XenDesktop with the associated server-side\n    example (located at base/examples/vc/server in this SDK).\n\n\n\n\n\n\nWithin the ICA session, run the server-side executable.\u2028\n\n\n\n\n\n\nThe server-side example queries the client-side virtual driver, and then\ndisplays the driver information. Use the \n-d\n parameter to display\ndetailed information.\u2028For Ping only: CTXPING sends PingCount separate\npings. PingCount has a default value of three, but can be set in the\n[Ping] section of the Module.ini file. Each ping consists of a BEGIN\npacket and an END packet.\n\n\nDebugging a Linux Virtual Driver\n\n\nUse the TRACE feature to log events on the client. To enable the TRACE\nstatements, you must build the debug version of the virtual driver and\ncreate a debug.ini file in the current directory where the client is\nrun.\n\n\nWhen the debug module is installed on the client, the TRACE statements\nwrite the debug information to a file, ncs.log.\nprocess id\n. The\nfollowing debug.ini contents create tracing for the example virtual\nchannels:\n\n\n\\[ncs\\]\ntraceFlags = +LOG_PRINTF\ntraceClasses = +TC_VD\ntraceFeatures = +TT_ALL\ntraceFile = ncs.log.\\$\\$\n\n\n\n\n\nYou can refine tracing by editing the traceFeatures line. For example,\n\"traceFeatures = +TT_API1 | TT_API2\" will only print trace statements\nof type TT_API1 and TT_API2.\n\n\nThe class flag for virtual channels is TC_VD. For the complete list of\nclass and event flags, see logflags.h (located in src/inc/).\n\n\n\n\n\n\nCompile the debug version of the virtual driver for the\n    client platform.\n\n\n\n\n\n\nIf it is running, close the client on the client device.\n\n\n\n\n\n\nCopy the debug version of the virtual driver to the client\n    installation directory. For example, copy vdping.dll to the client\n    installation directory as VDPING.DLL.\n\n\n\n\n\n\nEnsure that config.ini and module.ini in the client installation\n    directory are updated appropriately to load the new virtual driver,\n    following the instructions for loading a production version of the\n    virtual driver.\n\n\n\n\n\n\nCreate the debug.ini file in the current working directory.\n\n\n\n\n\n\nLaunch Receiver to implement the new virtual channel.", 
+            "title": "Using Example Programs"
+        }, 
+        {
+            "location": "/example-programs/#using-example-programs", 
+            "text": "The example programs included with the Virtual Channel SDK are\nbuildable, working virtual channels. Use these examples to:    Verify your Virtual Channel SDK installation is correct by building\n    a known working example program.    Provide working examples of code that can be modified to suit\n    your requirements.    Explore the features and functionality provided in the Virtual\n    Channel SDK.    Each of these example programs comprises a client virtual driver and a\nserver application. The server-side application is run from the command\nline within an ICA session. A single virtual channel comprises an\napplication pair.  The example programs included with the Virtual Channel SDK are:  Ping : Records the round-trip delay time for a test packet sent over\na virtual channel.  Mix : Demonstrates a mechanism to call functions (for example, to get\nthe time of day) on a remote client.  Over : Simple asynchronous application that demonstrates how to code\nan application where the server must receive a response from the client\nasynchronously, and where the type of packet being sent to the client is\ndifferent from the type received.  OXS : Demonstrates sub-window or overlay buffers, events, and timers.  Each example includes a description of the program, packet format, and\nother necessary information.", 
+            "title": "Using Example Programs"
+        }, 
+        {
+            "location": "/example-programs/#ping", 
+            "text": "Ping is a simple program that records the round-trip delay time for a\ntest packet sent over a virtual channel. The server sends a packet to\nthe client and the client responds with a packet containing the time it\nreceived the original packet from the server. This sequence is repeated\na specified number of times, and then the program displays the\nround-trip time for each ping and the average round-trip delay time.  For this example, there is no significant difference between a BEGIN\npacket and an END packet. The two types of packets are provided as an\nexample for writing your own virtual channel protocols.  This program demonstrates:    How to transfer data synchronously. The sequence of events is:\n    {SrvWrite, ClntRead, ClntWrite, SrvRead} {SrvWrite, ClntRead} {...}.\n    The server waits for the client to reply before sending the\n    next packet.    How to read parameter data (in this case, the number of times to\n    send packets to the client) from the Module.ini files.", 
+            "title": "Ping"
+        }, 
+        {
+            "location": "/example-programs/#packet-format", 
+            "text": "The following packet is exchanged between the client and the server.  typedef struct PING {\n    USHORT      uSign;          // Signature\n    USHORT      uType;          // Type, BEGIN or END, from server\n    USHORT      uLen;           // Packet length from server\n    USHORT      uCounter;       // Sequencer\n    ULONG       ulServerMS;     // Server millisecond clock\n    ULONG       ulClientMS;     // Client millisecond clock\n} PING, *PPING;", 
+            "title": "Packet Format"
+        }, 
+        {
+            "location": "/example-programs/#mix", 
+            "text": "Mix demonstrates a mechanism that can be used to call functions on a\nremote client (for example to get the time of day). This program\ndemonstrates an extensible scheme for making function calls from the\nserver to the client that allows the server to specify when it expects a\nresponse from the client and when it does not. This method can increase\nperformance, because the server does not have to constantly wait for a\nreply from the client.  The server calls a series of simple functions:    AddNo : Add two numbers and return the sum as the return value.    DispStr : Write a string to the log file. There is no return\n    value (write-only function).    Gettime : Read the client time and return it as the return value.    The actual implementation of these functions is on the client side. The\nserver conditionally waits for the response from the client, depending\non the function being executed. For example, the server waits for the\nresult of the AddNo or Gettime function, but not the write-only function\nDispStr, which returns no result.", 
+            "title": "Mix"
+        }, 
+        {
+            "location": "/example-programs/#packet-format_1", 
+            "text": "typedef struct MIXHEAD {\n    USHORT      uType           // Packet type\n    USHORT      uFunc;          // Index of Function\n    ULONG       uLen;           // Length of data\n    USHORT      fRetReq;        // True if return value required\n    ULONG       dwRetVal;       // Return Value from client\n    USHORT      dwLen1;         // length of data for \\#1 LpVoid\n    USHORT      dwLen2;         // length of data for \\#2 LpVoid\n} MIXHEAD, *PMIXHEAD;  The data consists of the above structure followed by the arguments to\nthe function being called. uLen is the total length of the data being\nsent, including the arguments. DwLen1 is the length of the data pointed\nto by a pointer argument.", 
+            "title": "Packet Format"
+        }, 
+        {
+            "location": "/example-programs/#sequence-of-events", 
+            "text": "The Mix program demonstrates the following sequence of events. See the\ngraphic on the next page.  This figure illustrates the sequence of events that occurs when you use\nthe Mix program, starting at the top.", 
+            "title": "Sequence of Events"
+        }, 
+        {
+            "location": "/example-programs/#over", 
+            "text": "Over is a simple asynchronous application. It demonstrates how to code\nan application in which the server must receive a response from the\nclient asynchronously, and the type of packet being sent to the client\nis different from the type received.  When the Over program begins, it:    Spawns a thread that waits for a response from the client.    Begins sending data packets with sequence numbers to the client.    (After sending the last packet of data) sends a packet with a\n    sequence number of NO_MORE_DATA, and then closes the connection.    The client receives packets and inspects the sequence number. For every\nsequence number divisible by 10, the client increases the sequence\nnumber by 7 and sends a response to the server. These numbers are chosen\narbitrarily to demonstrate that the client can asynchronously send data\nto the server at any time.  The packet type used to send data from the server to the client is\ndifferent from the packet type used to receive data from the client.", 
+            "title": "Over"
+        }, 
+        {
+            "location": "/example-programs/#packet-format-from-server-to-client", 
+            "text": "typedef struct OVER {\n    USHORT      uSign;          // Signature\n    USHORT      uType;          // Type, BEGIN or END, from server\n    USHORT      uLen;           // Packet length from server\n    USHORT      uCounter;       // Sequencer\n    ULONG       ulServerMS;     // Server millisecond clock\n} OVER, *POVER;", 
+            "title": "Packet Format - From Server to Client"
+        }, 
+        {
+            "location": "/example-programs/#packet-format-from-client-to-server", 
+            "text": "typedef struct DRVRESP {\n    USHORT      uType;          // Type OVERFLOW_JUMP from client\n    USHORT      uLen;           // Packet length from client\n    USHORT      uCounter;       // seqUencer\n} DRVRESP, * PDRVRESP;", 
+            "title": "Packet Format - From Client to Server"
+        }, 
+        {
+            "location": "/example-programs/#sequence-of-events_1", 
+            "text": "This figure illustrates the sequence of events that occurs when you\nuse the Over program, starting at the top.", 
+            "title": "Sequence of Events"
+        }, 
+        {
+            "location": "/example-programs/#oxs", 
+            "text": "OXS is the Noughts and Crosses game. The OXS virtual channel implements\nremote drawing of this game. The purpose of this is to demonstrate the\nfollowing interfaces, which are specific to the Receiver for Linux:    Sub-windows or overlay buffers    Events (the selection of File Descriptor)    Timers    The client component of the OXS virtual driver implements the drawing of\nthe game. All processing of the game play is performed on the server. To\nachieve client-side drawing, a sub-window (child) of the session window\nis obtained using the sub-window interface. The sub-window is placed\nover the corresponding area of the game window, and every movement to\nthe server-side game window is mimicked by the sub-window. This creates\nthe impression of a single application. Mouse clicks and interaction\nwith the server-side OXS application are converted into Play Move,\nWinning Line, Move Window, and Close Window commands. These are received\nby the virtual driver and translated into corresponding actions and X\ndrawing commands.  This sub-window technology is most useful for solutions such as local\nvideo decoding. The sub-window interface is not designed to take\nkeyboard and mouse input. It is intended to render graphics.  In addition, the OXS virtual driver uses the events (Evt) interface.\nThis monitors the X server file descriptor for Expose events, which\nallows a callback to redraw the game area for every event.  The OXS virtual driver also uses the timer (Tmr) interface. This works\naround a race condition between the OXS and Seamless virtual channels.\nAlthough the sub-window used for drawing mimics the movements of the\nserver side window, if Seamless is used a race condition occurs between\nthe movement of the Seamless server-side window and the sub-window. The\ntimer is used to delay the sub-window position update until after the\nSeamless window move is complete.  Note: The sample application below is a basic one and does not use the\nMM_clip api. In this case, the overlaid session sub-window is never\nclipped and is always an on top square.  Clipping the session sub-window properly can give the appearance that it\nis in the remote sessions window stack, even though it is actually\noverlaid on top of the session. This is not something this example does.", 
+            "title": "OXS"
+        }, 
+        {
+            "location": "/example-programs/#building-examples", 
+            "text": "", 
+            "title": "Building Examples"
+        }, 
+        {
+            "location": "/example-programs/#building-a-server-side-example-using-nmake", 
+            "text": "Examples of the latest server-side executables have been provided for\ntesting. Please download the latest Windows Virtual Channel SDK in order\nto develop the server-side component.", 
+            "title": "Building a Server-side Example using Nmake"
+        }, 
+        {
+            "location": "/example-programs/#building-a-client-side-example-using-linux", 
+            "text": "To start a build, open a terminal.    Change src/examples/vc/client/unix/MakeCOMMONVD to match the\n    target platform.  Note:  Linux does not require pingwire.c. Also, for Linux armel a\ncross compiler can be used. This is detected by the presence of the\nenvironment variable, CROSS_COMPILER_PREFIX    Set the environment variable HOST_PREFIX to the target:    linux for Linux x64    linux for Linux x86    linuxarm for Linux armel    linuxarmhf for Linux armhf      For example, to build  vdping.dll , type:  cd src/examples/vc/client/vdping/unix  and then type  make . The production (retail) and debug builds of vdping.dll are built in the\nlib subdirectory. Pre-built production versions are provided in the\nseparate directories,  src/examples/vc/client/vdping/linux/obj/retail  and src/examples/vc/client/vdping/linuxarm/obj/retail .    Perform the same process to build all other example virtual drivers.    Alternatively to build all example Virtual Drivers, type  cd\nsrc/examples/vc/client  and then run the  build  script.", 
+            "title": "Building a Client-side Example using Linux"
+        }, 
+        {
+            "location": "/example-programs/#configuring-the-virtual-driver", 
+            "text": "Copy the appropriate virtual driver for the platform to the client\n    installation directory. For example, copy the Linux virtual driver,\n    vdping.dll, in src/examples/vc/client/vdping/unix/lib/linux/retail\n    for a locally built version, or in\n    src/examples/vc/client/vdping/linux/obj/retail for a pre-built\n    version to the client installation directory as VDPING.DLL.    In the client installation directory, modify the file\n    config/module.ini and make the following changes:     In the [ICA 3.0] section append \u201cPing\u201d to the VirtualDriver list.    In the [ICA 3.0] section add \u201cPing=On\u201d.      Add a new section [Ping] with the entry \u201cDriverName=VDPING.DLL\u201d.    Copy ctxping.exe.sample from src/examples/vc/server/ctxping to the\n    Citrix server and rename it to ctxping.exe.    Run ctxping at the command prompt within a client session to\n    implement the Ping virtual channel.", 
+            "title": "Configuring the Virtual Driver"
+        }, 
+        {
+            "location": "/example-programs/#running-an-example-virtual-channel", 
+            "text": "Examples of the latest server-side executables have been provided for\ntesting.    On a client configured with the client-side example, connect to a\n    server running XenApp or XenDesktop with the associated server-side\n    example (located at base/examples/vc/server in this SDK).    Within the ICA session, run the server-side executable.\u2028    The server-side example queries the client-side virtual driver, and then\ndisplays the driver information. Use the  -d  parameter to display\ndetailed information.\u2028For Ping only: CTXPING sends PingCount separate\npings. PingCount has a default value of three, but can be set in the\n[Ping] section of the Module.ini file. Each ping consists of a BEGIN\npacket and an END packet.", 
+            "title": "Running an Example Virtual Channel"
+        }, 
+        {
+            "location": "/example-programs/#debugging-a-linux-virtual-driver", 
+            "text": "Use the TRACE feature to log events on the client. To enable the TRACE\nstatements, you must build the debug version of the virtual driver and\ncreate a debug.ini file in the current directory where the client is\nrun.  When the debug module is installed on the client, the TRACE statements\nwrite the debug information to a file, ncs.log. process id . The\nfollowing debug.ini contents create tracing for the example virtual\nchannels:  \\[ncs\\]\ntraceFlags = +LOG_PRINTF\ntraceClasses = +TC_VD\ntraceFeatures = +TT_ALL\ntraceFile = ncs.log.\\$\\$  You can refine tracing by editing the traceFeatures line. For example,\n\"traceFeatures = +TT_API1 | TT_API2\" will only print trace statements\nof type TT_API1 and TT_API2.  The class flag for virtual channels is TC_VD. For the complete list of\nclass and event flags, see logflags.h (located in src/inc/).    Compile the debug version of the virtual driver for the\n    client platform.    If it is running, close the client on the client device.    Copy the debug version of the virtual driver to the client\n    installation directory. For example, copy vdping.dll to the client\n    installation directory as VDPING.DLL.    Ensure that config.ini and module.ini in the client installation\n    directory are updated appropriately to load the new virtual driver,\n    following the instructions for loading a production version of the\n    virtual driver.    Create the debug.ini file in the current working directory.    Launch Receiver to implement the new virtual channel.", 
+            "title": "Debugging a Linux Virtual Driver"
+        }, 
+        {
+            "location": "/programming-guide/", 
+            "text": "Programming Guide\n\n\nVirtual channels are referred to by a seven-character (or shorter) ASCII\nname. In several previous versions of the ICA protocol, virtual channels\nwere numbered; the numbers are now assigned dynamically based on the\nASCII name, making implementation easier.\n\n\nWhen developing virtual channel code for internal use only, you can use\nany seven-character name that does not conflict with existing virtual\nchannels. Use only upper and lowercase ASCII letters and numbers. Follow\nthe existing naming convention when adding your own virtual channels.\n\n\nThe predefined channels, which begin with the OEM identifier CTX, are\nfor use only by Citrix.\n\n\nDesign Suggestions\n\n\nFollow these suggestions to make your virtual channels easier to design\nand enhance:\n\n\n\n\n\n\nWhen you design your own virtual channel protocol, allow for the\n    flexibility to add features. Virtual channels have version numbers\n    that are exchanged during initialization so that both the client and\n    the server detect the maximum level of functionality that can\n    be used. For example, if the client is at Version 3 and the server\n    is at Version 5, the server does not send any packets with\n    functionality beyond Version 3 because the client does not know how\n    to interpret the newer packets.\n\n\n\n\n\n\nBecause the server side of a virtual channel protocol can be\n    implemented as a separate process, it is easier to write code that\n    interfaces with the Citrix-provided virtual channel support on the\n    server than on the client (where the code must fit into an existing\n    code structure). The server side of a virtual channel simply opens\n    the channel, reads from and writes to it, and closes it when done.\n\n\n\n\n\n\nWriting code for the server-side is similar to writing an application,\nwhich uses services exported by the system. It is easier to write an\napplication to handle the virtual channel communication because it can\nthen be run once for each ICA connection supporting the virtual\nchannel.\n\n\nWriting for the client-side is similar to writing a driver, which must\nprovide services to the system in addition to using system services.\nIf a service is written, it must manage multiple connections.\n\n\n\n\n\n\nIf you are designing new hardware for use with new virtual channels\n    (for example, an improved compressed video format), make sure the\n    hardware can be detected so that the client can determine whether or\n    not it is installed. Then the client can communicate to the server\n    if the hardware is available before the server uses the new\n    data format. Optionally, you could have the virtual driver translate\n    the new data format for use with older hardware.\n\n\n\n\n\n\nThere might be limitations preventing your new virtual channel from\n    performing at an optimum level. If the client is connecting to the\n    server running XenApp through a low-speed connection, the bandwidth\n    might not be great enough to properly support audio or video data.\n    You can make your protocol adaptive, so that as bandwidth decreases,\n    performance degrades gracefully, possibly by sending sound normally\n    but reducing the frame rate of the video to fit the\n    available bandwidth.\n\n\n\n\n\n\nTo identify where problems are occurring (connection,\n    implementation, or protocol), first get the connection and\n    communication working. Then, after the virtual channel is complete\n    and debugged, do some time trials and record the results. These\n    results establish a baseline for measuring further optimizations\n    such as compression and other enhancements so that the channel\n    requires less bandwidth.\n\n\n\n\n\n\nThe time stamp in the pVdPoll variable can be helpful for resolving\n    timing issues in your virtual driver. It is a ULONG containing the\n    current time in milliseconds. The pVdPoll variable is a pointer to a\n    DLLPOLL structure. See dllapi.h (in base/inc/) for definitions of\n    these structures.\n\n\n\n\n\n\nClient-Side Functions Overview\n\n\nThe client software is built on a modular configurable architecture that\nallows replaceable, configurable modules (such as virtual channel\ndrivers) to handle various aspects of an ICA connection. These modules\nare specially formatted and dynamically loadable. To accomplish this\nmodular capability, each module (including virtual channel drivers)\nimplements a fixed set of function entry points.\n\n\nThere are six groups of functions:\nuser-defined, virtual driver helper, memory INI, Receiver for Linux\nsub-window interface, Receiver for Linux event interface, and Receiver\nfor Linux timer interface.\n\n\nUser-Defined Functions\n\n\nTo make writing virtual channels easier, dynamic loading is handled by\nthe WinStation driver, which in turn calls user-defined functions. This\nsimplifies creating the virtual channel because all you have to do is\nfill in the functions and link your virtual channel driver with vdapi.a\n(provided with this SDK).\n\n\n\n\n\n\n\n\nFunction\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nDriverClose\n\n\nFrees private driver data. Called before unloading a virtual driver (generally upon client exit).\n\n\n\n\n\n\nDriverGetLastError\n\n\nReturns the last error set by the virtual driver. Not used; links with the common front end, VDAPI.\n\n\n\n\n\n\nDriverInfo\n\n\nRetrieves information about the virtual driver.\n\n\n\n\n\n\nDriverOpen\n\n\nPerforms all initialization for the virtual driver. Called once when the client loads the virtual driver (at startup).\n\n\n\n\n\n\nDriverPoll\n\n\nAllows driver to check timers and other state information, sends queued data to the server, and performs any other required processing. Called periodically to see if the virtual driver has any data to write.\n\n\n\n\n\n\nDriverQueryInformation\n\n\nRetrieves run-time information from the virtual driver.\n\n\n\n\n\n\nDriverSetInformation\n\n\nSets run-time information in the virtual driver.\n\n\n\n\n\n\nICADataArrival\n\n\nIndicates that data was delivered. Called when data arrives on the virtual channel.\n\n\n\n\n\n\n\n\nVirtual Driver Helper Functions\n\n\nThe virtual driver uses helper functions to send data and manage the\nvirtual channel. When the WinStation driver initializes the virtual\ndriver, the WinStation driver passes pointers to helper functions and\nthe virtual driver passes pointers to the user-defined functions. Newer\nAPI functions QueueVirtualWrite, MM_*, Evt_*, and Tmr_* helper\nfunctions are callable directly by the virtual driver.\n\n\nVdCallWd is linked in as part of VDAPI and is available in all\nuser-implemented functions. The others are obtained during DriverOpen\nwhen VdCallWd is called with the WDxSETINFORMATION parameter.\n\n\n\n\n\n\n\n\nFunction\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nQueueVirtualWrite\n\n\nQueues a virtual write and stimulates packet output if required allowing the data to be sent without waiting for the poll. This must be used to send data to the server in all newly written virtual drivers. This replaces the deprecated functions below.\n\n\n\n\n\n\nAppendVdHeader (\nDeprecated\n)\n\n\nAppends a virtual driver header to a buffer.\n\n\n\n\n\n\nOutBufAppend (\nDeprecated\n)\n\n\nAppends data to a buffer.\n\n\n\n\n\n\nOutBufReserve (\nDeprecated\n)\n\n\nChecks for available output buffer space.\n\n\n\n\n\n\nOutBufWrite (\nDeprecated\n)\n\n\nSends the buffer to the server.\n\n\n\n\n\n\nVdCallWd\n\n\nUsed to query and set information from the WinStation driver (WD).\n\n\n\n\n\n\n\n\nMemory INI Functions\n\n\nMemory INI functions read data from the client engine configuration\nfiles stored in both the client installation directory for system wide\nsettings and \\$HOME/.ICAClient for user specific settings.\n\n\nFor each entry in appsrv.ini and wfclient.ini, there must be a\ncorresponding entry in All_Regions.ini for the setting to take effect.\nFor more information, refer to All_Regions.ini file in the\n\\$ICAROOT/config directory.\n\n\n\n\n\n\n\n\nFunction\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nmiGetPrivateProfileBool\n\n\nReturns a boolean value.\n\n\n\n\n\n\nmiGetPrivateProfileInt\n\n\nReturns an integer value.\n\n\n\n\n\n\nmiGetPrivateProfileLong\n\n\nReturns a long value.\n\n\n\n\n\n\nmiGetPrivateProfileString\n\n\nReturns a string value.\n\n\n\n\n\n\n\n\nReceiver for Linux Sub-Window Interface\n\n\nReceiver for Linux sub-window interface allows a virtual channel to gain\naccess to a sub-window of the client session in order to draw within a\nsession. The sub-window interface is not designed to take keyboard and\nmouse input. It is simply for rendering graphics.\n\n\n\n\n\n\n\n\nFunction\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nMM_clip\n\n\nSets the shape of the window.\n\n\n\n\n\n\nMM_destroy_window\n\n\nDestroys a window created by MM_get_window.\n\n\n\n\n\n\nMM_get_window\n\n\nCreates an operating system window that is a sub-window of an existing session window.\n\n\n\n\n\n\nMM_set_geometry\n\n\nSets the size and position of a session sub-window.\n\n\n\n\n\n\nMM_show_window\n\n\nMakes a window visible.\n\n\n\n\n\n\nMM_TWI_clear_new_window_function\n\n\nClears the callback for seamless window creation.\n\n\n\n\n\n\nMM_TWI_set_new_window_function\n\n\nAdds a callback for seamless window creation.\n\n\n\n\n\n\n\n\nReceiver for Linux Event (Evt) Interface\n\n\nReceiver for Linux event interface allows a virtual channel to select on\na given file descriptor in the Receiver for Linux event loop and receive\na callback from the Receiver for Linux event loop when the given\nconditions are met.\n\n\n\n\n\n\n\n\nFunction\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nEvt_create\n\n\nAllocates an event structure that can be used to fire a callback on an event.\n\n\n\n\n\n\nEvt_destroy\n\n\nDestroys previously created event structure.\n\n\n\n\n\n\nEvt_remove_triggers\n\n\nRemoves any previously added file descriptor selections on a given file descriptor.\n\n\n\n\n\n\nEvt_remove_triggers\n\n\nRemoves any previously added file descriptor selections on a given file descriptor.\n\n\n\n\n\n\nEvt_signal\n\n\nCalls the function stored in the event structure.\n\n\n\n\n\n\nEvt_trigger_for_input\n\n\nConnects the callback of an event structure to be triggered on the given file descriptor satisfying the input conditions.\n\n\n\n\n\n\nEvt_trigger_for_output\n\n\nConnects the callback of an event structure to be triggered on the given file descriptor satisfying the output conditions.\n\n\n\n\n\n\n\n\nReceiver for Linux Timer (Tmr) Interface\n\n\nReceiver for Linux timer interface allows a virtual channel to set up a\nrecurrent timer that invokes a given callback. The timer is attached to\nthe event loop of the Receiver for Linux and is called from the event\nloop when the timer fires.\n\n\n\n\n\n\n\n\nFunction\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nTmr_create\n\n\nCreates a timer object and returns its handle.\n\n\n\n\n\n\nTmr_destroy\n\n\nDestroys a timer object given a printer to its handle and sets the handle to NULL.\n\n\n\n\n\n\nTmr_setEnabled\n\n\nEnables or disables a timer object.\n\n\n\n\n\n\nTmr_setPeriod\n\n\nSets the timeout period for a timer.", 
+            "title": "Programming Guide"
+        }, 
+        {
+            "location": "/programming-guide/#programming-guide", 
+            "text": "Virtual channels are referred to by a seven-character (or shorter) ASCII\nname. In several previous versions of the ICA protocol, virtual channels\nwere numbered; the numbers are now assigned dynamically based on the\nASCII name, making implementation easier.  When developing virtual channel code for internal use only, you can use\nany seven-character name that does not conflict with existing virtual\nchannels. Use only upper and lowercase ASCII letters and numbers. Follow\nthe existing naming convention when adding your own virtual channels.  The predefined channels, which begin with the OEM identifier CTX, are\nfor use only by Citrix.", 
+            "title": "Programming Guide"
+        }, 
+        {
+            "location": "/programming-guide/#design-suggestions", 
+            "text": "Follow these suggestions to make your virtual channels easier to design\nand enhance:    When you design your own virtual channel protocol, allow for the\n    flexibility to add features. Virtual channels have version numbers\n    that are exchanged during initialization so that both the client and\n    the server detect the maximum level of functionality that can\n    be used. For example, if the client is at Version 3 and the server\n    is at Version 5, the server does not send any packets with\n    functionality beyond Version 3 because the client does not know how\n    to interpret the newer packets.    Because the server side of a virtual channel protocol can be\n    implemented as a separate process, it is easier to write code that\n    interfaces with the Citrix-provided virtual channel support on the\n    server than on the client (where the code must fit into an existing\n    code structure). The server side of a virtual channel simply opens\n    the channel, reads from and writes to it, and closes it when done.    Writing code for the server-side is similar to writing an application,\nwhich uses services exported by the system. It is easier to write an\napplication to handle the virtual channel communication because it can\nthen be run once for each ICA connection supporting the virtual\nchannel.  Writing for the client-side is similar to writing a driver, which must\nprovide services to the system in addition to using system services.\nIf a service is written, it must manage multiple connections.    If you are designing new hardware for use with new virtual channels\n    (for example, an improved compressed video format), make sure the\n    hardware can be detected so that the client can determine whether or\n    not it is installed. Then the client can communicate to the server\n    if the hardware is available before the server uses the new\n    data format. Optionally, you could have the virtual driver translate\n    the new data format for use with older hardware.    There might be limitations preventing your new virtual channel from\n    performing at an optimum level. If the client is connecting to the\n    server running XenApp through a low-speed connection, the bandwidth\n    might not be great enough to properly support audio or video data.\n    You can make your protocol adaptive, so that as bandwidth decreases,\n    performance degrades gracefully, possibly by sending sound normally\n    but reducing the frame rate of the video to fit the\n    available bandwidth.    To identify where problems are occurring (connection,\n    implementation, or protocol), first get the connection and\n    communication working. Then, after the virtual channel is complete\n    and debugged, do some time trials and record the results. These\n    results establish a baseline for measuring further optimizations\n    such as compression and other enhancements so that the channel\n    requires less bandwidth.    The time stamp in the pVdPoll variable can be helpful for resolving\n    timing issues in your virtual driver. It is a ULONG containing the\n    current time in milliseconds. The pVdPoll variable is a pointer to a\n    DLLPOLL structure. See dllapi.h (in base/inc/) for definitions of\n    these structures.", 
+            "title": "Design Suggestions"
+        }, 
+        {
+            "location": "/programming-guide/#client-side-functions-overview", 
+            "text": "The client software is built on a modular configurable architecture that\nallows replaceable, configurable modules (such as virtual channel\ndrivers) to handle various aspects of an ICA connection. These modules\nare specially formatted and dynamically loadable. To accomplish this\nmodular capability, each module (including virtual channel drivers)\nimplements a fixed set of function entry points.  There are six groups of functions:\nuser-defined, virtual driver helper, memory INI, Receiver for Linux\nsub-window interface, Receiver for Linux event interface, and Receiver\nfor Linux timer interface.", 
+            "title": "Client-Side Functions Overview"
+        }, 
+        {
+            "location": "/programming-guide/#user-defined-functions", 
+            "text": "To make writing virtual channels easier, dynamic loading is handled by\nthe WinStation driver, which in turn calls user-defined functions. This\nsimplifies creating the virtual channel because all you have to do is\nfill in the functions and link your virtual channel driver with vdapi.a\n(provided with this SDK).     Function  Description      DriverClose  Frees private driver data. Called before unloading a virtual driver (generally upon client exit).    DriverGetLastError  Returns the last error set by the virtual driver. Not used; links with the common front end, VDAPI.    DriverInfo  Retrieves information about the virtual driver.    DriverOpen  Performs all initialization for the virtual driver. Called once when the client loads the virtual driver (at startup).    DriverPoll  Allows driver to check timers and other state information, sends queued data to the server, and performs any other required processing. Called periodically to see if the virtual driver has any data to write.    DriverQueryInformation  Retrieves run-time information from the virtual driver.    DriverSetInformation  Sets run-time information in the virtual driver.    ICADataArrival  Indicates that data was delivered. Called when data arrives on the virtual channel.", 
+            "title": "User-Defined Functions"
+        }, 
+        {
+            "location": "/programming-guide/#virtual-driver-helper-functions", 
+            "text": "The virtual driver uses helper functions to send data and manage the\nvirtual channel. When the WinStation driver initializes the virtual\ndriver, the WinStation driver passes pointers to helper functions and\nthe virtual driver passes pointers to the user-defined functions. Newer\nAPI functions QueueVirtualWrite, MM_*, Evt_*, and Tmr_* helper\nfunctions are callable directly by the virtual driver.  VdCallWd is linked in as part of VDAPI and is available in all\nuser-implemented functions. The others are obtained during DriverOpen\nwhen VdCallWd is called with the WDxSETINFORMATION parameter.     Function  Description      QueueVirtualWrite  Queues a virtual write and stimulates packet output if required allowing the data to be sent without waiting for the poll. This must be used to send data to the server in all newly written virtual drivers. This replaces the deprecated functions below.    AppendVdHeader ( Deprecated )  Appends a virtual driver header to a buffer.    OutBufAppend ( Deprecated )  Appends data to a buffer.    OutBufReserve ( Deprecated )  Checks for available output buffer space.    OutBufWrite ( Deprecated )  Sends the buffer to the server.    VdCallWd  Used to query and set information from the WinStation driver (WD).", 
+            "title": "Virtual Driver Helper Functions"
+        }, 
+        {
+            "location": "/programming-guide/#memory-ini-functions", 
+            "text": "Memory INI functions read data from the client engine configuration\nfiles stored in both the client installation directory for system wide\nsettings and \\$HOME/.ICAClient for user specific settings.  For each entry in appsrv.ini and wfclient.ini, there must be a\ncorresponding entry in All_Regions.ini for the setting to take effect.\nFor more information, refer to All_Regions.ini file in the\n\\$ICAROOT/config directory.     Function  Description      miGetPrivateProfileBool  Returns a boolean value.    miGetPrivateProfileInt  Returns an integer value.    miGetPrivateProfileLong  Returns a long value.    miGetPrivateProfileString  Returns a string value.", 
+            "title": "Memory INI Functions"
+        }, 
+        {
+            "location": "/programming-guide/#receiver-for-linux-sub-window-interface", 
+            "text": "Receiver for Linux sub-window interface allows a virtual channel to gain\naccess to a sub-window of the client session in order to draw within a\nsession. The sub-window interface is not designed to take keyboard and\nmouse input. It is simply for rendering graphics.     Function  Description      MM_clip  Sets the shape of the window.    MM_destroy_window  Destroys a window created by MM_get_window.    MM_get_window  Creates an operating system window that is a sub-window of an existing session window.    MM_set_geometry  Sets the size and position of a session sub-window.    MM_show_window  Makes a window visible.    MM_TWI_clear_new_window_function  Clears the callback for seamless window creation.    MM_TWI_set_new_window_function  Adds a callback for seamless window creation.", 
+            "title": "Receiver for Linux Sub-Window Interface"
+        }, 
+        {
+            "location": "/programming-guide/#receiver-for-linux-event-evt-interface", 
+            "text": "Receiver for Linux event interface allows a virtual channel to select on\na given file descriptor in the Receiver for Linux event loop and receive\na callback from the Receiver for Linux event loop when the given\nconditions are met.     Function  Description      Evt_create  Allocates an event structure that can be used to fire a callback on an event.    Evt_destroy  Destroys previously created event structure.    Evt_remove_triggers  Removes any previously added file descriptor selections on a given file descriptor.    Evt_remove_triggers  Removes any previously added file descriptor selections on a given file descriptor.    Evt_signal  Calls the function stored in the event structure.    Evt_trigger_for_input  Connects the callback of an event structure to be triggered on the given file descriptor satisfying the input conditions.    Evt_trigger_for_output  Connects the callback of an event structure to be triggered on the given file descriptor satisfying the output conditions.", 
+            "title": "Receiver for Linux Event (Evt) Interface"
+        }, 
+        {
+            "location": "/programming-guide/#receiver-for-linux-timer-tmr-interface", 
+            "text": "Receiver for Linux timer interface allows a virtual channel to set up a\nrecurrent timer that invokes a given callback. The timer is attached to\nthe event loop of the Receiver for Linux and is called from the event\nloop when the timer fires.     Function  Description      Tmr_create  Creates a timer object and returns its handle.    Tmr_destroy  Destroys a timer object given a printer to its handle and sets the handle to NULL.    Tmr_setEnabled  Enables or disables a timer object.    Tmr_setPeriod  Sets the timeout period for a timer.", 
+            "title": "Receiver for Linux Timer (Tmr) Interface"
+        }, 
+        {
+            "location": "/programming-reference/", 
+            "text": "Programming Reference\n\n\nFor function summaries, see:\n\n\n\n\nClient-Side Functions Overview\n\n\n\n\nAppendVdHeader (Deprecated)\n\n\n\n\nNote\nThis function is deprecated. QueueVirtualWrite must be used in all\n\n\n\n\n\n\nnew virtual drivers.\n\n\nPlaces an ICA virtual channel prefix on the output buffer prior to\nassembling and sending the buffer.\n\n\nCalling Convention\n\n\nINT WFCAPI AppendVdHeader (\n    PWD pWd,\n    USHORT Channel,\n    USHORT ByteCount);\n\n\n\n\n\nParameters\n\n\npWD\n\n\nPointer to a WinStation driver control structure.\n\n\nChannel\n\n\nVirtual channel number.\n\n\nByteCount\n\n\nActual size in bytes of the virtual channel packet data to be sent. Do\nnot include additional bytes reservered for the buffer overhead.\n\n\nReturn Values\n\n\nIf the function succeeds, the return value is CLIENT_STATUS_SUCCESS.\n\n\nIf the function fails, the return value is the error code associated\nwith the failure; use GetLastError to get the extended error\ninformation.\n\n\nRemarks\n\n\nCall this function to prefix the virtual channel packet with the\nappropriate header information. Normally the virtual driver sees only\nthe private packet data. However, when a virtual driver sends a virtual\nchannel packet to a server application, it must use this function to\nprefix the data with the ICA header.\n\n\nUse OutBufReserve to reserve a buffer prior to making this call. The\nvirtual driver must use this function immediately after a successful\nOutBufReserve and before any other data is placed in the packet. This\naction uses the additional four bytes requested in OutBufReserve, so do\nnot include this overhead in \nByteCount\n.\n\n\nIf an ICA header or virtual channel data is appended to the buffer, the\nbuffer must be sent to the server before the control leaves the virtual\ndriver.\n\n\nA pointer to this function is obtained from the VDWRITEHOOK structure\nafter hook registration in DriverOpen. The VDWRITEHOOK structure also\nprovides \npWd\n.\n\n\nDriverClose\n\n\nThe WinStation driver calls this function prior to unloading the\nvirtual driver, when the ICA connection is being terminated.\n\n\nCalling Convention\n\n\nINT Driverclose(\n    PVD pVD,\n    PDLLCLOSE pVdClose,\n    PUINT16 puiSize);\n\n\n\n\n\nParameters\n\n\npVD\n\n\nPointer to a virtual driver control structure.\n\n\npVdClose\n\n\nPointer to a standard driver close information structure.\n\n\npuiSize\n\n\nPointer to the size of the driver close information structure. This is\nan input parameter.\n\n\nReturn Values\n\n\nIf the function succeeds the return value is CLIENT_STATUS_SUCCESS.\n\n\nIf the function fails, the return value is the CLIENT_ERROR_* value\ncorresponding to the error condition; see clterr.h (in src/inc/) for a\nlist of error values beginning with CLIENT_ERROR.\n\n\nRemarks\n\n\nWhen DriverClose is called, all private driver data is freed. The\nvirtual driver does not need to deallocate the virtual channel or write\nhooks.\n\n\nThe pVdClose structure currently contains one element \u2013 NotUsed. This\nstructure can be ignored.\n\n\nDriverGetLastError\n\n\nThis function is not used but is available for linking with the common\nfront end, VDAPI.\n\n\nCalling Convention\n\n\nINT DriverGetLastError(\n    PVD pVD,\n    PVDLASSTERROR pVdLastError);\n\n\n\n\n\nParameters\n\n\npVD\n\n\nPointer to a virtual driver control structure.\n\n\npVdLastError\n\n\nPointer to a structure that receives the last error information.\n\n\nReturn Value\n\n\nThe driver returns CLIENT_STATUS_SUCCESS.\n\n\nRemarks\n\n\nThis function currently has no practical significance for virtual\ndrivers; it is provided for compatibility with the loadable module\ninterface.\n\n\nDriverInfo\n\n\nGets information about the virtual driver, such as the version level of\nthe driver.\n\n\nCalling Convention\n\n\nINT DriverInfo(\n    PVD pVD,\n    PDLLINFO pVdInfo,\n    PUINT16 puiSize);\n\n\n\n\n\nParameters\n\n\npVD\n\n\nPointer to a virtual driver control structure.\n\n\npVdInfo\n\n\nPointer to a standard driver information structure.\n\n\npuiSize\n\n\nPointer to the size of the driver information structure. This is an\noutput parameter.\n\n\nReturn Value\n\n\nIf the function succeeds, it returns CLIENT_STATUS_SUCCESS.\n\n\nIf the function fails because the buffer pointed to by pVdInfo is too\nsmall, it returns CLIENT_ERROR_BUFFER_TOO_SMALL. Normally, when a\nCLIENT_ERROR_* result code is returned, the ICA session is\ndisconnected. CLIENT_ERROR_BUFFER_ TOO_SMALL is an exception and\ndoes not result in the ICA session being disconnected. Instead, the\nWinStation driver attempts to call DriverInfo again with the ByteCount\nof pVdInfo returned by the failed call.\n\n\nRemarks\n\n\nWhen the client starts, it calls this function to retrieve\nmodule-specific information for transmission to the host. This\ninformation is returned to the server side of the virtual channel by\nWFVirtualChannelQuery.\n\n\nThe virtual driver must support this call by returning a structure in\nthe pVdInfo buffer. This structure can be a developer-defined virtual\nchannel-specific structure, but it must begin with a VD_C2H structure,\nwhich in turn begins with a MODULE_C2H structure. All fields of the\nVD_C2H structure must be filled in except for the ChannelMask field.\nSee ica-c2h.h (in src/inc/) for definitions of these structures.\n\n\nThe virtual driver must first check the size of the information buffer\ngiven against the size that the virtual driver requires (the VD_C2H\nstructure). The size of the input buffer is given in\npVdInfo-\nByteCount.\n\n\nIf the buffer is too small to store the information that the driver\nneeds to send, the correct size is filled into the ByteCount field and\nthe driver returns CLIENT_ERROR_BUFFER_TOO_SMALL.\n\n\nIf the buffer is large enough, the driver must fill it with a\nmodule-defined structure. At a minimum, this structure must contain a\nVD_C2H structure. The VD_C2H structure must be the first data in the\nbuffer; additional channel-specific data can follow. All relevant fields\nof this structure are filled in by this function. The flow control\nmethod is specified in the VDFLOW structure (an element of the VD_C2H\nstructure). The Ping example contains a flow control selection.\n\n\nThe WinStation driver calls this function twice at initialization, after\ncalling DriverOpen. The first call contains a NULL information buffer\nand a buffer size of zero. The driver is expected to fill in\npVdInfo-\nByteCount with the required buffer size and return\nCLIENT_ERROR_BUFFER_TOO_SMALL. The WinStation driver allocates a\nbuffer of that size and retries the operation.\n\n\nThe data buffer pointed to by pVdinfo-\npBuffer must not be changed by\nthe virtual driver. The WinStation driver stores byte swap information\nin this buffer.\n\n\nThe parameter puiSize must be initialized to the size of the driver\ninformation structure.\n\n\nDriverOpen\n\n\nInitializes the virtual driver. The client engine calls this\nuser-written function once when the client is loaded.\n\n\nCalling Convention\n\n\nINT DriverOpen(\n    PVD pVD, PVDOPEN pVdOpen)\n    PUINT16 puiSize);\n\n\n\n\n\nParameters\n\n\npVD\n\n\nPointer to the virtual driver control structure. This pointer is passed\non every call to the virtual driver.\n\n\npVdOpen\n\n\nPointer to the virtual driver Open structure.\n\n\npuiSize\n\n\nPointer to the size of the virtual driver Open structure. This is an\noutput parameter.\n\n\nReturn Values\n\n\nIf the function succeeds, it returns CLIENT_STATUS_SUCCESS.\n\n\nIf the function fails, it returns the CLIENT_ERROR_* value\ncorresponding to the error condition; see clterr.h (in src/inc/) for a\nlist of error values beginning with CLIENT_ERROR\n\n\nRemarks\n\n\nThe code fragments in this section are taken from the vdping example.\n\n\nThe DriverOpen function must:\n\n\n.  Allocate a virtual channel.\n\n\nFill in a WDQUERYINFORMATION structure and call VdCallWd. The\nWinStation driver fills in the OpenVirtualChannel structure (including\nthe channel number) and the data in pVd.\n\n\nWDQUERYINFORMATION wdqi;\nOPENVIRTUALCHANNEL OpenVirtualChannel;\nUINT16 uiSize;\nwdqi.WdInformationClass = WdOpenVirtualChannel;\nwdqi.pWdInformation = \nOpenVirtualChannel;\nwdqi.WdInformationLength = sizeof(OPENVIRTUALCHANNEL);\nOpenVirtualChannel.pVCName = CTXPING_VIRTUAL_CHANNEL_NAME;\nuiSize = sizeof(WDQUERYINFORMATION);\nrc = VdCallWd(pVd, WDxQUERYINFORMATION, \nwdqi, \nuiSize);\n/* do error processing here */\n\n\n\n\n\nAfter the call to VdCallWd, the channel number is assigned in the\nOpenVirtualChannel structure's Channel element. Save the channel\nnumber and set the channel mask to indicate which channel this driver\nwill handle.\n\n\nFor example:\n\n\ng_usVirtualChannelNum = OpenVirtualChannel.Channel;\npVdOpen-\nChannelMask = (1L \n g_usVirtualChannelNum);\n\n\n\n\n\n.  Optionally specify a pointer to a private data structure.\n\n\nIf you want the virtual driver to allocate memory for state data, it can\nhave a pointer to this data returned on each call by placing the pointer\nin the virtual driver structure, as follows:\n\n\npVd-\npPrivate = pMyStructure;\n\n\n\n\n\n.  Exchange entry point data with the WinStation driver.\n\n\nThe virtual driver must register a write hook with the client WinStation\ndriver. The write hook is the entry point of the virtual driver to be\ncalled when data is received for this virtual channel. The WinStation\ndriver returns pointers to functions that the driver must use to fill in\noutput buffers and sends data to the WinStation driver for transmission\nto the server.\n\n\nWDSETINFORMATION wdsi; VDWRITEHOOK vdwh;\n// Fill in a write hook structure\nvdwh.Type = g_usVirtualChannelNum; vdwh.pVdData = pVd;\nvdwh.pProc = (PVDWRITEPROCEDURE) ICADataArrival;\n// Fill in a set information structure\nwdsi.WdInformationClass = WdVirtualWriteHook;\nwdsi.pWdInformation = \nvdwh;\nwdsi.WdInformationLength = sizeof(VDWRITEHOOK);\nuiSize = sizeof(WDSETINFORMATION);\nrc = VdCallWd( pVd, WDxSETINFORMATION, \nwdsi, \nuiSize);\n/* do error processing here */\n\n\n\n\n\nDuring the registration of the write hook, the WinStation driver passes\nentry points for the deprecated output buffer virtual driver helper\nfunctions to the virtual driver in the VDWRITEHOOK structure. The\nDriverOpen function saves these in global variables so helper functions\nin the virtual driver can use them. The WinStation driver also passes a\npointer to the WinStation driver data area, which the DriverOpen\nfunction also saves (because it is the first argument to the virtual\ndriver helper functions).\n\n\n// Record pointers to functions used          \n// for sending data to the host.              \npWd = vdwh.pWdData;                           \npOutBufReserve = vdwh.pOutBufReserveProc;     \npOutBufAppend = vdwh.pOutBufAppenProc;        \npOutBufWrite = vdwh.pOutBufWriteProc;         \npAppendVdHeader = vdwh.pAppendVdHeaderProc;   \n\n\n\n\n\n.  Allocate all memory needed by the driver and do any initialization.\n    You can obtain the maximum ICA buffer size from the MaximumWriteSize\n    element in the VDWRITEHOOK structure that is returned.\n\n\n\n\nNote\nvdwh.MaximumWriteSize is one byte greater than the actual\n\n\n\n\n\n\nmaximum that you can use because it also includes the channel number.\n\n\ng_usMaxDataSize = vdwh.MaxiumWriteSize - 1;\nif(NULL == (pMyData = malloc( g_usMaxDataSize )))\n{\n    return(CLIENT_ERROR_NO_MEMORY);\n}\n\n\n\n\n\n.  Return the size of the VDOPEN structure in \npuiSize\n. This is used\n    by the client engine to determine the version of the virtual\n    channel driver.\n\n\nDriverPoll\n\n\nAllows the virtual driver to get periodic control to perform any action\nas required. With the Evt_\n and Tmr_\n APIs, a more event driven\nimplementation is possible so you may find that the DriverPoll is empty.\n\n\nCalling Convention\n\n\nINT DriverPoll(\nPVD pVD,\nPVOID pVdPoll,\nPUINT16 puiSize);\n\n\n\n\n\nParameters\n\n\npVD\n\n\nPointer to a virtual driver control structure.\n\n\npVdPoll\n\n\nPointer to one of the driver poll information structures (DLLPOLL).\n\n\npuiSize\n\n\nPointer to the size of the driver poll information structure. This is an\noutput parameter.\n\n\nReturn Values\n\n\nIf the functionsucceeds, it returns CLIENT_STATUS_SUCCESS. If the driver has no data\non this polling pass, it returns CLIENT_STATUS_NO_DATA.\n\n\nIf the virtual driver cannot allocate an output buffer, it returns\nCLIENT_STATUS_ERROR_RETRY so the WinStation driver does not slow\npolling. The virtual driver then attempts to get an output buffer the\nnext time it is polled.\n\n\nReturn values that begin with CLIENT_ERROR_ are fatal errors; the ICA\nsession is disconnected.\n\n\nRemarks\n\n\nBecause the client engine is single threaded, a virtual driver is not allowed to block while waiting for a\ndesired result (such as the availability of an output buffer) because\nthis prevents the rest of the client from processing.\n\n\nThe Ping example includes examples of processing that can occur in\nDriverPoll.\n\n\nDriverQueryInformation\n\n\nGets run-time information from the virtual driver.\n\n\nCalling Convention\n\n\nINT DriverQueryInformation(\nPVD pVD,\nPVDQUERYINFORMATION pVdQueryInformation,\nPUINT16 puiSize);\n\n\n\n\n\nParameters\n\n\npVD\n\n\nPointer to a virtual driver control structure.\n\n\npVdQueryInformation\n\n\nPointer to a structure that specifies the information to query and the\nresults buffer.\n\n\npuiSize\n\n\nPointer to the size of the query information and resolves structure.\nThis is an output parameter.\n\n\nReturn Value\n\n\nThe function returns CLIENT_STATUS_SUCCESS.\n\n\nRemarks\n\n\nThis function currently has no practical significance for virtual\ndrivers; it is provided for compatibility with the loadable module\ninterface. There are no general purpose query functions at this time\nother than LastError. The LastError query is accomplished through the\nDriverGetLastError function.\n\n\nDriverSetInformation\n\n\nSets run-time information in the virtual driver.\n\n\nCalling Convention\n\n\nINT DriverSetInformation(\nPVD pVD,\nPVDSETINFORMATION pVdSetInformation,\nPUINT16 puiSize);\n\n\n\n\n\nParameters\n\n\npVD\n\n\nPointer to a virtual driver control structure.\n\n\npVdSetInformation\n\n\nPointer to a structure that specifies the information class, a pointer\nto any additional data, and the size in bytes of the additional data (if\nany).\n\n\npuiSize\n\n\nPointer to the size of the information structure. This is an input\nparameter.\n\n\nReturn Value\n\n\nThe function returns CLIENT_STATUS_SUCCESS.\n\n\nRemarks\n\n\nThis function can receive two information classes:\n\n\n\n\n\n\nVdDisableModule: When the connection is being closed.\n\n\n\n\n\n\nVdFlush: When WFPurgeInput or WFPurgeOutput is called by the\n    server-side virtual channel application. The VdSetInformation\n    structure contains a pointer to a VDFLUSH structure that specifies\n    which purge function was called.\n\n\n\n\n\n\nEvt_create\n\n\nAllocates an event structure containing a callback that can be\nassociated with the input or the output events of a particular file\ndescriptor.\n\n\nCalling Convention\n\n\nVPSTATUS\nEvt_create (\nvoid \\*hTC,\nPFNDELIVER pDeliverFunc,\nvoid \\*pSubscriberId,\nPEVT \\*out);\n\n\n\n\n\nParameters\n\n\nhTC\n\n\nPass NULL value as a dummy.\n\n\npDeliverFunc\n\n\nThe callback to call.\n\n\npSubscriberId\n\n\nData passed as an argument to the callback.\n\n\nout\n\n\nThe event structure returned.\n\n\nReturn Value\n\n\nThe event structure created is returned with the out pointer argument.\nIf the function succeeds, the return value is EVT_SUCCESS.\n\n\nIf the function fails because of insufficient memory, the return value\nis EVT_OBJ_CREATE_FAILED.\n\n\nRemarks\n\n\nThe first argument of the callback pSubscriberId is the same as the\npSubscriberId used to create the event structure.\n\n\nThe second argument nEvt is a pointer to the event structure responsible\nfor the callback.\n\n\nEvt_destroy\n\n\nDestroys previously created event structure by freeing its memory and\nnulling the given pointer.\n\n\nCalling Convention\n\n\nVPSTATUS\nEvt_destroy (\nPEVT \\*phEvt);\n\n\n\n\n\nParameters\n\n\nphEvt\n\n\nPointer to the event object to destroy.\n\n\nReturn Value\n\n\nIf the function succeeds, the return value is EVT_SUCCESS.\n\n\nRemarks\n\n\nThe event object to destroy must be removed from the event loop using\nEvt_remove_triggers, before Evt_destroy is called.\n\n\nEvt_remove_triggers\n\n\nRemoves the previously setup file descriptor selections from the given\nfile descriptor.\n\n\nCalling Convention\n\n\nVPSTATUS\nEvt_remove_triggers (\nInt fd);\n\n\n\n\n\nParameters\n\n\nfd\n\n\nThe file descriptor to remove all selections from.\n\n\nReturn Value\n\n\nIf the function succeeds, the return value is EVT_SUCCESS.\n\n\nRemarks\n\n\nIf both the input and output conditions are selected, both the\nconditions are removed.\n\n\nEvt_signal\n\n\nCalls the callback stored within the given event structure.\n\n\nCalling Convention\n\n\nVPSTATUS\nEvt_signal (\nPEVT hEvt);\n\n\n\n\n\nParameters\n\n\nhEvt\n\n\nThe event structure containing the callback to call.\n\n\nReturn Value\n\n\nIf the function succeeds, the return value is EVT_SUCCESS.\n\n\nRemarks\n\n\nCalls the callback function directly. No conditions must be met prior to\nthis call.\n\n\nEvt_trigger_for_input\n\n\nConnects the callback of an event structure to trigger on the given file\ndescriptor when it satisfies the input conditions.\n\n\nCalling Convention\n\n\nVPSTATUS\nEvt_trigger_for_input (\nPEVT hEvt,\nint fd);\n\n\n\n\n\nParameters\n\n\nhEvt\n\n\nThe event structure to associate with the input conditions of the given\nfile descriptor.\n\n\nfd\n\n\nThe file descriptor.\n\n\nReturn Value\n\n\nIf the function succeeds, the return value is EVT_SUCCESS.\n\n\nIf the function fails because of insufficient memory, the return value\nis EVT_OBJ_CREATE_FAILED.\n\n\nRemarks\n\n\nThe Glib implementation of the event loop used by Receiver for Linux\nwatches for the input conditions G_IO_IN and G_IO_HUP.\n\n\nEvt_trigger_for_output\n\n\nConnects the callback of an event structure to trigger on the given file\ndescriptor when it satisfies the output conditions.\n\n\nCalling Convention\n\n\nVPSTATUS\nEvt_trigger_for_output (\nPEVT hEvt,\nint fd);\n\n\n\n\n\nParameters\n\n\nhEvt\n\n\nThe event structure to associate with the ouput conditions of the given\nfile descriptor.\n\n\nfd\n\n\nThe file descriptor.\n\n\nReturn Value\n\n\nIf the function succeeds, the return value is EVT_SUCCESS.\n\n\nIf the function fails because of insufficient memory, the return value\nis EVT_OBJ_CREATE_FAILED.\n\n\nRemarks\n\n\nThe Glib implementation of the event loop used by Receiver for Linux\nwatches for the ouput conditions G_IO_OUT.\n\n\nICADataArrival\n\n\nThe WinStation driver calls this function when data is received on a\nvirtual channel being monitored by the driver. The address of this\nfunction is passed to the WinStation driver during DriverOpen.\n\n\nCalling Convention\n\n\nVOID wfcapi ICADataArrival(\nPVD pVD,\nUSHORT uChan,\nLPBYTE pBuf,\nUSHORT Length);\n\n\n\n\n\nParameters\n\n\npVD\n\n\nPointer to a virtual driver control structure.\n\n\nuChan\n\n\nVirtual channel number.\n\n\npBuf\n\n\nPointer to the data buffer containing the virtual channel data as sent\nby the server-side application.\n\n\nLength\n\n\nLength in bytes of the data in the buffer.\n\n\nReturn Value\n\n\nNo value is returned from this function.\n\n\nRemarks\n\n\nThis function name is a placeholder for a user-defined function; the\nactual function does not have to be called ICADataArrival, although it\ndoes have to match the function signature (parameters and return type).\nThe address of this function is given to the WinStation driver during\nDriverOpen. Although ICA prefixes packet control data to the virtual\nchannel data, this prefix is removed before this function is called.\n\n\nAfter the virtual driver returns from this function, the WinStation\ndriver considers the data delivered. The virtual driver must save\nwhatever information it needs from this packet if later processing is\nrequired.\n\n\nDo not allow this function to block. Use your own thread or the\nDriverPoll function (with polling enabled) for any required deferred\nprocessing.\n\n\nThe virtual driver can send data to the server on receipt of this data\nfrom within the ICADataArrival function, but be aware that the send\noperation may return an immediate error when buffers are not available\nto accommodate the send operation. The virtual driver may not block in\nthis function waiting for the sending operation to complete.\n\n\nIf the virtual driver is handling multiple virtual channels, use the\nuChan parameter to determine the channel over which this data is to be\nsent. See DriverOpen for more information.\n\n\nmiGetPrivateProfileBool\n\n\nGets a Boolean value from a section of the Configuration Storage.\n\n\nCalling Convention\n\n\nINT miGetPrivateProfileBool(\nPCHAR lpszSection,\nPCHAR lpszEntry,\nBOOL bDefault);\n\n\n\n\n\nParameters\n\n\nlpszSection\n\n\nName of section to query.\n\n\nlpszEntry\n\n\nName of entry to query.\n\n\nbDefault\n\n\nDefault value to use.\n\n\nReturn Values\n\n\nIf the requested entry is found, the entry value is returned; otherwise,\n\nbDefault\n is returned.\n\n\nRemarks\n\n\nA Boolean value of TRUE can be represented by on, yes, or true in the\nconfiguration files. All other strings are interpreted as FALSE.\n\n\nmiGetPrivateProfileInt\n\n\nGets an integer from a section of the Configuration Storage.\n\n\nCalling Convention\n\n\nINT miGetPrivateProfileInt(\nPCHAR lpszSection,\nPCHAR lpszEntry,\nINT iDefault);\n\n\n\n\n\nParameters\n\n\nlpszSection\n\n\nName of section to query.\n\n\nlpszEntry\n\n\nName of entry to query.\n\n\niDefault\n\n\nDefault value to use.\n\n\nReturn Values\n\n\nIf the requested entry is found, the entry value is returned; otherwise,\niDefault is returned.\n\n\nmiGetPrivateProfileLong\n\n\nGets a long value from a section of the configuration files.\n\n\nCalling Convention\n\n\nINT miGetPrivateProfileLong(\nPCHAR lpszSection,\nPCHAR lpszEntry,\nLONG lDefault);\n\n\n\n\n\nParameters\n\n\nlpszSection\n\n\nName of section to query.\n\n\nlpszEntry\n\n\nName of entry to query.\n\n\nlDefault\n\n\nDefault value to use.\n\n\nReturn Values\n\n\nIf the requested entry is found, the entry value is returned; otherwise,\nlDefault is returned.\n\n\nmiGetPrivateProfileString\n\n\nGets a string from a section of the configuration files.\n\n\nCalling Convention\n\n\nINT miGetPrivateProfileString(\nPCHAR lpszSection,\nPCHAR lpszEntry,\nPCHAR lpszDefault,\nPCHAR lpszReturnBuffer, INT cbSize);\n\n\n\n\n\nParameters\n\n\nlpszSection\n\n\nName of section to query.\n\n\nlpszEntry\n\n\nName of entry to query.\n\n\nlpszDefault\n\n\nDefault value to use.\n\n\nlpszReturnBuffer\n\n\nPointer to a buffer to hold results.\n\n\ncbSize\n\n\nSize of lpszReturnBuffer in bytes.\n\n\nReturn Values\n\n\nThis function returns the string length of the value returned in\nlpszReturnBuffer (not including the trailing NULL).\n\n\nIf the requested entry is found and the size of the entry string is less\nthan or equal to cbSize, the entry value is copied to lpszReturnBuffer;\notherwise, iDefault is copied to lpszReturnBuffer.\n\n\nRemarks\n\n\nlpszDefault must fit in lpszReturnBuffer. The caller is responsible for\nallocating and deallocating lpszReturnBuffer.\n\n\nlpszReturnBuffer must be large enough to hold the maximum length entry\nstring, plus a NULL termination character. If an entry string does not\nfit in lpszReturnBuffer, the lpszDefault value is used.\n\n\nMM_clip\n\n\nSets the shape of the operating system window \u201cxwin\u201d from the list of\nsorted rectangles.\n\n\nCalling Convention\n\n\nvoid\nMM_clip (\nUINT32 xwin,\nint count,\nstruct tagTWI_RECT \\*rects,\nBOOLEAN extended)\n\n\n\n\n\nParameters\n\n\nxwin\n\n\nOperating system session sub-window.\n\n\ncount\n\n\nNumber of rectangles.\n\n\nrects\n\n\nArray of rectangles sorted by Y and X.\n\n\nextended\n\n\nTRUE for any extensions; otherwise, FALSE.\n\n\nReturn Values\n\n\nThere are no return values.\n\n\nRemarks\n\n\nThe structure has four long integers for left, top, right, and bottom.\nRectangles are YXsorted.\n\n\nThe last argument must be FALSE to start a fresh clipping update, and\nTRUE to add any clipping updates to the current clipping list.\n\n\nMM_destroy_window\n\n\nDestroys a window created by MM_get_window().\n\n\nCalling Convention\n\n\nvoid\nMM_destroy_window (\nUINT32 hwin,\nUINT32 xwin,\n\n\n\n\n\nParameters\n\n\nhwin\n\n\nHost (seamless) window identifiers, ignored for non-seamless sessions.\n\n\nxwin\n\n\nx sub-window of the session window.\n\n\nReturn Values\n\n\nThere are no return values.\n\n\nRemarks\n\n\nMM_destroy_window also removes any window deletion callbacks added\nwith the low level MM_TWI_set_deletion_call.\n\n\nMM_get_window\n\n\nCreates an operating system window \"xwinp\" that is a sub-window of an\nexisting session window with a server handle \"hwin\".\n\n\nCalling Convention\n\n\nBOOLEAN\nMM_get_window (\nUINT32 hwin,\nUINT32 \\*xwinp,\n\n\n\n\n\nParameters\n\n\nhwin\n\n\nHost (seamless) window identifiers, ignored for non-seamless sessions.\n\n\nxwinp\n\n\nLocal operating system window identifier. Returns the sub-window\nidentifier of the session window. In this case, the X Window System is\nthe operating system windowing system.\n\n\nReturn Values\n\n\nIf the parent (hwin) exists, the return value is TRUE. If the parent\ndoes not exist, the return value is FALSE.\n\n\nIf the return value is FALSE, the function, including window creation,\nstill works. The root window, however, is used as a temporary parent.\n\n\nA call to MM_get_window() or MM_set_geometry() can be used to\nreparent to any existing seamless window.\n\n\nRemarks\n\n\nWhen \"0\" is passed as the server handle in a non-seamless (single\nwindow) session, there can be an existing window, *xwinp that is\nreparented. The sub-window, however, is unmapped.\n\n\nIf the parent is seamless, *xwinp is protected by unmapping and\nreparenting it to the root before the parent is deleted.\n\n\nMM_set_geometry\n\n\nSets the size and position for an existing sub-window, \"xwin\" of a\nsession window with the server handle, \"hwin\".\n\n\nCalling Convention\n\n\nBOOLEAN\nMM_set_geometry (\nUINT32 hwin,\nUINT32 xwin,\nCTXMM_RECT \\*rt);\n\n\n\n\n\nParameters\n\n\nhwin\n\n\nHost (seamless) window identifiers, ignored for non-seamless sessions.\n\n\nxwin\n\n\nLocal operating system window identifier for the session sub-window. In\nthis case, the X Window System is the operating system windowing system.\n\n\nrt\n\n\nCTXMM_RECT that describes the new window position and geometry.\n\n\nReturn Values\n\n\nIf the parent (hwin) exists, the return value is TRUE. If the parent\ndoes not exist, the return value is FALSE.\n\n\nIf the return value is TRUE, the sub-window is mapped on return.\n\n\nRemarks\n\n\nThe CTXMM_RECT window rectangle is within the session coordinates which\nare not window relative and consist of four unsigned 32-bit integers for\nleft, top, right, and bottom.\n\n\nMM_show_window\n\n\nMakes a sub-window visible.\n\n\nCalling Convention\n\n\nvoid\nMM_show_window (\nUINT32 xwin)\n\n\n\n\n\nParameters\n\n\nxwin\n\n\nLocal operating system window identifier for the session sub-window. In\nthis case, the X Window System is the operating system windowing system.\n\n\nReturn Values\n\n\nThere are no return values.\n\n\nRemarks\n\n\nThis function is called when the parent seamless window arrives after\nthe geometry is set.\n\n\nThere must, however, be a successful call to MM_get_window()\ninitially.\n\n\nThe function can be called with exactly the same window identifiers as\nthe previous one. It cannot be used if MM_set_geometry() previously\nreturned TRUE.\n\n\nMM_TWI_clear_new_window_function\n\n\nClears the callback function set up using\nMM_TWI_set_new_window_function.\n\n\nCalling Convention\n\n\nvoid\nMM_TWI_clear_new_window_function (\nvoid (\\*) (UINT32))\n\n\n\n\n\nParameters\n\n\n(*)(UINT32))\n\n\nCallback function pointer to remove.\n\n\nReturn Values\n\n\nThere are no return values.\n\n\nRemarks\n\n\nClears the callback for seamless window creation.\n\n\nMM_TWI_set_new_window_function\n\n\nSets a callback function for seamless window creation.\n\n\nCalling Convention\n\n\nvoid\nMM_TWI_set_new_window_function (\nvoid (*) (UINT32));\n\n\n\n\n\nParameters\n\n\n(*)(UINT32)\n\n\nCallback function pointer to remove.\n\n\nReturn Values\n\n\nThere are no return values.\n\n\nRemarks\n\n\nWhen MM_get_window() fails because the seamless window is not yet\ncreated, MM_TWI_set_new_window_function can be used to watch the\ncreation. The handle must be established only when required and should\nbe removed immediately. The callback argument is the server window\nhandle of a newly created seamless window.\n\n\nOutBufAppend (Deprecated)\n\n\n\n\nNote\nThis function is deprecated. QueueVirtualWrite must be used in all\n\n\n\n\n\n\nnew virtual drivers.\n\n\nAdds virtual channel packet data to the current output buffer.\n\n\nCalling Convention\n\n\nINT WFCAPI OutBufAppend(\nPWD pWd,\nLPBYTE pData,\nUSHORT ByteCount);\n\n\n\n\n\nParameters\n\n\npWd\n\n\nPointer to a WinStation driver control structure.\n\n\npData\n\n\nPointer to the buffer containing the data to append.\n\n\nByteCount\n\n\nNumber of bytes to append to the buffer.\n\n\nReturn Values\n\n\nIf the function succeeds, it returns CLIENT_STATUS_SUCCESS.\n\n\nIf the function fails, it returns error code associated with the\nfailure; use GetLastError to get the extended error information.\n\n\nRemarks\n\n\nThis function adds virtual channel packet data to the end of the current\noutput buffer. A buffer of appropriate size must be reserved before\ncalling this function.\n\n\nThe address for this function is obtained from the VDWRITEHOOK structure\nafter hook registration. The VDWRITEHOOK structure also provides \npWd\n.\n\n\nThis function can be called multiple times to build up the content of\nthe buffer. It is not written until OutBufWrite is called. Attempts to\nwrite more data than was specified in OutBufReserve cause unpredictable\nresults.\n\n\nThe packet header information must be filled in before this function is\ncalled.\n\n\nIf an ICA header or virtual channel data is appended to the buffer, the\nbuffer must be sent to the server before the control leaves the virtual\ndriver.\n\n\nOutBufReserve (Deprecated)\n\n\n\n\nNote\nThis function is deprecated. QueueVirtualWrite must be used in all\n\n\n\n\n\n\nnew virtual drivers.\n\n\nChecks if a buffer of the requested size is available. This function\ndoes not allocate buffers because they are already allocated by the\nWinStation driver.\n\n\nCalling Convention\n\n\nINT WFCAPI OutBufReserve(\nPWD pWd,\nUSHORT ByteCount);\n\n\n\n\n\nParameters\n\n\npWd\n\n\nPointer to a WinStation driver control structure.\n\n\nByteCount\n\n\nSize in bytes of the buffer needed. This must be four bytes larger than\nthe data to be sent.\n\n\nReturn Values\n\n\nIf a buffer of the specified size is available, the return value is\nCLIENT_STATUS_SUCCESS.\n\n\nIf a buffer of the specified size is not available, the return value is\nCLIENT_ERROR_NO_OUTBUF.\n\n\nRemarks\n\n\nAfter this function is called to reserve an output buffer, use the other\nOutBuf* helper functions to append data and then send the buffer to the\nserver.\n\n\nIf a buffer of the specified size is not available, attempt the\noperation in a later DriverPoll call.\n\n\nThe developer determines the \nByteCount\n, which can be any length up to\nthe maximum size supported by the ICA connection. This size is\nindependent of size restrictions on the lower-layer transport.\n\n\n\n\n\n\nIf the server is running XenApp or a version of Presentation Server\n    3.0 Feature Release 2 or later, the maximum packet size is 5000\n    bytes (4996 bytes of data plus the 4-byte packet overhead generated\n    by the ICA datastream manager)\n\n\n\n\n\n\nIf the server is running a version of Presentation Server earlier\n    than 3.0 Feature Release 2, the maximum packet size is 2048 bytes\n    (2044 bytes of data plus the 4- byte packet overhead generated by\n    the ICA datastream manager)\n\n\n\n\n\n\nThe address for this function is obtained from the VDWRITEHOOK structure\nafter hook registration. The VDWRITEHOOK structure also provides the\n\npWd\n address.\n\n\nOutBufWrite (Deprecated)\n\n\n\n\nNote\nThis function is deprecated. QueueVirtualWrite must be used in all\n\n\n\n\n\n\nnew virtual drivers.\n\n\nSends a virtual channel packet to XenApp or XenDesktop.\n\n\nCalling Convention\n\n\nINT WFCAPI OutBufWrite(\nPWD pWd);\n\n\n\n\n\nParameters\n\n\npWd\n\n\nPointer to a WinStation driver control structure.\n\n\nReturn Values\n\n\nIf the function succeeds, it returns CLIENT_STATUS_SUCCESS.\n\n\nIf the function fails, it returns the error code associated with the\nfailure; use GetLastError to get the extended error information.\n\n\nRemarks\n\n\nThis function sends the current output buffer to the host. If a buffer\nwas not reserved or no data was appended, this function does nothing.\n\n\nIf an ICA header or virtual channel data is appended to the buffer, the\nbuffer must be sent to the server before DriverPoll returns.\n\n\nThe address for this function is obtained from the VDWRITEHOOK structure\nafter hook registration. The VDWRITEHOOK structure also provides the\n\npWd\n address.\n\n\nQueueVirtualWrite\n\n\nQueueVirtualWrite is an improved scatter gather interface. It queues a\nvirtual write and stimulates packet output if required allowing data to\nbe sent without having to wait for the poll.\n\n\nCalling Convention\n\n\nint WFCAPI\nQueueVirtualWrite (\nPWD pWd,\nSHORT Channel,\nLPMEMORY_SECTION pMemorySections,\nUSHORT NrOfMemorySections,\nUSHORT Flag);\n\n\n\n\n\nParameters\n\n\npWd\n\n\nPointer to a WinStation driver control structure.\n\n\nChannel\n\n\nThe virtual channel number\n\n\npMemorySections\n\n\nPointer to an array memory sections.\n\n\nNrOfMemorySections\n\n\nThe number of memory sections.\n\n\nFlag\n\n\nThis can be FLUSH_IMMEDIATELY if the data is required to be sent\nimmediately or ! FLUSH_IMMEDIATELY for lower priority data.\n\n\nReturn Values\n\n\nIf the function succeeds, that is queued successfully, the return value\nis CLIENT_STATUS_SUCCESS.\n\n\nIf the function fails because of unsuccessful queue, the return value is\nCLIENT_ERROR_NO_OUTBUF.\n\n\nRemarks\n\n\nThe interface is simpler as it reduces the call sequence OutBufReserve,\nAppendVdHeader, OutBufAppend, and OutBufWrite down to a single\nQueveVirtualWrite call.\n\n\nThe data to be written across the chosen virtual channel is described by\nan array of MEMORY_SECTION structures, each of which contains a length\nand data pointer pair. This allows multiple non-contiguous data segments\nto be combined and written with a single QueueVirtualWrite.\n\n\nTmr_create\n\n\nCreates a timer object and returns its handle.\n\n\nCalling Convention\n\n\nVPSTATUS\nTmr_create (\nHND hTC,\nUINT32 uiPeriod,\nPVOID pvSubscriber,\nPFNDELIVER pfnDeliver.\nPTMR * phTimer);\n\n\n\n\n\nParameters\n\n\nhTC\n\n\nThe value is NULL.\n\n\nuiPeriod\n\n\nThe timeout for the timer in milliseconds.\n\n\npvSubscriber\n\n\nData passed as an argument to the callback.\n\n\npfnDeliver\n\n\nThe callback to call.\n\n\nphTimer\n\n\nThe returned timer structure.\n\n\nReturn Values\n\n\nIf the function succeeds, the return value is TMR_SUCCESS.\n\n\nIf the function fails because of insufficient memory, the return value\nis TMR_OBJ_CREATE_FAILED.\n\n\nRemarks\n\n\nThe default state of a newly created timer object is disabled. The\n\"deliver\" function is called when the timer fires.\n\n\nTmr_destroy\n\n\nDestroys the timer object pointed to by the given handle and sets the\nhandle to NULL.\n\n\nCalling Convention\n\n\nVPSTATUS\nTmr_destroy (\nPTMR \\* phTimer);\n\n\n\n\n\nParameters\n\n\nphTimer\n\n\nThe timer to destroy.\n\n\nReturn Values\n\n\nIf the function succeeds, the return value is TMR_SUCCESS.\n\n\nRemarks\n\n\nTmr_destroy is called for all timer objects when they are not required.\n\n\nTmr_setEnabled\n\n\nEnables or disables a timer object.\n\n\nCalling Convention\n\n\nVPSTATUS\nTmr_setEnabled (\nPTMR \\* hTimer);\nBOOL fEnabled);\n\n\n\n\n\nParameters\n\n\nhTimer\n\n\nThe timer to enable or disable.\n\n\nfEnabled\n\n\nEnables or disables the timer.\n\n\nReturn Values\n\n\nIf the function succeeds, the return value is TMR_SUCCESS.\n\n\nRemarks\n\n\nEnabling a disabled timer restarts the timing period. Re-enabling an\nenabled timer, however, does not perform any action.\n\n\nTmr_setPeriod\n\n\nSets the timeout period for a timer.\n\n\nCalling Convention\n\n\nVPSTATUS\nTmr_setPeriod (\nPTMR \\* hTimer);\nUNIT32 uiPeriod);\n\n\n\n\n\nParameters\n\n\nhTimer\n\n\nThe timer to change the timeout period for.\n\n\nuiPeriod\n\n\nThe new timeout period in milliseconds.\n\n\nReturn Values\n\n\nIf the function succeeds, the return value is TMR_SUCCESS.\n\n\nRemarks\n\n\nIf the timer is already running, the timer is reset and fires after the\nnew period. If the timer is disabled, the timeout period is updated but\nthe timer remains disabled.\n\n\nVdCallWd\n\n\nCalls the client WinStation driver to query and set information about\nthe virtual channel. This is the main method for the virtual driver to\naccess the WinStation driver. For general-purpose virtual channel\ndrivers, this sets the virtual write hook.\n\n\nCalling Convention\n\n\nINT VdCallWd (\nPVD pVd,\nUSHORT ProcIndex,\nPVOID pParam,\nPUINT16 puiSize);\n\n\n\n\n\nParameters\n\n\npVd\n\n\nPointer to a virtual driver control structure.\n\n\nProcIndex\n\n\nIndex of the WinStation driver routine to call. For virtual drivers,\nthis can be either WDxQUERYINFORMATION or WDxSETINFORMATION.\n\n\npParam\n\n\nPointer to a parameter structure, used for both input and output.\n\n\npuiSize\n\n\nSize of parameter structure, used for both input and output.\n\n\nReturn Values\n\n\nIf the function succeeds, it returns CLIENT_STATUS_SUCCESS.\n\n\nIf the function fails, it returns an error code associated with the\nfailure; use DriverGetLastError to get the extended error information.\n\n\nRemarks\n\n\nThis function is a general purpose mechanism to call routines in the\nWinStation driver. The only valid uses of this function for a virtual\ndriver are:\n\n\n\n\n\n\nTo allocate the virtual channel using WDxQUERYINFORMATION\n\n\n\n\n\n\nTo exchange function pointers with the WinStation driver during\n    DriverOpen using WDxSETINFORMATION\n\n\n\n\n\n\nFor more information, see DriverOpen or the Ping example.\n\n\nOn successful return, the VDWRITEHOOK structure contains pointers to the\noutput buffer virtual driver helper functions, and a pointer to the\nWinStation driver control block (which is needed for buffer calls).", 
+            "title": "Programming Reference"
+        }, 
+        {
+            "location": "/programming-reference/#programming-reference", 
+            "text": "For function summaries, see:   Client-Side Functions Overview", 
+            "title": "Programming Reference"
+        }, 
+        {
+            "location": "/programming-reference/#appendvdheader-deprecated", 
+            "text": "Note This function is deprecated. QueueVirtualWrite must be used in all    new virtual drivers.  Places an ICA virtual channel prefix on the output buffer prior to\nassembling and sending the buffer.", 
+            "title": "AppendVdHeader (Deprecated)"
+        }, 
+        {
+            "location": "/programming-reference/#calling-convention", 
+            "text": "INT WFCAPI AppendVdHeader (\n    PWD pWd,\n    USHORT Channel,\n    USHORT ByteCount);", 
+            "title": "Calling Convention"
+        }, 
+        {
+            "location": "/programming-reference/#parameters", 
+            "text": "pWD  Pointer to a WinStation driver control structure.  Channel  Virtual channel number.  ByteCount  Actual size in bytes of the virtual channel packet data to be sent. Do\nnot include additional bytes reservered for the buffer overhead.", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/programming-reference/#return-values", 
+            "text": "If the function succeeds, the return value is CLIENT_STATUS_SUCCESS.  If the function fails, the return value is the error code associated\nwith the failure; use GetLastError to get the extended error\ninformation.", 
+            "title": "Return Values"
+        }, 
+        {
+            "location": "/programming-reference/#remarks", 
+            "text": "Call this function to prefix the virtual channel packet with the\nappropriate header information. Normally the virtual driver sees only\nthe private packet data. However, when a virtual driver sends a virtual\nchannel packet to a server application, it must use this function to\nprefix the data with the ICA header.  Use OutBufReserve to reserve a buffer prior to making this call. The\nvirtual driver must use this function immediately after a successful\nOutBufReserve and before any other data is placed in the packet. This\naction uses the additional four bytes requested in OutBufReserve, so do\nnot include this overhead in  ByteCount .  If an ICA header or virtual channel data is appended to the buffer, the\nbuffer must be sent to the server before the control leaves the virtual\ndriver.  A pointer to this function is obtained from the VDWRITEHOOK structure\nafter hook registration in DriverOpen. The VDWRITEHOOK structure also\nprovides  pWd .", 
+            "title": "Remarks"
+        }, 
+        {
+            "location": "/programming-reference/#driverclose", 
+            "text": "The WinStation driver calls this function prior to unloading the\nvirtual driver, when the ICA connection is being terminated.", 
+            "title": "DriverClose"
+        }, 
+        {
+            "location": "/programming-reference/#calling-convention_1", 
+            "text": "INT Driverclose(\n    PVD pVD,\n    PDLLCLOSE pVdClose,\n    PUINT16 puiSize);", 
+            "title": "Calling Convention"
+        }, 
+        {
+            "location": "/programming-reference/#parameters_1", 
+            "text": "pVD  Pointer to a virtual driver control structure.  pVdClose  Pointer to a standard driver close information structure.  puiSize  Pointer to the size of the driver close information structure. This is\nan input parameter.", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/programming-reference/#return-values_1", 
+            "text": "If the function succeeds the return value is CLIENT_STATUS_SUCCESS.  If the function fails, the return value is the CLIENT_ERROR_* value\ncorresponding to the error condition; see clterr.h (in src/inc/) for a\nlist of error values beginning with CLIENT_ERROR.", 
+            "title": "Return Values"
+        }, 
+        {
+            "location": "/programming-reference/#remarks_1", 
+            "text": "When DriverClose is called, all private driver data is freed. The\nvirtual driver does not need to deallocate the virtual channel or write\nhooks.  The pVdClose structure currently contains one element \u2013 NotUsed. This\nstructure can be ignored.", 
+            "title": "Remarks"
+        }, 
+        {
+            "location": "/programming-reference/#drivergetlasterror", 
+            "text": "This function is not used but is available for linking with the common\nfront end, VDAPI.", 
+            "title": "DriverGetLastError"
+        }, 
+        {
+            "location": "/programming-reference/#calling-convention_2", 
+            "text": "INT DriverGetLastError(\n    PVD pVD,\n    PVDLASSTERROR pVdLastError);", 
+            "title": "Calling Convention"
+        }, 
+        {
+            "location": "/programming-reference/#parameters_2", 
+            "text": "pVD  Pointer to a virtual driver control structure.  pVdLastError  Pointer to a structure that receives the last error information.", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/programming-reference/#return-value", 
+            "text": "The driver returns CLIENT_STATUS_SUCCESS.", 
+            "title": "Return Value"
+        }, 
+        {
+            "location": "/programming-reference/#remarks_2", 
+            "text": "This function currently has no practical significance for virtual\ndrivers; it is provided for compatibility with the loadable module\ninterface.", 
+            "title": "Remarks"
+        }, 
+        {
+            "location": "/programming-reference/#driverinfo", 
+            "text": "Gets information about the virtual driver, such as the version level of\nthe driver.", 
+            "title": "DriverInfo"
+        }, 
+        {
+            "location": "/programming-reference/#calling-convention_3", 
+            "text": "INT DriverInfo(\n    PVD pVD,\n    PDLLINFO pVdInfo,\n    PUINT16 puiSize);", 
+            "title": "Calling Convention"
+        }, 
+        {
+            "location": "/programming-reference/#parameters_3", 
+            "text": "pVD  Pointer to a virtual driver control structure.  pVdInfo  Pointer to a standard driver information structure.  puiSize  Pointer to the size of the driver information structure. This is an\noutput parameter.", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/programming-reference/#return-value_1", 
+            "text": "If the function succeeds, it returns CLIENT_STATUS_SUCCESS.  If the function fails because the buffer pointed to by pVdInfo is too\nsmall, it returns CLIENT_ERROR_BUFFER_TOO_SMALL. Normally, when a\nCLIENT_ERROR_* result code is returned, the ICA session is\ndisconnected. CLIENT_ERROR_BUFFER_ TOO_SMALL is an exception and\ndoes not result in the ICA session being disconnected. Instead, the\nWinStation driver attempts to call DriverInfo again with the ByteCount\nof pVdInfo returned by the failed call.", 
+            "title": "Return Value"
+        }, 
+        {
+            "location": "/programming-reference/#remarks_3", 
+            "text": "When the client starts, it calls this function to retrieve\nmodule-specific information for transmission to the host. This\ninformation is returned to the server side of the virtual channel by\nWFVirtualChannelQuery.  The virtual driver must support this call by returning a structure in\nthe pVdInfo buffer. This structure can be a developer-defined virtual\nchannel-specific structure, but it must begin with a VD_C2H structure,\nwhich in turn begins with a MODULE_C2H structure. All fields of the\nVD_C2H structure must be filled in except for the ChannelMask field.\nSee ica-c2h.h (in src/inc/) for definitions of these structures.  The virtual driver must first check the size of the information buffer\ngiven against the size that the virtual driver requires (the VD_C2H\nstructure). The size of the input buffer is given in\npVdInfo- ByteCount.  If the buffer is too small to store the information that the driver\nneeds to send, the correct size is filled into the ByteCount field and\nthe driver returns CLIENT_ERROR_BUFFER_TOO_SMALL.  If the buffer is large enough, the driver must fill it with a\nmodule-defined structure. At a minimum, this structure must contain a\nVD_C2H structure. The VD_C2H structure must be the first data in the\nbuffer; additional channel-specific data can follow. All relevant fields\nof this structure are filled in by this function. The flow control\nmethod is specified in the VDFLOW structure (an element of the VD_C2H\nstructure). The Ping example contains a flow control selection.  The WinStation driver calls this function twice at initialization, after\ncalling DriverOpen. The first call contains a NULL information buffer\nand a buffer size of zero. The driver is expected to fill in\npVdInfo- ByteCount with the required buffer size and return\nCLIENT_ERROR_BUFFER_TOO_SMALL. The WinStation driver allocates a\nbuffer of that size and retries the operation.  The data buffer pointed to by pVdinfo- pBuffer must not be changed by\nthe virtual driver. The WinStation driver stores byte swap information\nin this buffer.  The parameter puiSize must be initialized to the size of the driver\ninformation structure.", 
+            "title": "Remarks"
+        }, 
+        {
+            "location": "/programming-reference/#driveropen", 
+            "text": "Initializes the virtual driver. The client engine calls this\nuser-written function once when the client is loaded.", 
+            "title": "DriverOpen"
+        }, 
+        {
+            "location": "/programming-reference/#calling-convention_4", 
+            "text": "INT DriverOpen(\n    PVD pVD, PVDOPEN pVdOpen)\n    PUINT16 puiSize);", 
+            "title": "Calling Convention"
+        }, 
+        {
+            "location": "/programming-reference/#parameters_4", 
+            "text": "pVD  Pointer to the virtual driver control structure. This pointer is passed\non every call to the virtual driver.  pVdOpen  Pointer to the virtual driver Open structure.  puiSize  Pointer to the size of the virtual driver Open structure. This is an\noutput parameter.", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/programming-reference/#return-values_2", 
+            "text": "If the function succeeds, it returns CLIENT_STATUS_SUCCESS.  If the function fails, it returns the CLIENT_ERROR_* value\ncorresponding to the error condition; see clterr.h (in src/inc/) for a\nlist of error values beginning with CLIENT_ERROR", 
+            "title": "Return Values"
+        }, 
+        {
+            "location": "/programming-reference/#remarks_4", 
+            "text": "The code fragments in this section are taken from the vdping example.  The DriverOpen function must:  .  Allocate a virtual channel.  Fill in a WDQUERYINFORMATION structure and call VdCallWd. The\nWinStation driver fills in the OpenVirtualChannel structure (including\nthe channel number) and the data in pVd.  WDQUERYINFORMATION wdqi;\nOPENVIRTUALCHANNEL OpenVirtualChannel;\nUINT16 uiSize;\nwdqi.WdInformationClass = WdOpenVirtualChannel;\nwdqi.pWdInformation =  OpenVirtualChannel;\nwdqi.WdInformationLength = sizeof(OPENVIRTUALCHANNEL);\nOpenVirtualChannel.pVCName = CTXPING_VIRTUAL_CHANNEL_NAME;\nuiSize = sizeof(WDQUERYINFORMATION);\nrc = VdCallWd(pVd, WDxQUERYINFORMATION,  wdqi,  uiSize);\n/* do error processing here */  After the call to VdCallWd, the channel number is assigned in the\nOpenVirtualChannel structure's Channel element. Save the channel\nnumber and set the channel mask to indicate which channel this driver\nwill handle.  For example:  g_usVirtualChannelNum = OpenVirtualChannel.Channel;\npVdOpen- ChannelMask = (1L   g_usVirtualChannelNum);  .  Optionally specify a pointer to a private data structure.  If you want the virtual driver to allocate memory for state data, it can\nhave a pointer to this data returned on each call by placing the pointer\nin the virtual driver structure, as follows:  pVd- pPrivate = pMyStructure;  .  Exchange entry point data with the WinStation driver.  The virtual driver must register a write hook with the client WinStation\ndriver. The write hook is the entry point of the virtual driver to be\ncalled when data is received for this virtual channel. The WinStation\ndriver returns pointers to functions that the driver must use to fill in\noutput buffers and sends data to the WinStation driver for transmission\nto the server.  WDSETINFORMATION wdsi; VDWRITEHOOK vdwh;\n// Fill in a write hook structure\nvdwh.Type = g_usVirtualChannelNum; vdwh.pVdData = pVd;\nvdwh.pProc = (PVDWRITEPROCEDURE) ICADataArrival;\n// Fill in a set information structure\nwdsi.WdInformationClass = WdVirtualWriteHook;\nwdsi.pWdInformation =  vdwh;\nwdsi.WdInformationLength = sizeof(VDWRITEHOOK);\nuiSize = sizeof(WDSETINFORMATION);\nrc = VdCallWd( pVd, WDxSETINFORMATION,  wdsi,  uiSize);\n/* do error processing here */  During the registration of the write hook, the WinStation driver passes\nentry points for the deprecated output buffer virtual driver helper\nfunctions to the virtual driver in the VDWRITEHOOK structure. The\nDriverOpen function saves these in global variables so helper functions\nin the virtual driver can use them. The WinStation driver also passes a\npointer to the WinStation driver data area, which the DriverOpen\nfunction also saves (because it is the first argument to the virtual\ndriver helper functions).  // Record pointers to functions used          \n// for sending data to the host.              \npWd = vdwh.pWdData;                           \npOutBufReserve = vdwh.pOutBufReserveProc;     \npOutBufAppend = vdwh.pOutBufAppenProc;        \npOutBufWrite = vdwh.pOutBufWriteProc;         \npAppendVdHeader = vdwh.pAppendVdHeaderProc;     .  Allocate all memory needed by the driver and do any initialization.\n    You can obtain the maximum ICA buffer size from the MaximumWriteSize\n    element in the VDWRITEHOOK structure that is returned.   Note vdwh.MaximumWriteSize is one byte greater than the actual    maximum that you can use because it also includes the channel number.  g_usMaxDataSize = vdwh.MaxiumWriteSize - 1;\nif(NULL == (pMyData = malloc( g_usMaxDataSize )))\n{\n    return(CLIENT_ERROR_NO_MEMORY);\n}  .  Return the size of the VDOPEN structure in  puiSize . This is used\n    by the client engine to determine the version of the virtual\n    channel driver.", 
+            "title": "Remarks"
+        }, 
+        {
+            "location": "/programming-reference/#driverpoll", 
+            "text": "Allows the virtual driver to get periodic control to perform any action\nas required. With the Evt_  and Tmr_  APIs, a more event driven\nimplementation is possible so you may find that the DriverPoll is empty.", 
+            "title": "DriverPoll"
+        }, 
+        {
+            "location": "/programming-reference/#calling-convention_5", 
+            "text": "INT DriverPoll(\nPVD pVD,\nPVOID pVdPoll,\nPUINT16 puiSize);", 
+            "title": "Calling Convention"
+        }, 
+        {
+            "location": "/programming-reference/#parameters_5", 
+            "text": "pVD  Pointer to a virtual driver control structure.  pVdPoll  Pointer to one of the driver poll information structures (DLLPOLL).  puiSize  Pointer to the size of the driver poll information structure. This is an\noutput parameter.", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/programming-reference/#return-values_3", 
+            "text": "If the functionsucceeds, it returns CLIENT_STATUS_SUCCESS. If the driver has no data\non this polling pass, it returns CLIENT_STATUS_NO_DATA.  If the virtual driver cannot allocate an output buffer, it returns\nCLIENT_STATUS_ERROR_RETRY so the WinStation driver does not slow\npolling. The virtual driver then attempts to get an output buffer the\nnext time it is polled.  Return values that begin with CLIENT_ERROR_ are fatal errors; the ICA\nsession is disconnected.", 
+            "title": "Return Values"
+        }, 
+        {
+            "location": "/programming-reference/#remarks_5", 
+            "text": "Because the client engine is single threaded, a virtual driver is not allowed to block while waiting for a\ndesired result (such as the availability of an output buffer) because\nthis prevents the rest of the client from processing.  The Ping example includes examples of processing that can occur in\nDriverPoll.", 
+            "title": "Remarks"
+        }, 
+        {
+            "location": "/programming-reference/#driverqueryinformation", 
+            "text": "Gets run-time information from the virtual driver.", 
+            "title": "DriverQueryInformation"
+        }, 
+        {
+            "location": "/programming-reference/#calling-convention_6", 
+            "text": "INT DriverQueryInformation(\nPVD pVD,\nPVDQUERYINFORMATION pVdQueryInformation,\nPUINT16 puiSize);", 
+            "title": "Calling Convention"
+        }, 
+        {
+            "location": "/programming-reference/#parameters_6", 
+            "text": "pVD  Pointer to a virtual driver control structure.  pVdQueryInformation  Pointer to a structure that specifies the information to query and the\nresults buffer.  puiSize  Pointer to the size of the query information and resolves structure.\nThis is an output parameter.", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/programming-reference/#return-value_2", 
+            "text": "The function returns CLIENT_STATUS_SUCCESS.", 
+            "title": "Return Value"
+        }, 
+        {
+            "location": "/programming-reference/#remarks_6", 
+            "text": "This function currently has no practical significance for virtual\ndrivers; it is provided for compatibility with the loadable module\ninterface. There are no general purpose query functions at this time\nother than LastError. The LastError query is accomplished through the\nDriverGetLastError function.", 
+            "title": "Remarks"
+        }, 
+        {
+            "location": "/programming-reference/#driversetinformation", 
+            "text": "Sets run-time information in the virtual driver.", 
+            "title": "DriverSetInformation"
+        }, 
+        {
+            "location": "/programming-reference/#calling-convention_7", 
+            "text": "INT DriverSetInformation(\nPVD pVD,\nPVDSETINFORMATION pVdSetInformation,\nPUINT16 puiSize);", 
+            "title": "Calling Convention"
+        }, 
+        {
+            "location": "/programming-reference/#parameters_7", 
+            "text": "pVD  Pointer to a virtual driver control structure.  pVdSetInformation  Pointer to a structure that specifies the information class, a pointer\nto any additional data, and the size in bytes of the additional data (if\nany).  puiSize  Pointer to the size of the information structure. This is an input\nparameter.", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/programming-reference/#return-value_3", 
+            "text": "The function returns CLIENT_STATUS_SUCCESS.", 
+            "title": "Return Value"
+        }, 
+        {
+            "location": "/programming-reference/#remarks_7", 
+            "text": "This function can receive two information classes:    VdDisableModule: When the connection is being closed.    VdFlush: When WFPurgeInput or WFPurgeOutput is called by the\n    server-side virtual channel application. The VdSetInformation\n    structure contains a pointer to a VDFLUSH structure that specifies\n    which purge function was called.", 
+            "title": "Remarks"
+        }, 
+        {
+            "location": "/programming-reference/#evt_create", 
+            "text": "Allocates an event structure containing a callback that can be\nassociated with the input or the output events of a particular file\ndescriptor.", 
+            "title": "Evt_create"
+        }, 
+        {
+            "location": "/programming-reference/#calling-convention_8", 
+            "text": "VPSTATUS\nEvt_create (\nvoid \\*hTC,\nPFNDELIVER pDeliverFunc,\nvoid \\*pSubscriberId,\nPEVT \\*out);", 
+            "title": "Calling Convention"
+        }, 
+        {
+            "location": "/programming-reference/#parameters_8", 
+            "text": "hTC  Pass NULL value as a dummy.  pDeliverFunc  The callback to call.  pSubscriberId  Data passed as an argument to the callback.  out  The event structure returned.", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/programming-reference/#return-value_4", 
+            "text": "The event structure created is returned with the out pointer argument.\nIf the function succeeds, the return value is EVT_SUCCESS.  If the function fails because of insufficient memory, the return value\nis EVT_OBJ_CREATE_FAILED.", 
+            "title": "Return Value"
+        }, 
+        {
+            "location": "/programming-reference/#remarks_8", 
+            "text": "The first argument of the callback pSubscriberId is the same as the\npSubscriberId used to create the event structure.  The second argument nEvt is a pointer to the event structure responsible\nfor the callback.", 
+            "title": "Remarks"
+        }, 
+        {
+            "location": "/programming-reference/#evt_destroy", 
+            "text": "Destroys previously created event structure by freeing its memory and\nnulling the given pointer.", 
+            "title": "Evt_destroy"
+        }, 
+        {
+            "location": "/programming-reference/#calling-convention_9", 
+            "text": "VPSTATUS\nEvt_destroy (\nPEVT \\*phEvt);", 
+            "title": "Calling Convention"
+        }, 
+        {
+            "location": "/programming-reference/#parameters_9", 
+            "text": "phEvt  Pointer to the event object to destroy.", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/programming-reference/#return-value_5", 
+            "text": "If the function succeeds, the return value is EVT_SUCCESS.", 
+            "title": "Return Value"
+        }, 
+        {
+            "location": "/programming-reference/#remarks_9", 
+            "text": "The event object to destroy must be removed from the event loop using\nEvt_remove_triggers, before Evt_destroy is called.", 
+            "title": "Remarks"
+        }, 
+        {
+            "location": "/programming-reference/#evt_remove_triggers", 
+            "text": "Removes the previously setup file descriptor selections from the given\nfile descriptor.", 
+            "title": "Evt_remove_triggers"
+        }, 
+        {
+            "location": "/programming-reference/#calling-convention_10", 
+            "text": "VPSTATUS\nEvt_remove_triggers (\nInt fd);", 
+            "title": "Calling Convention"
+        }, 
+        {
+            "location": "/programming-reference/#parameters_10", 
+            "text": "fd  The file descriptor to remove all selections from.", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/programming-reference/#return-value_6", 
+            "text": "If the function succeeds, the return value is EVT_SUCCESS.", 
+            "title": "Return Value"
+        }, 
+        {
+            "location": "/programming-reference/#remarks_10", 
+            "text": "If both the input and output conditions are selected, both the\nconditions are removed.", 
+            "title": "Remarks"
+        }, 
+        {
+            "location": "/programming-reference/#evt_signal", 
+            "text": "Calls the callback stored within the given event structure.", 
+            "title": "Evt_signal"
+        }, 
+        {
+            "location": "/programming-reference/#calling-convention_11", 
+            "text": "VPSTATUS\nEvt_signal (\nPEVT hEvt);", 
+            "title": "Calling Convention"
+        }, 
+        {
+            "location": "/programming-reference/#parameters_11", 
+            "text": "hEvt  The event structure containing the callback to call.", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/programming-reference/#return-value_7", 
+            "text": "If the function succeeds, the return value is EVT_SUCCESS.", 
+            "title": "Return Value"
+        }, 
+        {
+            "location": "/programming-reference/#remarks_11", 
+            "text": "Calls the callback function directly. No conditions must be met prior to\nthis call.", 
+            "title": "Remarks"
+        }, 
+        {
+            "location": "/programming-reference/#evt_trigger_for_input", 
+            "text": "Connects the callback of an event structure to trigger on the given file\ndescriptor when it satisfies the input conditions.", 
+            "title": "Evt_trigger_for_input"
+        }, 
+        {
+            "location": "/programming-reference/#calling-convention_12", 
+            "text": "VPSTATUS\nEvt_trigger_for_input (\nPEVT hEvt,\nint fd);", 
+            "title": "Calling Convention"
+        }, 
+        {
+            "location": "/programming-reference/#parameters_12", 
+            "text": "hEvt  The event structure to associate with the input conditions of the given\nfile descriptor.  fd  The file descriptor.", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/programming-reference/#return-value_8", 
+            "text": "If the function succeeds, the return value is EVT_SUCCESS.  If the function fails because of insufficient memory, the return value\nis EVT_OBJ_CREATE_FAILED.", 
+            "title": "Return Value"
+        }, 
+        {
+            "location": "/programming-reference/#remarks_12", 
+            "text": "The Glib implementation of the event loop used by Receiver for Linux\nwatches for the input conditions G_IO_IN and G_IO_HUP.", 
+            "title": "Remarks"
+        }, 
+        {
+            "location": "/programming-reference/#evt_trigger_for_output", 
+            "text": "Connects the callback of an event structure to trigger on the given file\ndescriptor when it satisfies the output conditions.", 
+            "title": "Evt_trigger_for_output"
+        }, 
+        {
+            "location": "/programming-reference/#calling-convention_13", 
+            "text": "VPSTATUS\nEvt_trigger_for_output (\nPEVT hEvt,\nint fd);", 
+            "title": "Calling Convention"
+        }, 
+        {
+            "location": "/programming-reference/#parameters_13", 
+            "text": "hEvt  The event structure to associate with the ouput conditions of the given\nfile descriptor.  fd  The file descriptor.", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/programming-reference/#return-value_9", 
+            "text": "If the function succeeds, the return value is EVT_SUCCESS.  If the function fails because of insufficient memory, the return value\nis EVT_OBJ_CREATE_FAILED.", 
+            "title": "Return Value"
+        }, 
+        {
+            "location": "/programming-reference/#remarks_13", 
+            "text": "The Glib implementation of the event loop used by Receiver for Linux\nwatches for the ouput conditions G_IO_OUT.", 
+            "title": "Remarks"
+        }, 
+        {
+            "location": "/programming-reference/#icadataarrival", 
+            "text": "The WinStation driver calls this function when data is received on a\nvirtual channel being monitored by the driver. The address of this\nfunction is passed to the WinStation driver during DriverOpen.", 
+            "title": "ICADataArrival"
+        }, 
+        {
+            "location": "/programming-reference/#calling-convention_14", 
+            "text": "VOID wfcapi ICADataArrival(\nPVD pVD,\nUSHORT uChan,\nLPBYTE pBuf,\nUSHORT Length);", 
+            "title": "Calling Convention"
+        }, 
+        {
+            "location": "/programming-reference/#parameters_14", 
+            "text": "pVD  Pointer to a virtual driver control structure.  uChan  Virtual channel number.  pBuf  Pointer to the data buffer containing the virtual channel data as sent\nby the server-side application.  Length  Length in bytes of the data in the buffer.", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/programming-reference/#return-value_10", 
+            "text": "No value is returned from this function.", 
+            "title": "Return Value"
+        }, 
+        {
+            "location": "/programming-reference/#remarks_14", 
+            "text": "This function name is a placeholder for a user-defined function; the\nactual function does not have to be called ICADataArrival, although it\ndoes have to match the function signature (parameters and return type).\nThe address of this function is given to the WinStation driver during\nDriverOpen. Although ICA prefixes packet control data to the virtual\nchannel data, this prefix is removed before this function is called.  After the virtual driver returns from this function, the WinStation\ndriver considers the data delivered. The virtual driver must save\nwhatever information it needs from this packet if later processing is\nrequired.  Do not allow this function to block. Use your own thread or the\nDriverPoll function (with polling enabled) for any required deferred\nprocessing.  The virtual driver can send data to the server on receipt of this data\nfrom within the ICADataArrival function, but be aware that the send\noperation may return an immediate error when buffers are not available\nto accommodate the send operation. The virtual driver may not block in\nthis function waiting for the sending operation to complete.  If the virtual driver is handling multiple virtual channels, use the\nuChan parameter to determine the channel over which this data is to be\nsent. See DriverOpen for more information.", 
+            "title": "Remarks"
+        }, 
+        {
+            "location": "/programming-reference/#migetprivateprofilebool", 
+            "text": "Gets a Boolean value from a section of the Configuration Storage.", 
+            "title": "miGetPrivateProfileBool"
+        }, 
+        {
+            "location": "/programming-reference/#calling-convention_15", 
+            "text": "INT miGetPrivateProfileBool(\nPCHAR lpszSection,\nPCHAR lpszEntry,\nBOOL bDefault);", 
+            "title": "Calling Convention"
+        }, 
+        {
+            "location": "/programming-reference/#parameters_15", 
+            "text": "lpszSection  Name of section to query.  lpszEntry  Name of entry to query.  bDefault  Default value to use.", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/programming-reference/#return-values_4", 
+            "text": "If the requested entry is found, the entry value is returned; otherwise, bDefault  is returned.", 
+            "title": "Return Values"
+        }, 
+        {
+            "location": "/programming-reference/#remarks_15", 
+            "text": "A Boolean value of TRUE can be represented by on, yes, or true in the\nconfiguration files. All other strings are interpreted as FALSE.", 
+            "title": "Remarks"
+        }, 
+        {
+            "location": "/programming-reference/#migetprivateprofileint", 
+            "text": "Gets an integer from a section of the Configuration Storage.", 
+            "title": "miGetPrivateProfileInt"
+        }, 
+        {
+            "location": "/programming-reference/#calling-convention_16", 
+            "text": "INT miGetPrivateProfileInt(\nPCHAR lpszSection,\nPCHAR lpszEntry,\nINT iDefault);", 
+            "title": "Calling Convention"
+        }, 
+        {
+            "location": "/programming-reference/#parameters_16", 
+            "text": "lpszSection  Name of section to query.  lpszEntry  Name of entry to query.  iDefault  Default value to use.", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/programming-reference/#return-values_5", 
+            "text": "If the requested entry is found, the entry value is returned; otherwise,\niDefault is returned.", 
+            "title": "Return Values"
+        }, 
+        {
+            "location": "/programming-reference/#migetprivateprofilelong", 
+            "text": "Gets a long value from a section of the configuration files.", 
+            "title": "miGetPrivateProfileLong"
+        }, 
+        {
+            "location": "/programming-reference/#calling-convention_17", 
+            "text": "INT miGetPrivateProfileLong(\nPCHAR lpszSection,\nPCHAR lpszEntry,\nLONG lDefault);", 
+            "title": "Calling Convention"
+        }, 
+        {
+            "location": "/programming-reference/#parameters_17", 
+            "text": "lpszSection  Name of section to query.  lpszEntry  Name of entry to query.  lDefault  Default value to use.", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/programming-reference/#return-values_6", 
+            "text": "If the requested entry is found, the entry value is returned; otherwise,\nlDefault is returned.", 
+            "title": "Return Values"
+        }, 
+        {
+            "location": "/programming-reference/#migetprivateprofilestring", 
+            "text": "Gets a string from a section of the configuration files.", 
+            "title": "miGetPrivateProfileString"
+        }, 
+        {
+            "location": "/programming-reference/#calling-convention_18", 
+            "text": "INT miGetPrivateProfileString(\nPCHAR lpszSection,\nPCHAR lpszEntry,\nPCHAR lpszDefault,\nPCHAR lpszReturnBuffer, INT cbSize);", 
+            "title": "Calling Convention"
+        }, 
+        {
+            "location": "/programming-reference/#parameters_18", 
+            "text": "lpszSection  Name of section to query.  lpszEntry  Name of entry to query.  lpszDefault  Default value to use.  lpszReturnBuffer  Pointer to a buffer to hold results.  cbSize  Size of lpszReturnBuffer in bytes.", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/programming-reference/#return-values_7", 
+            "text": "This function returns the string length of the value returned in\nlpszReturnBuffer (not including the trailing NULL).  If the requested entry is found and the size of the entry string is less\nthan or equal to cbSize, the entry value is copied to lpszReturnBuffer;\notherwise, iDefault is copied to lpszReturnBuffer.", 
+            "title": "Return Values"
+        }, 
+        {
+            "location": "/programming-reference/#remarks_16", 
+            "text": "lpszDefault must fit in lpszReturnBuffer. The caller is responsible for\nallocating and deallocating lpszReturnBuffer.  lpszReturnBuffer must be large enough to hold the maximum length entry\nstring, plus a NULL termination character. If an entry string does not\nfit in lpszReturnBuffer, the lpszDefault value is used.", 
+            "title": "Remarks"
+        }, 
+        {
+            "location": "/programming-reference/#mm_clip", 
+            "text": "Sets the shape of the operating system window \u201cxwin\u201d from the list of\nsorted rectangles.", 
+            "title": "MM_clip"
+        }, 
+        {
+            "location": "/programming-reference/#calling-convention_19", 
+            "text": "void\nMM_clip (\nUINT32 xwin,\nint count,\nstruct tagTWI_RECT \\*rects,\nBOOLEAN extended)", 
+            "title": "Calling Convention"
+        }, 
+        {
+            "location": "/programming-reference/#parameters_19", 
+            "text": "xwin  Operating system session sub-window.  count  Number of rectangles.  rects  Array of rectangles sorted by Y and X.  extended  TRUE for any extensions; otherwise, FALSE.", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/programming-reference/#return-values_8", 
+            "text": "There are no return values.", 
+            "title": "Return Values"
+        }, 
+        {
+            "location": "/programming-reference/#remarks_17", 
+            "text": "The structure has four long integers for left, top, right, and bottom.\nRectangles are YXsorted.  The last argument must be FALSE to start a fresh clipping update, and\nTRUE to add any clipping updates to the current clipping list.", 
+            "title": "Remarks"
+        }, 
+        {
+            "location": "/programming-reference/#mm_destroy_window", 
+            "text": "Destroys a window created by MM_get_window().", 
+            "title": "MM_destroy_window"
+        }, 
+        {
+            "location": "/programming-reference/#calling-convention_20", 
+            "text": "void\nMM_destroy_window (\nUINT32 hwin,\nUINT32 xwin,", 
+            "title": "Calling Convention"
+        }, 
+        {
+            "location": "/programming-reference/#parameters_20", 
+            "text": "hwin  Host (seamless) window identifiers, ignored for non-seamless sessions.  xwin  x sub-window of the session window.", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/programming-reference/#return-values_9", 
+            "text": "There are no return values.", 
+            "title": "Return Values"
+        }, 
+        {
+            "location": "/programming-reference/#remarks_18", 
+            "text": "MM_destroy_window also removes any window deletion callbacks added\nwith the low level MM_TWI_set_deletion_call.", 
+            "title": "Remarks"
+        }, 
+        {
+            "location": "/programming-reference/#mm_get_window", 
+            "text": "Creates an operating system window \"xwinp\" that is a sub-window of an\nexisting session window with a server handle \"hwin\".", 
+            "title": "MM_get_window"
+        }, 
+        {
+            "location": "/programming-reference/#calling-convention_21", 
+            "text": "BOOLEAN\nMM_get_window (\nUINT32 hwin,\nUINT32 \\*xwinp,", 
+            "title": "Calling Convention"
+        }, 
+        {
+            "location": "/programming-reference/#parameters_21", 
+            "text": "hwin  Host (seamless) window identifiers, ignored for non-seamless sessions.  xwinp  Local operating system window identifier. Returns the sub-window\nidentifier of the session window. In this case, the X Window System is\nthe operating system windowing system.", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/programming-reference/#return-values_10", 
+            "text": "If the parent (hwin) exists, the return value is TRUE. If the parent\ndoes not exist, the return value is FALSE.  If the return value is FALSE, the function, including window creation,\nstill works. The root window, however, is used as a temporary parent.  A call to MM_get_window() or MM_set_geometry() can be used to\nreparent to any existing seamless window.", 
+            "title": "Return Values"
+        }, 
+        {
+            "location": "/programming-reference/#remarks_19", 
+            "text": "When \"0\" is passed as the server handle in a non-seamless (single\nwindow) session, there can be an existing window, *xwinp that is\nreparented. The sub-window, however, is unmapped.  If the parent is seamless, *xwinp is protected by unmapping and\nreparenting it to the root before the parent is deleted.", 
+            "title": "Remarks"
+        }, 
+        {
+            "location": "/programming-reference/#mm_set_geometry", 
+            "text": "Sets the size and position for an existing sub-window, \"xwin\" of a\nsession window with the server handle, \"hwin\".", 
+            "title": "MM_set_geometry"
+        }, 
+        {
+            "location": "/programming-reference/#calling-convention_22", 
+            "text": "BOOLEAN\nMM_set_geometry (\nUINT32 hwin,\nUINT32 xwin,\nCTXMM_RECT \\*rt);", 
+            "title": "Calling Convention"
+        }, 
+        {
+            "location": "/programming-reference/#parameters_22", 
+            "text": "hwin  Host (seamless) window identifiers, ignored for non-seamless sessions.  xwin  Local operating system window identifier for the session sub-window. In\nthis case, the X Window System is the operating system windowing system.  rt  CTXMM_RECT that describes the new window position and geometry.", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/programming-reference/#return-values_11", 
+            "text": "If the parent (hwin) exists, the return value is TRUE. If the parent\ndoes not exist, the return value is FALSE.  If the return value is TRUE, the sub-window is mapped on return.", 
+            "title": "Return Values"
+        }, 
+        {
+            "location": "/programming-reference/#remarks_20", 
+            "text": "The CTXMM_RECT window rectangle is within the session coordinates which\nare not window relative and consist of four unsigned 32-bit integers for\nleft, top, right, and bottom.", 
+            "title": "Remarks"
+        }, 
+        {
+            "location": "/programming-reference/#mm_show_window", 
+            "text": "Makes a sub-window visible.", 
+            "title": "MM_show_window"
+        }, 
+        {
+            "location": "/programming-reference/#calling-convention_23", 
+            "text": "void\nMM_show_window (\nUINT32 xwin)", 
+            "title": "Calling Convention"
+        }, 
+        {
+            "location": "/programming-reference/#parameters_23", 
+            "text": "xwin  Local operating system window identifier for the session sub-window. In\nthis case, the X Window System is the operating system windowing system.", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/programming-reference/#return-values_12", 
+            "text": "There are no return values.", 
+            "title": "Return Values"
+        }, 
+        {
+            "location": "/programming-reference/#remarks_21", 
+            "text": "This function is called when the parent seamless window arrives after\nthe geometry is set.  There must, however, be a successful call to MM_get_window()\ninitially.  The function can be called with exactly the same window identifiers as\nthe previous one. It cannot be used if MM_set_geometry() previously\nreturned TRUE.", 
+            "title": "Remarks"
+        }, 
+        {
+            "location": "/programming-reference/#mm_twi_clear_new_window_function", 
+            "text": "Clears the callback function set up using\nMM_TWI_set_new_window_function.", 
+            "title": "MM_TWI_clear_new_window_function"
+        }, 
+        {
+            "location": "/programming-reference/#calling-convention_24", 
+            "text": "void\nMM_TWI_clear_new_window_function (\nvoid (\\*) (UINT32))", 
+            "title": "Calling Convention"
+        }, 
+        {
+            "location": "/programming-reference/#parameters_24", 
+            "text": "(*)(UINT32))  Callback function pointer to remove.", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/programming-reference/#return-values_13", 
+            "text": "There are no return values.", 
+            "title": "Return Values"
+        }, 
+        {
+            "location": "/programming-reference/#remarks_22", 
+            "text": "Clears the callback for seamless window creation.", 
+            "title": "Remarks"
+        }, 
+        {
+            "location": "/programming-reference/#mm_twi_set_new_window_function", 
+            "text": "Sets a callback function for seamless window creation.", 
+            "title": "MM_TWI_set_new_window_function"
+        }, 
+        {
+            "location": "/programming-reference/#calling-convention_25", 
+            "text": "void\nMM_TWI_set_new_window_function (\nvoid (*) (UINT32));", 
+            "title": "Calling Convention"
+        }, 
+        {
+            "location": "/programming-reference/#parameters_25", 
+            "text": "(*)(UINT32)  Callback function pointer to remove.", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/programming-reference/#return-values_14", 
+            "text": "There are no return values.", 
+            "title": "Return Values"
+        }, 
+        {
+            "location": "/programming-reference/#remarks_23", 
+            "text": "When MM_get_window() fails because the seamless window is not yet\ncreated, MM_TWI_set_new_window_function can be used to watch the\ncreation. The handle must be established only when required and should\nbe removed immediately. The callback argument is the server window\nhandle of a newly created seamless window.", 
+            "title": "Remarks"
+        }, 
+        {
+            "location": "/programming-reference/#outbufappend-deprecated", 
+            "text": "Note This function is deprecated. QueueVirtualWrite must be used in all    new virtual drivers.  Adds virtual channel packet data to the current output buffer.", 
+            "title": "OutBufAppend (Deprecated)"
+        }, 
+        {
+            "location": "/programming-reference/#calling-convention_26", 
+            "text": "INT WFCAPI OutBufAppend(\nPWD pWd,\nLPBYTE pData,\nUSHORT ByteCount);", 
+            "title": "Calling Convention"
+        }, 
+        {
+            "location": "/programming-reference/#parameters_26", 
+            "text": "pWd  Pointer to a WinStation driver control structure.  pData  Pointer to the buffer containing the data to append.  ByteCount  Number of bytes to append to the buffer.", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/programming-reference/#return-values_15", 
+            "text": "If the function succeeds, it returns CLIENT_STATUS_SUCCESS.  If the function fails, it returns error code associated with the\nfailure; use GetLastError to get the extended error information.", 
+            "title": "Return Values"
+        }, 
+        {
+            "location": "/programming-reference/#remarks_24", 
+            "text": "This function adds virtual channel packet data to the end of the current\noutput buffer. A buffer of appropriate size must be reserved before\ncalling this function.  The address for this function is obtained from the VDWRITEHOOK structure\nafter hook registration. The VDWRITEHOOK structure also provides  pWd .  This function can be called multiple times to build up the content of\nthe buffer. It is not written until OutBufWrite is called. Attempts to\nwrite more data than was specified in OutBufReserve cause unpredictable\nresults.  The packet header information must be filled in before this function is\ncalled.  If an ICA header or virtual channel data is appended to the buffer, the\nbuffer must be sent to the server before the control leaves the virtual\ndriver.", 
+            "title": "Remarks"
+        }, 
+        {
+            "location": "/programming-reference/#outbufreserve-deprecated", 
+            "text": "Note This function is deprecated. QueueVirtualWrite must be used in all    new virtual drivers.  Checks if a buffer of the requested size is available. This function\ndoes not allocate buffers because they are already allocated by the\nWinStation driver.", 
+            "title": "OutBufReserve (Deprecated)"
+        }, 
+        {
+            "location": "/programming-reference/#calling-convention_27", 
+            "text": "INT WFCAPI OutBufReserve(\nPWD pWd,\nUSHORT ByteCount);", 
+            "title": "Calling Convention"
+        }, 
+        {
+            "location": "/programming-reference/#parameters_27", 
+            "text": "pWd  Pointer to a WinStation driver control structure.  ByteCount  Size in bytes of the buffer needed. This must be four bytes larger than\nthe data to be sent.", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/programming-reference/#return-values_16", 
+            "text": "If a buffer of the specified size is available, the return value is\nCLIENT_STATUS_SUCCESS.  If a buffer of the specified size is not available, the return value is\nCLIENT_ERROR_NO_OUTBUF.", 
+            "title": "Return Values"
+        }, 
+        {
+            "location": "/programming-reference/#remarks_25", 
+            "text": "After this function is called to reserve an output buffer, use the other\nOutBuf* helper functions to append data and then send the buffer to the\nserver.  If a buffer of the specified size is not available, attempt the\noperation in a later DriverPoll call.  The developer determines the  ByteCount , which can be any length up to\nthe maximum size supported by the ICA connection. This size is\nindependent of size restrictions on the lower-layer transport.    If the server is running XenApp or a version of Presentation Server\n    3.0 Feature Release 2 or later, the maximum packet size is 5000\n    bytes (4996 bytes of data plus the 4-byte packet overhead generated\n    by the ICA datastream manager)    If the server is running a version of Presentation Server earlier\n    than 3.0 Feature Release 2, the maximum packet size is 2048 bytes\n    (2044 bytes of data plus the 4- byte packet overhead generated by\n    the ICA datastream manager)    The address for this function is obtained from the VDWRITEHOOK structure\nafter hook registration. The VDWRITEHOOK structure also provides the pWd  address.", 
+            "title": "Remarks"
+        }, 
+        {
+            "location": "/programming-reference/#outbufwrite-deprecated", 
+            "text": "Note This function is deprecated. QueueVirtualWrite must be used in all    new virtual drivers.  Sends a virtual channel packet to XenApp or XenDesktop.", 
+            "title": "OutBufWrite (Deprecated)"
+        }, 
+        {
+            "location": "/programming-reference/#calling-convention_28", 
+            "text": "INT WFCAPI OutBufWrite(\nPWD pWd);", 
+            "title": "Calling Convention"
+        }, 
+        {
+            "location": "/programming-reference/#parameters_28", 
+            "text": "pWd  Pointer to a WinStation driver control structure.", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/programming-reference/#return-values_17", 
+            "text": "If the function succeeds, it returns CLIENT_STATUS_SUCCESS.  If the function fails, it returns the error code associated with the\nfailure; use GetLastError to get the extended error information.", 
+            "title": "Return Values"
+        }, 
+        {
+            "location": "/programming-reference/#remarks_26", 
+            "text": "This function sends the current output buffer to the host. If a buffer\nwas not reserved or no data was appended, this function does nothing.  If an ICA header or virtual channel data is appended to the buffer, the\nbuffer must be sent to the server before DriverPoll returns.  The address for this function is obtained from the VDWRITEHOOK structure\nafter hook registration. The VDWRITEHOOK structure also provides the pWd  address.", 
+            "title": "Remarks"
+        }, 
+        {
+            "location": "/programming-reference/#queuevirtualwrite", 
+            "text": "QueueVirtualWrite is an improved scatter gather interface. It queues a\nvirtual write and stimulates packet output if required allowing data to\nbe sent without having to wait for the poll.", 
+            "title": "QueueVirtualWrite"
+        }, 
+        {
+            "location": "/programming-reference/#calling-convention_29", 
+            "text": "int WFCAPI\nQueueVirtualWrite (\nPWD pWd,\nSHORT Channel,\nLPMEMORY_SECTION pMemorySections,\nUSHORT NrOfMemorySections,\nUSHORT Flag);", 
+            "title": "Calling Convention"
+        }, 
+        {
+            "location": "/programming-reference/#parameters_29", 
+            "text": "pWd  Pointer to a WinStation driver control structure.  Channel  The virtual channel number  pMemorySections  Pointer to an array memory sections.  NrOfMemorySections  The number of memory sections.  Flag  This can be FLUSH_IMMEDIATELY if the data is required to be sent\nimmediately or ! FLUSH_IMMEDIATELY for lower priority data.", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/programming-reference/#return-values_18", 
+            "text": "If the function succeeds, that is queued successfully, the return value\nis CLIENT_STATUS_SUCCESS.  If the function fails because of unsuccessful queue, the return value is\nCLIENT_ERROR_NO_OUTBUF.", 
+            "title": "Return Values"
+        }, 
+        {
+            "location": "/programming-reference/#remarks_27", 
+            "text": "The interface is simpler as it reduces the call sequence OutBufReserve,\nAppendVdHeader, OutBufAppend, and OutBufWrite down to a single\nQueveVirtualWrite call.  The data to be written across the chosen virtual channel is described by\nan array of MEMORY_SECTION structures, each of which contains a length\nand data pointer pair. This allows multiple non-contiguous data segments\nto be combined and written with a single QueueVirtualWrite.", 
+            "title": "Remarks"
+        }, 
+        {
+            "location": "/programming-reference/#tmr_create", 
+            "text": "Creates a timer object and returns its handle.", 
+            "title": "Tmr_create"
+        }, 
+        {
+            "location": "/programming-reference/#calling-convention_30", 
+            "text": "VPSTATUS\nTmr_create (\nHND hTC,\nUINT32 uiPeriod,\nPVOID pvSubscriber,\nPFNDELIVER pfnDeliver.\nPTMR * phTimer);", 
+            "title": "Calling Convention"
+        }, 
+        {
+            "location": "/programming-reference/#parameters_30", 
+            "text": "hTC  The value is NULL.  uiPeriod  The timeout for the timer in milliseconds.  pvSubscriber  Data passed as an argument to the callback.  pfnDeliver  The callback to call.  phTimer  The returned timer structure.", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/programming-reference/#return-values_19", 
+            "text": "If the function succeeds, the return value is TMR_SUCCESS.  If the function fails because of insufficient memory, the return value\nis TMR_OBJ_CREATE_FAILED.", 
+            "title": "Return Values"
+        }, 
+        {
+            "location": "/programming-reference/#remarks_28", 
+            "text": "The default state of a newly created timer object is disabled. The\n\"deliver\" function is called when the timer fires.", 
+            "title": "Remarks"
+        }, 
+        {
+            "location": "/programming-reference/#tmr_destroy", 
+            "text": "Destroys the timer object pointed to by the given handle and sets the\nhandle to NULL.", 
+            "title": "Tmr_destroy"
+        }, 
+        {
+            "location": "/programming-reference/#calling-convention_31", 
+            "text": "VPSTATUS\nTmr_destroy (\nPTMR \\* phTimer);", 
+            "title": "Calling Convention"
+        }, 
+        {
+            "location": "/programming-reference/#parameters_31", 
+            "text": "phTimer  The timer to destroy.", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/programming-reference/#return-values_20", 
+            "text": "If the function succeeds, the return value is TMR_SUCCESS.", 
+            "title": "Return Values"
+        }, 
+        {
+            "location": "/programming-reference/#remarks_29", 
+            "text": "Tmr_destroy is called for all timer objects when they are not required.", 
+            "title": "Remarks"
+        }, 
+        {
+            "location": "/programming-reference/#tmr_setenabled", 
+            "text": "Enables or disables a timer object.", 
+            "title": "Tmr_setEnabled"
+        }, 
+        {
+            "location": "/programming-reference/#calling-convention_32", 
+            "text": "VPSTATUS\nTmr_setEnabled (\nPTMR \\* hTimer);\nBOOL fEnabled);", 
+            "title": "Calling Convention"
+        }, 
+        {
+            "location": "/programming-reference/#parameters_32", 
+            "text": "hTimer  The timer to enable or disable.  fEnabled  Enables or disables the timer.", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/programming-reference/#return-values_21", 
+            "text": "If the function succeeds, the return value is TMR_SUCCESS.", 
+            "title": "Return Values"
+        }, 
+        {
+            "location": "/programming-reference/#remarks_30", 
+            "text": "Enabling a disabled timer restarts the timing period. Re-enabling an\nenabled timer, however, does not perform any action.", 
+            "title": "Remarks"
+        }, 
+        {
+            "location": "/programming-reference/#tmr_setperiod", 
+            "text": "Sets the timeout period for a timer.", 
+            "title": "Tmr_setPeriod"
+        }, 
+        {
+            "location": "/programming-reference/#calling-convention_33", 
+            "text": "VPSTATUS\nTmr_setPeriod (\nPTMR \\* hTimer);\nUNIT32 uiPeriod);", 
+            "title": "Calling Convention"
+        }, 
+        {
+            "location": "/programming-reference/#parameters_33", 
+            "text": "hTimer  The timer to change the timeout period for.  uiPeriod  The new timeout period in milliseconds.", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/programming-reference/#return-values_22", 
+            "text": "If the function succeeds, the return value is TMR_SUCCESS.", 
+            "title": "Return Values"
+        }, 
+        {
+            "location": "/programming-reference/#remarks_31", 
+            "text": "If the timer is already running, the timer is reset and fires after the\nnew period. If the timer is disabled, the timeout period is updated but\nthe timer remains disabled.", 
+            "title": "Remarks"
+        }, 
+        {
+            "location": "/programming-reference/#vdcallwd", 
+            "text": "Calls the client WinStation driver to query and set information about\nthe virtual channel. This is the main method for the virtual driver to\naccess the WinStation driver. For general-purpose virtual channel\ndrivers, this sets the virtual write hook.", 
+            "title": "VdCallWd"
+        }, 
+        {
+            "location": "/programming-reference/#calling-convention_34", 
+            "text": "INT VdCallWd (\nPVD pVd,\nUSHORT ProcIndex,\nPVOID pParam,\nPUINT16 puiSize);", 
+            "title": "Calling Convention"
+        }, 
+        {
+            "location": "/programming-reference/#parameters_34", 
+            "text": "pVd  Pointer to a virtual driver control structure.  ProcIndex  Index of the WinStation driver routine to call. For virtual drivers,\nthis can be either WDxQUERYINFORMATION or WDxSETINFORMATION.  pParam  Pointer to a parameter structure, used for both input and output.  puiSize  Size of parameter structure, used for both input and output.", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/programming-reference/#return-values_23", 
+            "text": "If the function succeeds, it returns CLIENT_STATUS_SUCCESS.  If the function fails, it returns an error code associated with the\nfailure; use DriverGetLastError to get the extended error information.", 
+            "title": "Return Values"
+        }, 
+        {
+            "location": "/programming-reference/#remarks_32", 
+            "text": "This function is a general purpose mechanism to call routines in the\nWinStation driver. The only valid uses of this function for a virtual\ndriver are:    To allocate the virtual channel using WDxQUERYINFORMATION    To exchange function pointers with the WinStation driver during\n    DriverOpen using WDxSETINFORMATION    For more information, see DriverOpen or the Ping example.  On successful return, the VDWRITEHOOK structure contains pointers to the\noutput buffer virtual driver helper functions, and a pointer to the\nWinStation driver control block (which is needed for buffer calls).", 
+            "title": "Remarks"
+        }
+    ]
+}
